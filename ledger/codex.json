@@ -1,10 +1,13 @@
 {
-  "$comment": "Codex-solo book. Notional comparison book per methodology.md section 4 (OPEN — owner to confirm). Same rules, same prices as the real conclusion book. Entries use the selection-card schema in selection-card.schema.json.",
+  "$comment": "Codex-solo book. REAL MONEY, own independent £200 bank (methodology.md section 4, decided 12 September 2026). Same market/price rules as the other two books, scored independently. Entries use the selection-card schema in selection-card.schema.json. Stop rule (section 2) applies to this book on its own: max 20 bets, review at bet 10, terminates early if a decision changes because of this book's own running P/L — never because of another book's.",
   "book": "codex",
   "bank_gbp": 200,
   "stake_gbp": 10,
   "bets_placed": 0,
   "bets_remaining": 20,
   "running_balance_gbp": 200,
+  "review_checkpoint_at_bet": 10,
+  "stopped": false,
+  "stop_reason": null,
   "entries": []
 }

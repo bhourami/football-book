@@ -1,5 +1,5 @@
 {
-  "$comment": "Debated conclusion book. REAL MONEY (methodology.md section 2). This is the book the owner actually stakes. price_obtained_by_owner and price_obtained_timestamp_utc on each entry must reflect what he actually got, never what was showing at selection time. Stop rule (section 2) applies to this book: max 20 bets, review at bet 10, terminates early if any decision changes because of running P/L.",
+  "$comment": "Debated conclusion book. REAL MONEY, own independent £200 bank (methodology.md sections 2 and 4, decided 12 September 2026) — one of three real-money books, not the only one. price_obtained_by_owner and price_obtained_timestamp_utc on each entry must reflect what the owner actually got, never what was showing at selection time. Stop rule (section 2) applies to this book on its own: max 20 bets, review at bet 10, terminates early if any decision changes because of this book's own running P/L.",
   "book": "conclusion",
   "bank_gbp": 200,
   "stake_gbp": 10,

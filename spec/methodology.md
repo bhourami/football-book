@@ -50,21 +50,16 @@ diagnostic, not the verdict. If the bank finishes up or down, that
 alone proves nothing at this sample size; do not let it be treated as
 proof in either direction.
 
-## 4. Three books — OPEN (scope)
+## 4. Three books — decided
 Claude alone, Codex alone, and the debated conclusion, each scored on
 identical selections at identical prices, exactly as the earnings desk
-ran it. **OPEN:** whether all three carry a real £200/£10 bank each
-(£600 total real exposure), or only the conclusion book is real money
-while Claude-solo and Codex-solo run as notional comparison books at
-the same stake structure. The handoff document does not settle this;
-the owner must state it before bet one, in writing, in this section.
-
-Until this is set, the default operating assumption is: **conclusion
-book is real money; Claude-solo and Codex-solo are notional
-comparison books, same rules, same prices.** This default is not
-authorised — it is a placeholder so the rest of the pipeline can be
-built without blocking on it, and must be confirmed or overridden by
-the owner before the first bet settles.
+ran it. **Decided 12 September 2026, owner's call: all three books are
+real money.** Each carries its own real £200 bank at £10 flat stakes
+(section 2), for £600 total real exposure across the three books, not
+£200. Each book's stop rule (section 2) applies independently — one
+book stopping at 20 bets or bank exhaustion does not stop the other
+two, and a decision is never altered in one book because of another
+book's running profit or loss.
 
 ## 5. Blind-before-debate protocol
 Each analyst's selection is sealed before it sees the other's. This is
@@ -192,8 +187,8 @@ See `/reference/data-sources.md`. Fixtures, prices and statistics come
 from public sources only — no account login is used for research.
 
 ## 15. Open items requiring owner sign-off before bet one
-1. Section 4 — real-money scope of the three books (£200 conclusion
-   only, or £200 x 3).
-2. Section 7 — the minimum edge threshold.
-3. Confirm the review checkpoint at bet 10 (section 2), or set a
-   different one.
+1. ~~Section 4 — real-money scope of the three books.~~ Decided 12
+   September 2026: all three books real, £200 each, £600 total real
+   exposure.
+2. Section 7 — the minimum edge threshold. Still open; no bet may be
+   entered into any of the three live books until this is set.
