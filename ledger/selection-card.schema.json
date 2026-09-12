@@ -1,0 +1,42 @@
+{
+  "$comment": "Selection card schema — methodology.md section 8. Every selection, taken or rejected, uses this exact shape. A rejected selection uses the same fields (section 9) so the rejected-selection audit is directly comparable to the ledger.",
+  "type": "object",
+  "required": [
+    "fixture_id", "competition", "kickoff_utc", "home_team", "away_team",
+    "market", "our_probability", "estimate_method", "estimate_source",
+    "price", "price_source", "price_timestamp_utc",
+    "overround", "fair_probability", "required_strike_rate", "edge",
+    "stake_gbp", "decision", "decision_reason",
+    "team_news_status", "analyst"
+  ],
+  "properties": {
+    "fixture_id": { "type": "string", "description": "e.g. 2026-09-19-ARS-MCI" },
+    "competition": { "const": "Premier League" },
+    "kickoff_utc": { "type": "string", "format": "date-time" },
+    "home_team": { "type": "string" },
+    "away_team": { "type": "string" },
+    "market": { "enum": ["match_result", "btts"] },
+    "selection": { "type": "string", "description": "e.g. home_win, draw, away_win, btts_yes, btts_no; omitted if decision is declined with no candidate selection" },
+    "our_probability": { "type": "number", "minimum": 0, "maximum": 1 },
+    "estimate_method": { "type": "string", "description": "the stated model used — base rates, xG-derived, etc. Must be fitted before the fixture, per methodology section 7." },
+    "estimate_source": { "type": "string" },
+    "price": { "type": "number", "minimum": 1, "description": "decimal odds" },
+    "price_source": { "type": "string" },
+    "price_timestamp_utc": { "type": "string", "format": "date-time" },
+    "overround": { "type": "number" },
+    "fair_probability": { "type": "number", "minimum": 0, "maximum": 1 },
+    "required_strike_rate": { "type": "number", "minimum": 0, "maximum": 1, "description": "equals fair_probability; restated for readability on the card" },
+    "edge": { "type": "number", "description": "our_probability - fair_probability" },
+    "stake_gbp": { "type": "number", "description": "10 if taken, 0 if declined" },
+    "decision": { "enum": ["taken", "declined"] },
+    "decision_reason": { "type": "string", "description": "required when declined; e.g. edge_below_threshold, insufficient_evidence, team_news_unconfirmed" },
+    "team_news_status": { "enum": ["confirmed", "unconfirmed"] },
+    "analyst": { "enum": ["claude", "codex", "conclusion"] },
+    "price_obtained_by_owner": { "type": ["number", "null"], "description": "filled in only after the owner actually places the bet; the price he got, not the price shown at selection time" },
+    "price_obtained_timestamp_utc": { "type": ["string", "null"], "format": "date-time" },
+    "closing_price": { "type": ["number", "null"], "description": "filled in at kickoff" },
+    "clv": { "type": ["number", "null"], "description": "implied-probability difference between price obtained and closing price; filled in at kickoff" },
+    "result": { "type": ["string", "null"], "enum": ["won", "lost", "void", null] },
+    "settled_pl_gbp": { "type": ["number", "null"] }
+  }
+}

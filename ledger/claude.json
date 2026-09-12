@@ -1,0 +1,10 @@
+{
+  "$comment": "Claude-solo book. Notional comparison book per methodology.md section 4 (OPEN — owner to confirm). Same rules, same prices as the real conclusion book. Entries use the selection-card schema in selection-card.schema.json.",
+  "book": "claude",
+  "bank_gbp": 200,
+  "stake_gbp": 10,
+  "bets_placed": 0,
+  "bets_remaining": 20,
+  "running_balance_gbp": 200,
+  "entries": []
+}

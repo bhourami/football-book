@@ -1,0 +1,71 @@
+# football-book
+
+This repository runs a real-money football betting research pipeline: three
+parallel books (Claude alone, Codex alone, debated conclusion) tested against
+identical Premier League singles at identical prices, evaluated primarily on
+closing line value rather than profit and loss. It is the sequel to
+`~/earnings-lab`, carrying over what that project paid to learn — see
+`/reference/earnings-desk-handoff.md` for the source document.
+
+## Authoritative methodology
+
+`/spec/methodology.md` is the **authoritative rule set** for this project. It
+defines the bank, stake, stop rule, market scope, the blind-before-debate
+protocol, the edge/selection formulas, the selection card schema, the
+rejected-selection audit, and CLV/calibration tracking.
+
+- **Every session must read `/spec/methodology.md` at the start of the
+  session**, before writing or modifying any code, data, or reports.
+- **No session may change or reinterpret any definition in
+  `/spec/methodology.md`.** It is filled in and maintained by the owner only.
+  Do not "fix", "clarify", "infer a reasonable default for", or silently work
+  around a gap or ambiguity in it — including the sections currently marked
+  **OPEN**.
+- Sections marked OPEN in the methodology are not decided. No bet may be
+  entered into the live book while a section it depends on is still OPEN.
+  Flag it; do not guess a number and proceed.
+- If anything in the codebase, a request, or the data appears to **conflict**
+  with `/spec/methodology.md` — that is an error to raise to the owner, not a
+  decision to resolve unilaterally.
+
+## Hard boundary
+
+No session, script or agent in this repository places a bet, or holds, reads,
+or uses bookmaker account credentials, ever — see methodology section 13. All
+research, pricing and recording here is done from public data sources. The
+owner places every wager himself, at the price he actually obtains.
+
+## Repository layout
+
+- `/spec/` — frozen methodology and other authoritative specifications.
+- `/reference/` — data source notes and the earnings-desk handoff document
+  this project started from. Non-authoritative for rules; never a substitute
+  for `/spec/methodology.md`.
+- `/universe/` — frozen fixture-list snapshots (one per gameweek).
+- `/collaboration/` — the blind-before-debate protocol and each analyst's
+  input files.
+- `/ledger/` — the three books' selection cards and settled results.
+- `/requests/` — the rejected-selection audit.
+- `/scripts/` — pipeline code (edge/CLV calculator, etc).
+
+## Analyst handoff
+
+- `/collaboration/claude-input.json` and `/collaboration/codex-input.json`
+  hold each analyst's current selections. Claude writes only its own file;
+  Codex writes only its own. Neither reads the other's file, or any content
+  derived from it, before its own opening selection for a fixture is written
+  and committed to disk.
+- Read `/collaboration/PROTOCOL.md` before performing any selection or debate
+  work. It exists specifically to prevent the sequencing bug that flattered
+  an earlier "solo" book by letting it react to the other analyst's opening
+  view without either the owner or the analysts noticing.
+- Ledger figures asserted in an input file are claims, not entries. A bet
+  enters `/ledger/` only with a completed selection card: price, source,
+  timestamp, and (once placed) the price the owner actually obtained.
+
+## Fail-closed
+
+No team news, no bet. Missing or unconfirmed inputs are never defaulted to a
+selection — see methodology section 6. This applies identically to the
+rejected-selection audit: a decline for insufficient evidence is recorded
+with the same fields as a taken bet.

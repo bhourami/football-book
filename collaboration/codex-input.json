@@ -1,0 +1,5 @@
+{
+  "$comment": "Codex's own opening selections. Codex writes only this file. See /collaboration/PROTOCOL.md before adding an entry — the opening for a fixture must be written and committed here before Codex is shown anything from claude-input.json for that fixture.",
+  "analyst": "codex",
+  "selections": []
+}

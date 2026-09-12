@@ -1,0 +1,4 @@
+{
+  "$comment": "Methodology section 9. Every declined selection, from any book, logged with the identical selection-card fields as a taken bet (decision: 'declined', decision_reason required). Never pruned or summarised away.",
+  "entries": []
+}

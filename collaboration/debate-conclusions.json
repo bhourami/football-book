@@ -1,0 +1,4 @@
+{
+  "$comment": "Written only by the reconciliation step described in /collaboration/PROTOCOL.md. Never hand-edited to fit a result. A bet appears here only when Claude's and Codex's final positions agree on market, selection and stake, and neither is blocked by fail-closed.",
+  "conclusions": []
+}

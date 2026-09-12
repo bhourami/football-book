@@ -1,0 +1,13 @@
+# Local secrets. Never commit these files.
+.env
+.env.*
+!.env.example
+
+# Common local/runtime files.
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Advisory locks and atomic replacement scratch files.
+*.json.lock
+.pending-*
