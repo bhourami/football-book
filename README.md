@@ -13,3 +13,6 @@ bet: the minimum edge threshold (section 7).
 See `NOTICE.md` before reading anything else in this repository as advice —
 it isn't. See `reference/earnings-desk-handoff.md` for the full reasoning
 behind every rule here.
+
+Published, plain-language standings live at
+[football-book-reports](https://github.com/bhourami/football-book-reports).
