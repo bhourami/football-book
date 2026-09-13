@@ -34,7 +34,8 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T12:02:50Z",
-      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json for full comparison). Draw price unchanged at 3.90; edge recomputed against refreshed Bet365 odds via scripts/edge_calculator.py -- still clears the 3pp threshold. Selection remains taken."
+      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json for full comparison). Draw price unchanged at 3.90; edge recomputed against refreshed Bet365 odds via scripts/edge_calculator.py -- still clears the 3pp threshold. Selection remains taken.",
+      "hypothetical_result_if_placed": "lost -- Brighton won 5-0, not a draw"
     },
     {
       "fixture_id": "2026-09-13-COV-BHA",
@@ -57,7 +58,8 @@
       "settled_pl_gbp": null,
       "status": "pending_owner_placement",
       "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "hypothetical_result_if_placed": "won -- Coventry failed to score (lost 0-5), BTTS No would have won"
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -65,7 +67,7 @@
       "selection": "away_win",
       "our_probability": 0.56,
       "edge": 0.1052,
-      "price": 2.10,
+      "price": 2.1,
       "price_source": "bet365 (news.bet365.com official odds line, corroborated live via oddschecker.com/search aggregation), refreshed 2026-09-13T14:35:00Z",
       "price_timestamp_utc": "2026-09-13T02:23:00Z",
       "stake_gbp": 10,
@@ -82,7 +84,8 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
-      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). Match-result price moved from 2.15 to 2.10 on Man City -- normal market drift as both lineups firmed up with no surprises, not itself team-news driven. Overround/fair-probability/edge recomputed via scripts/edge_calculator.py against the refreshed Bet365 odds (Man Utd 3.25 / Draw 3.80 / Man City 2.10): edge now +10.52pp (was +11.74pp) -- still comfortably clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check."
+      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). Match-result price moved from 2.15 to 2.10 on Man City -- normal market drift as both lineups firmed up with no surprises, not itself team-news driven. Overround/fair-probability/edge recomputed via scripts/edge_calculator.py against the refreshed Bet365 odds (Man Utd 3.25 / Draw 3.80 / Man City 2.10): edge now +10.52pp (was +11.74pp) -- still comfortably clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check.",
+      "hypothetical_result_if_placed": "won -- Man City won 1-0"
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -107,7 +110,8 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
-      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). BTTS No price unchanged at 2.625 (Yes re-quoted directly at 4/9; No backed out of the unchanged overround since no source independently re-quoted it). Edge recomputed via scripts/edge_calculator.py -- unchanged at +5.91pp, still clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check."
+      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). BTTS No price unchanged at 2.625 (Yes re-quoted directly at 4/9; No backed out of the unchanged overround since no source independently re-quoted it). Edge recomputed via scripts/edge_calculator.py -- unchanged at +5.91pp, still clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check.",
+      "hypothetical_result_if_placed": "won -- final 0-1, only Man City scored, BTTS No would have won"
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",
