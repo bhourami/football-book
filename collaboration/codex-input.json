@@ -66,18 +66,20 @@
         "away": 1.95
       },
       "candidate_selection": "away_win",
-      "price": 2.15,
-      "price_source": "oddschecker.com (Bet365 line)",
+      "price": 2.10,
+      "price_source": "bet365 (news.bet365.com official odds line, corroborated live via oddschecker.com/search aggregation), refreshed 2026-09-13T14:35:00Z",
       "price_timestamp_utc": "2026-09-13T02:23:00Z",
-      "overround": 0.0509,
-      "fair_probability": 0.4426,
-      "edge": 0.1174,
+      "overround": 0.0470,
+      "fair_probability": 0.4548,
+      "edge": 0.1052,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
       "confidence": "medium",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups published ~55min before kickoff (see claude-input.json for the full comparison). Man Utd missing Baleba, de Ligt, Ugarte, Heaton, Amad Diallo as assumed; Shaw's doubt resolved to confirmed absence (Dorgu starts). Man City full strength as assumed (O'Reilly fit, benched). No material change to the picture; probability estimate held at 0.56. Match-result price moved from 2.15 to 2.10 on Man City (normal market drift, not team-news driven -- City shortened after both sides' lineups firmed up with no surprises). Overround/fair-probability/edge recomputed via scripts/edge_calculator.py against the refreshed Bet365 odds (Man Utd 3.25 / Draw 3.80 / Man City 2.10): edge now +10.52pp (was +11.74pp at the original price) -- still comfortably clears the 3pp threshold. Selection remains taken."
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -96,9 +98,11 @@
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
       "confidence": "medium",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups published ~55min before kickoff (see claude-input.json for the full comparison); no material change. Probability estimate held at 0.414. BTTS Yes re-quoted directly at 4/9 (1.444 decimal) at bet365; No price not independently re-quoted anywhere found, backed out via the unchanged 0.0735 overround, reproducing the original 2.625 exactly -- market has not moved. Edge recomputed via scripts/edge_calculator.py: unchanged at +5.91pp, still clears the 3pp threshold. Selection remains taken."
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",

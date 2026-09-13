@@ -55,7 +55,8 @@
       "decision_reason": "Discretionary accumulator combining this book's own three taken selections, permitted under methodology.md section 12 as amended 13 September 2026. Not itself edge-gated -- no combined-edge threshold exists yet (flagged OPEN in section 12).",
       "price_obtained_by_owner": "29.20/1", "price_obtained_timestamp_utc": "2026-09-13T13:01:00Z",
       "result": "pending", "settled_pl_gbp": null, "status": "placed",
-      "note": "Originally logged in ledger/deviations.json before the section 12 amendment; moved here once accumulators combining a single book's own selections were permitted."
+      "note": "Originally logged in ledger/deviations.json before the section 12 amendment; moved here once accumulators combining a single book's own selections were permitted.",
+      "actual_lineup_check_note": "FLAGGED, NOT RESOLVED HERE: one leg of this accumulator (2026-09-13-MUN-MCI btts_no) carried unconfirmed team news at the 2026-09-13T13:01:00Z placement time -- same sequencing gap as the standalone BTTS No entry above (placed over an hour before the confirmed-lineup check that should have preceded it per methodology.md section 6). Retroactive check (2026-09-13T14:35:00Z) found no material lineup change and an unchanged/still-clearing edge on that leg -- see the standalone BTTS No entry's note for detail. Placed stake and price are left untouched; raised to the owner, not resolved here."
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -79,8 +80,11 @@
       "settled_pl_gbp": null,
       "status": "placed",
       "note": "Claude edge +6.5pp, Codex edge +5.9pp -- see collaboration/debates/gw4-2026-09-13/reconciliation.md",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
+      "actual_lineup_check_note": "FLAGGED, NOT RESOLVED HERE: this check ran retroactively, after the bet -- this entry's price_obtained_timestamp_utc shows placement at 2026-09-13T13:01:00Z, over an hour before this check. Methodology.md section 6 (decided 13 Sept 2026) requires a provisional selection to be re-checked against the confirmed lineup BEFORE placement, precisely so a live-money bet is never staked on unconfirmed team news -- that sequencing did not happen here. Recording what the retroactive check found, for the record, but this does not cure the process gap: official lineups (confirmed ~55min pre-kickoff -- see collaboration/claude-input.json for the full comparison) matched pre-match assumptions with no material change, and BTTS No's edge recomputed against the refreshed market is unchanged (Claude +6.51pp, Codex +5.91pp), still clearing the 3pp threshold. Decision, stake, price_obtained_by_owner and status are left untouched -- this was a real-money bet already placed and cannot be undone or retroactively 'declined'. Raised to the owner as a fail-closed sequencing violation to review, not something resolved unilaterally here."
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",

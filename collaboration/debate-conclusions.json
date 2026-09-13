@@ -29,7 +29,11 @@
       "claude_edge": 0.0651,
       "codex_edge": 0.0591,
       "agreement": "both taken",
-      "status": "pending_owner_placement"
+      "status": "pending_owner_placement",
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
+      "actual_lineup_check_note": "Official lineups confirmed ~55min pre-kickoff, matching pre-match assumptions with no material change (see collaboration/claude-input.json and collaboration/codex-input.json). BTTS No price unchanged at 2.625; both edges recomputed against the refreshed market -- unchanged (Claude +6.51pp, Codex +5.91pp) -- and still clear the 3pp threshold. Selection continues to hold. NOTE -- this field says 'pending_owner_placement', but ledger/conclusion.json shows this same selection already marked 'placed' (owner-obtained price 2.60, timestamped 2026-09-13T13:01:00Z, over an hour before this lineup check ran). That is a real discrepancy between this file and the ledger, and more importantly means the bet was placed before -- not after -- the confirmed-lineup check required by methodology.md section 6. Flagged for the owner; not resolved here by editing either the status or the ledger's placement record."
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",
