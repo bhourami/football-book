@@ -87,6 +87,20 @@ fixture, that is a no-bet, recorded as `insufficient_evidence` in the
 selection card (section 8) and logged in the rejected-selection audit
 (section 9) exactly like any other decline.
 
+**Decided 13 September 2026, owner's call: "team news confirmed" means
+the official starting lineup (teamsheet) has been published** —
+typically around an hour before kick-off — not the pre-match
+injury/doubt reporting used to form the initial probability estimate.
+A selection formed from pre-lineup reporting is **provisional**: it
+must be re-checked against the actual confirmed lineup before the
+bet is placed. If the real lineup differs materially from what the
+estimate assumed (an expected absentee starts, a expected starter is
+rested, an unreported change), the probability estimate and edge are
+recomputed at that point, and the selection can flip from taken to
+declined or vice versa. A provisional selection is not itself a
+completed selection card — it becomes one only once the lineup check
+has happened, recorded with its own timestamp.
+
 ## 7. Edge and the selection rule — decided
 Every price states a strike rate. There is no bet unless our own
 probability estimate differs from the market's fair probability, and
