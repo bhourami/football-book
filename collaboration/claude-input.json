@@ -1,5 +1,81 @@
 {
-  "$comment": "Claude's own opening selections. Claude writes only this file. See /collaboration/PROTOCOL.md before adding an entry — the opening for a fixture must be written and committed here before Claude is shown anything from codex-input.json for that fixture.",
+  "$comment": "Claude's own opening selections. Written and committed to disk before Codex's blind run for this gameweek (protocol.md). Probability estimates were formed from team-news/form research before the market prices were used for anything beyond computing edge against them -- prices were already visible from the research pass (Claude did the odds research itself), so true price-blindness isn't achievable for the human-facing narrative reasoning below; the discipline enforced instead is: the stated probability was written down before edge was computed, and was not revised after seeing how large the resulting edge was, per methodology section 7.",
   "analyst": "claude",
-  "selections": []
+  "run_at_utc": "2026-09-13T02:45:00Z",
+  "estimate_method": "Qualitative, form-and-injury-adjusted probability estimate: recent-form base rate (points/goals this season) adjusted for home advantage and the specific injury/availability news gathered for each side. This is NOT a fitted statistical model (no Poisson goal model, no xG data pulled) -- it is a reasoned qualitative estimate, and Claude flags that it should not be trusted at the same confidence level as a quantitative model, especially where it disagrees with the market by a wide margin.",
+  "selections": [
+    {
+      "fixture_id": "2026-09-13-COV-BHA",
+      "market": "match_result",
+      "our_probabilities": { "home_win": 0.22, "draw": 0.28, "away_win": 0.50 },
+      "reasoning": "Coventry bottom of the table, 0 goals scored in 3 games, 5 conceded, missing Wright/Kesler-Hayden/Woolfenden/Cherif. Brighton missing a long list of attacking players (Minteh, Mitoma, Ferguson, Tzimas among others) and have lost their last three league away games specifically, despite good overall form. The gap is real but Brighton's away form and depleted attack narrow it more than the raw table position suggests.",
+      "candidate_selection": "draw",
+      "price": 3.90, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "overround": 0.0469, "fair_probability": 0.2449, "edge": 0.0351,
+      "decision": "taken",
+      "decision_reason": "edge clears 3pp threshold, though narrowly -- within the likely error bars of a qualitative estimate; low confidence",
+      "team_news_status": "confirmed",
+      "team_news_note": "Confirmed = credible recent injury/availability reporting from multiple outlets, not the hour-before teamsheet, which isn't out yet for any fixture in this batch. This reading of 'confirmed' is not settled in spec/methodology.md -- flagged for the owner."
+    },
+    {
+      "fixture_id": "2026-09-13-COV-BHA",
+      "market": "btts",
+      "our_probabilities": { "yes": 0.32, "no": 0.68 },
+      "reasoning": "Coventry have not scored in three league games. Weighted that heavily.",
+      "candidate_selection": "btts_no",
+      "price": 2.10, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "overround": 0.0761, "fair_probability": 0.4425, "edge": 0.2375,
+      "decision": "declined",
+      "decision_reason": "edge_implausible_model_uncertainty -- a 24-point disagreement with a liquid market, on the first-ever run of an unvalidated qualitative method, is far more likely to be Claude's estimate being wrong than a genuine mispricing. Recording the number honestly rather than quietly rounding it down, but recommending against treating this as real edge. Not adjusted after the fact to a smaller number -- declined outright instead, per methodology's own warning against a book that always agrees with itself.",
+      "team_news_status": "confirmed"
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI",
+      "market": "match_result",
+      "our_probabilities": { "home_win": 0.31, "draw": 0.24, "away_win": 0.45 },
+      "reasoning": "Man City near-perfect start under Maresca, Haaland exceptional form, fewer injury concerns. Man Utd missing Baleba, de Ligt, Ugarte, Heaton, Amad Diallo, Shaw doubtful. Landed close to Opta's own supercomputer figures (City 44.2/Utd 31.6/Draw 24.2), which is itself a signal there's little differentiated view here.",
+      "candidate_selection": "away_win",
+      "price": 2.15, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:23:00Z",
+      "overround": 0.0509, "fair_probability": 0.4426, "edge": 0.0074,
+      "decision": "declined",
+      "decision_reason": "edge_below_threshold",
+      "team_news_status": "confirmed"
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI",
+      "market": "btts",
+      "our_probabilities": { "yes": 0.58, "no": 0.42 },
+      "reasoning": "Both sides can score, but City's defensive solidity under Maresca and Utd's inconsistent attack (1 win from 3) make a City-dominant, Utd-shut-out scoreline plausible enough that the market's 64.5% fair BTTS-yes looks a little high.",
+      "candidate_selection": "btts_no",
+      "price": 2.625, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:23:00Z",
+      "overround": 0.0735, "fair_probability": 0.3549, "edge": 0.0651,
+      "decision": "taken",
+      "decision_reason": "edge clears 3pp threshold with a moderate, plausible-sized disagreement (not an outlier like the Coventry BTTS figure)",
+      "team_news_status": "confirmed"
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW",
+      "market": "match_result",
+      "our_probabilities": { "home_win": 0.35, "draw": 0.30, "away_win": 0.35 },
+      "reasoning": "Leeds winless in 3 in all competitions but decent underlying start (5 pts from 3). Newcastle unbeaten in 5 under new manager Jaissle and won both away games this season, but missing Joelinton and Dan Burn for certain, plus goalkeeper and full-back doubts -- real defensive depletion for an away side.",
+      "candidate_selection": "away_win",
+      "price": 3.00, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "overround": 0.0538, "fair_probability": 0.3163, "edge": 0.0337,
+      "decision": "taken",
+      "decision_reason": "edge clears 3pp threshold, narrowly -- low confidence",
+      "team_news_status": "confirmed"
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW",
+      "market": "btts",
+      "our_probabilities": { "yes": 0.55, "no": 0.45 },
+      "reasoning": "Newcastle's defensive injuries cut both ways for BTTS; landed close to the market's own fair price.",
+      "candidate_selection": "btts_no",
+      "price": 2.20, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "overround": 0.0606, "fair_probability": 0.4286, "edge": 0.0214,
+      "decision": "declined",
+      "decision_reason": "edge_below_threshold",
+      "team_news_status": "confirmed"
+    }
+  ]
 }

@@ -1,4 +1,61 @@
 {
-  "$comment": "Written only by the reconciliation step described in /collaboration/PROTOCOL.md. Never hand-edited to fit a result. A bet appears here only when Claude's and Codex's final positions agree on market, selection and stake, and neither is blocked by fail-closed.",
-  "conclusions": []
+  "$comment": "Written only by the reconciliation step described in /collaboration/PROTOCOL.md. Never hand-edited to fit a result. A bet appears here only when Claude's and Codex's final positions agree on market, selection and stake, and neither is blocked by fail-closed. Full workings: /collaboration/debates/gw4-2026-09-13/reconciliation.md",
+  "conclusions": [
+    {
+      "fixture_id": "2026-09-13-COV-BHA",
+      "market": "match_result",
+      "selection": "draw",
+      "kickoff_utc": "2026-09-13T13:00:00Z",
+      "price": 3.90,
+      "price_source": "oddschecker.com (Bet365 line)",
+      "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "claude_edge": 0.0351,
+      "codex_edge": 0.0481,
+      "agreement": "both taken",
+      "status": "pending_owner_placement"
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI",
+      "market": "btts",
+      "selection": "btts_no",
+      "kickoff_utc": "2026-09-13T15:30:00Z",
+      "price": 2.625,
+      "price_source": "oddschecker.com (Bet365 line)",
+      "price_timestamp_utc": "2026-09-13T02:23:00Z",
+      "claude_edge": 0.0651,
+      "codex_edge": 0.0591,
+      "agreement": "both taken",
+      "status": "pending_owner_placement"
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW",
+      "market": "match_result",
+      "selection": "away_win",
+      "kickoff_utc": "2026-09-14T19:00:00Z",
+      "price": 3.00,
+      "price_source": "oddschecker.com (Bet365 line)",
+      "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "claude_edge": 0.0337,
+      "codex_edge": 0.1117,
+      "agreement": "both taken",
+      "status": "pending_owner_placement"
+    }
+  ],
+  "no_position": [
+    {
+      "fixture_id": "2026-09-13-COV-BHA",
+      "market": "btts",
+      "reason": "Claude declined on model-confidence grounds despite the edge formula clearing the threshold (+23.8pp); Codex took it (+16.4pp). Disagreement preserved."
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI",
+      "market": "match_result",
+      "reason": "Claude declined (+0.7pp, below threshold); Codex took Man City to win (+11.7pp). Disagreement preserved."
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW",
+      "market": "btts",
+      "reason": "Claude declined (+2.1pp, below threshold); Codex took BTTS No (+3.6pp). Disagreement preserved."
+    }
+  ]
 }

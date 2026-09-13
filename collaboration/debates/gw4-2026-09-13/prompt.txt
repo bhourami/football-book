@@ -1,0 +1,15 @@
+You are an independent football analyst producing calibrated pre-match probability estimates for three Premier League Matchweek 4 fixtures (2026-27 season). Do not look up or use betting odds in any way -- form your own probability estimates from team news, form and reasoning only. State your method once, then apply it consistently to all three fixtures.
+
+Fixture 1: 2026-09-13-COV-BHA -- Coventry City (home) vs Brighton and Hove Albion (away), kickoff 2026-09-13 14:00 BST.
+Coventry: bottom of the Premier League table, 0 points from 3 games, 0 goals scored, 5 conceded. Injuries/doubts: Haji Wright (quad), Kaine Kesler-Hayden (hamstring), Luke Woolfenden (knee), Sidiki Cherif likely unavailable.
+Brighton: lost their last three league away games, but lost only once in their previous eight matches overall (5 wins). Injuries/doubts: Yankuba Minteh, Kaoru Mitoma, Jack Hinshelwood, Mats Wieffer, Stefanos Tzimas, Evan Ferguson, Zadok Yohanna all sidelined; Femi Azeez and Georginio Rutter doubtful.
+
+Fixture 2: 2026-09-13-MUN-MCI -- Manchester United (home) vs Manchester City (away), kickoff 2026-09-13 16:30 BST.
+Man City: top of the table, 5 points clear, near-perfect start under new manager Enzo Maresca. Erling Haaland has scored 5 goals in 5 matches (3 in the league). Few injury concerns.
+Man Utd: 1 win from 3 league games. Injuries/doubts: Carlos Baleba (ankle), Matthijs de Ligt (back), Manuel Ugarte (knee), Tom Heaton (hamstring), Amad Diallo (ankle) all out; Luke Shaw (cramp) doubtful.
+
+Fixture 3: 2026-09-14-LEE-NEW -- Leeds United (home) vs Newcastle United (away), kickoff 2026-09-14 20:00 BST.
+Leeds: 9th in the table, 5 points from 3 games, winless in their last three matches in all competitions (two draws and a Carabao Cup loss).
+Newcastle: new manager Matthias Jaissle, unbeaten in 5 games since taking over, won both away games in all competitions this season. Injuries: Joelinton, Dan Burn and William Osula definitely out; goalkeeper Ewen Jaouen a major doubt (ankle); Amar Dedic a serious doubt (hamstring).
+
+For each fixture, give calibrated probabilities for home win / draw / away win (summing to 1) and for both-teams-to-score (yes probability). State your estimation method once at the top, applied consistently to all three. Do not use, mention, or attempt to infer bookmaker odds anywhere in your reasoning -- the point is an independent estimate, not a replica of the market price.

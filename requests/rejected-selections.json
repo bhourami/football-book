@@ -1,4 +1,27 @@
 {
   "$comment": "Methodology section 9. Every declined selection, from any book, logged with the identical selection-card fields as a taken bet (decision: 'declined', decision_reason required). Never pruned or summarised away.",
-  "entries": []
+  "entries": [
+    {
+      "fixture_id": "2026-09-13-COV-BHA", "market": "btts", "selection": "btts_no",
+      "analyst": "claude", "our_probability": 0.68, "edge": 0.2375,
+      "price": 2.10, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "decision": "declined", "decision_reason": "edge_implausible_model_uncertainty",
+      "team_news_status": "confirmed",
+      "note": "Codex's independent estimate agreed in direction (+16.4pp), declined anyway per methodology's rule against revising a position after seeing another number -- see reconciliation.md"
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI", "market": "match_result", "selection": "away_win",
+      "analyst": "claude", "our_probability": 0.45, "edge": 0.0074,
+      "price": 2.15, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:23:00Z",
+      "decision": "declined", "decision_reason": "edge_below_threshold",
+      "team_news_status": "confirmed"
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW", "market": "btts", "selection": "btts_no",
+      "analyst": "claude", "our_probability": 0.45, "edge": 0.0214,
+      "price": 2.20, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-13T02:24:00Z",
+      "decision": "declined", "decision_reason": "edge_below_threshold",
+      "team_news_status": "confirmed"
+    }
+  ]
 }

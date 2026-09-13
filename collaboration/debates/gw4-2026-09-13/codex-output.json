@@ -1,0 +1,32 @@
+{
+  "estimate_method": "Using the supplied information as given, I assign expected goals to each team from a qualitative assessment of underlying strength, home advantage, recent performance and player availability. I give limited weight to three-game league samples and short streaks. For every fixture, independent Poisson goal distributions produce home/draw/away probabilities and BTTS probability, calculated as (1−exp(−home expected goals))×(1−exp(−away expected goals)). These are judgment-based estimates, not an empirically validated calibration; confidence reflects uncertainty in the inputs.",
+  "fixtures": [
+    {
+      "fixture_id": "2026-09-13-COV-BHA",
+      "home_win_probability": 0.238,
+      "draw_probability": 0.293,
+      "away_win_probability": 0.469,
+      "btts_yes_probability": 0.393,
+      "reasoning": "Expected goals: Coventry 0.80, Brighton 1.25. Coventry's scoreless start and attacking absences reduce their scoring outlook, although three matches provide limited evidence. Brighton's stronger overall form supports an away advantage, moderated substantially by their extensive absences and recent away defeats. Reduced attacking availability on both sides raises the draw chance and lowers BTTS.",
+      "confidence": "low"
+    },
+    {
+      "fixture_id": "2026-09-13-MUN-MCI",
+      "home_win_probability": 0.221,
+      "draw_probability": 0.219,
+      "away_win_probability": 0.56,
+      "btts_yes_probability": 0.586,
+      "reasoning": "Expected goals: Manchester United 1.15, Manchester City 1.95. City's strong start, Haaland's scoring and relatively healthy squad support a clear advantage. United's defensive and midfield absences increase City's scoring prospects, while Amad's absence weakens United's attack. Home advantage keeps United's scoring and winning chances meaningful. Uncertainty around City's managerial transition limits confidence.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-14-LEE-NEW",
+      "home_win_probability": 0.313,
+      "draw_probability": 0.259,
+      "away_win_probability": 0.428,
+      "btts_yes_probability": 0.535,
+      "reasoning": "Expected goals: Leeds 1.20, Newcastle 1.45. Newcastle's unbeaten managerial start and away results support a modest edge, with limited weight given to the small sample and mixed competitions. Leeds' home advantage and unbeaten-looking points return of five from three keep the contest competitive. Newcastle's midfield and defensive absences narrow their advantage; goalkeeper and full-back doubts add uncertainty.",
+      "confidence": "low"
+    }
+  ]
+}
