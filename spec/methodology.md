@@ -184,15 +184,35 @@ that is well calibrated but unprofitable has a pricing problem it can
 fix. A book that is miscalibrated is guessing, whatever the profit
 looks like.
 
-## 12. Accumulators — shadow only
-No accumulators in the live book. The house margin compounds per leg
-(roughly 18-20% against a four-leg accumulator at 5% overround per
-leg, before either analyst forms a view), which makes it the one
-product least likely to show a real edge even if one exists in the
-underlying selections. For every taken single, or pair of same-day
-singles, record what the accumulator equivalent would have paid, in a
-shadow column, at the same prices. Twenty weeks of that data decides
-whether accumulators earn a place — not before.
+## 12. Accumulators — decided
+Originally frozen as shadow-only: no accumulators in the live book,
+because the house margin compounds per leg (roughly 18-20% against a
+four-leg accumulator at 5% overround per leg, before either analyst
+forms a view), making it the product least likely to show a real edge
+even if one exists in the underlying selections. That reasoning stands
+and is not deleted — an accumulator is still a much harder bar to
+clear than any single leg.
+
+**Amended 13 September 2026, owner's call: accumulators are now
+permitted in the live book**, at the owner's discretion, under these
+rules:
+- An accumulator may only combine selections that a single book
+  (Claude-solo, Codex-solo, or conclusion) has itself already taken
+  as its own selections that gameweek — never a mix pulled from
+  different books, and never a selection any book declined.
+- Staked separately from the singles (its own flat £10 stake),
+  charged against that book's own bank, and counted as one additional
+  bet toward that book's 20-bet ceiling and bet-10 review checkpoint.
+- Recorded as its own entry, showing every leg's price and the
+  combined price, never merged into the single-selection rows.
+
+**OPEN — no combined-edge threshold is defined for accumulators.**
+Section 7's 3pp threshold gates each single leg's *individual*
+selection, not the combined accumulator price. Until this is set, an
+accumulator is a discretionary bonus bet layered on top of selections
+that already cleared the single-leg threshold on their own — not
+itself a modelled, edge-gated selection. Do not treat an accumulator
+being placed as evidence the process endorses its combined price.
 
 ## 13. Boundaries
 The desk researches, records and evaluates. It does not place bets

@@ -1,39 +1,15 @@
 {
-  "$comment": "Real-money bets placed outside the frozen three-book structure. Never silently merged into claude.json / codex.json / conclusion.json, and never treated as validating or invalidating the frozen rule they depart from -- see spec/methodology.md section 12, which explicitly excludes accumulators from the live book. Recorded here so nothing is hidden, per the fail-closed/frozen-rules discipline: conflicts with the frozen methodology are raised, not resolved quietly.",
+  "$comment": "Real-money bets placed outside the frozen three-book structure at the time they were placed. An entry moves out of this file only if a later, deliberate, dated methodology amendment brings it in scope of one of the three books -- it is never deleted, only annotated with where it went.",
   "entries": [
     {
       "type": "accumulator",
       "placed_at_utc": "2026-09-13T13:01:00Z",
       "bookmaker": "Ladbrokes",
       "stake_gbp": 10,
-      "boosted_from": "26.89/1",
-      "boosted_to": "29.20/1",
-      "potential_returns_gbp": 302.10,
-      "legs": [
-        {
-          "fixture_id": "2026-09-13-COV-BHA",
-          "market": "match_result",
-          "selection": "draw",
-          "price": 3.80,
-          "price_note": "2Up&Win - Early Payout enhanced product, same as the single leg's product type"
-        },
-        {
-          "fixture_id": "2026-09-13-MUN-MCI",
-          "market": "btts",
-          "selection": "btts_no",
-          "price": 2.65
-        },
-        {
-          "fixture_id": "2026-09-14-LEE-NEW",
-          "market": "match_result",
-          "selection": "away_win",
-          "price": 3.00
-        }
-      ],
-      "methodology_conflict": "spec/methodology.md section 12: 'No accumulators in the live book... the house margin compounds per leg.' This bet directly contradicts that rule. It was placed by the owner's own choice ('for good measure'), not selected or recommended by any of the three books' process.",
-      "bank_attribution": "OPEN -- not charged against any of the three £200 books' bank_gbp. Owner to confirm whether this £10 should count against one of the three banks, or is genuinely separate money outside the whole tracked structure. Left unresolved rather than assumed.",
-      "result": "pending",
-      "settled_pl_gbp": null
+      "status": "MOVED",
+      "moved_to": "ledger/conclusion.json (accumulator entry)",
+      "moved_reason": "methodology.md section 12 amended 13 September 2026 to permit accumulators combining a single book's own already-taken selections. This accumulator's three legs are exactly the conclusion book's three taken selections, so it now belongs there rather than here.",
+      "note": "Originally recorded here because at the moment it was placed, section 12 still read 'no accumulators in the live book.' Kept as a record of that sequence: the bet was placed before the rule permitting it existed, and the rule was changed afterward to accommodate it. Not held up as an example of good process -- flagged, not endorsed."
     }
   ]
 }
