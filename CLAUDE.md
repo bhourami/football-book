@@ -69,3 +69,13 @@ No team news, no bet. Missing or unconfirmed inputs are never defaulted to a
 selection — see methodology section 6. This applies identically to the
 rejected-selection audit: a decline for insufficient evidence is recorded
 with the same fields as a taken bet.
+
+## Bookmaker UI risk
+
+On Matchweek 4's first placements, the owner twice ended up on something he
+didn't mean to: a "2Up&Win - Early Payout" enhanced single instead of the
+plain market, and an odds boost applied without realising what it was. Both
+were mis-taps, not deliberate choices, and both were recorded honestly with
+that noted rather than presented as considered decisions. When recording
+`price_obtained_by_owner`, if the product, price or structure looks unusual
+next to what was modelled, ask rather than assume it was intentional.
