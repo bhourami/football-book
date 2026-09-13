@@ -15,13 +15,13 @@
       "market": "match_result",
       "selection": "draw",
       "our_probability": 0.28,
-      "edge": 0.0351,
+      "edge": 0.0348,
       "price": 3.9,
       "price_source": "oddschecker.com (Bet365 line)",
       "price_timestamp_utc": "2026-09-13T02:24:00Z",
       "stake_gbp": 10,
       "decision": "taken",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
       "analyst": "claude",
       "price_obtained_by_owner": null,
       "price_obtained_timestamp_utc": null,
@@ -30,8 +30,10 @@
       "result": null,
       "settled_pl_gbp": null,
       "status": "pending_owner_placement",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-13T12:02:50Z",
+      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json for full comparison). Draw price unchanged at 3.90; edge recomputed against refreshed Bet365 odds via scripts/edge_calculator.py -- still clears the 3pp threshold. Selection remains taken."
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",

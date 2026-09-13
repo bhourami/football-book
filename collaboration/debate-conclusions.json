@@ -9,10 +9,14 @@
       "price": 3.90,
       "price_source": "oddschecker.com (Bet365 line)",
       "price_timestamp_utc": "2026-09-13T02:24:00Z",
-      "claude_edge": 0.0351,
-      "codex_edge": 0.0481,
+      "claude_edge": 0.0348,
+      "codex_edge": 0.0478,
       "agreement": "both taken",
-      "status": "pending_owner_placement"
+      "status": "pending_owner_placement",
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-13T12:02:50Z",
+      "actual_lineup_check_note": "Official lineups confirmed ~1hr pre-kickoff, matching pre-match assumptions with no material change. Draw price unchanged at 3.90; edges recomputed against refreshed Bet365 odds (Coventry 3.80 / Draw 3.90 / Brighton 1.90). Both edges still clear the 3pp threshold -- selection continues to hold."
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",

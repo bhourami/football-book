@@ -17,15 +17,17 @@
       "price": 3.9,
       "price_source": "oddschecker.com (Bet365 line)",
       "price_timestamp_utc": "2026-09-13T02:24:00Z",
-      "overround": 0.0469,
-      "fair_probability": 0.2449,
-      "edge": 0.0351,
+      "overround": 0.0459,
+      "fair_probability": 0.2452,
+      "edge": 0.0348,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold, though narrowly -- within the likely error bars of a qualitative estimate; low confidence",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
       "team_news_note": "Confirmed = credible recent injury/availability reporting from multiple outlets, not the hour-before teamsheet, which isn't out yet for any fixture in this batch. This reading of 'confirmed' is not settled in spec/methodology.md -- flagged for the owner.",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-13T12:02:50Z",
+      "actual_lineup_check_note": "Official confirmed lineups published (101greatgoals.com, corroborated by other outlets citing the same XIs; Lampard and Hurzeler both confirmed via post-teamsheet quotes). Coventry XI as expected minus Wright/Kesler-Hayden/Woolfenden (Josh Eccles also out, not previously listed); Sidiki Cherif is fit and among the substitutes -- the assumption that he was absent was wrong, but he did not start, so it does not change the picture. Brighton XI confirms all previously assumed absentees (Minteh, Mitoma, Hinshelwood, Wieffer, Tzimas, Ferguson, Yohanna) still out; neither possible returnee (Azeez, Rutter) started. No material change to the picture -- probability estimate held at 0.28. Re-fetched Bet365 match-result odds (oddschecker.com): Coventry 14/5 (3.80), Draw 29/10 (3.90), Brighton 9/10 (1.90) -- draw price unchanged, edge recomputed against the refreshed market odds via scripts/edge_calculator.py."
     },
     {
       "fixture_id": "2026-09-13-COV-BHA",
