@@ -1,6 +1,7 @@
 # Football Book — Frozen Methodology
 Version: V1
 Frozen: 12 September 2026
+Last amended: 13 September 2026 (section 7 edge threshold set)
 Status: authoritative. No session may change or reinterpret any
 definition below. Conflicts are raised as errors, never resolved
 locally. Source: `football-book-handoff.md`, written 12 September 2026
@@ -86,11 +87,23 @@ fixture, that is a no-bet, recorded as `insufficient_evidence` in the
 selection card (section 8) and logged in the rejected-selection audit
 (section 9) exactly like any other decline.
 
-## 7. Edge and the selection rule — OPEN (threshold)
+## 7. Edge and the selection rule — decided
 Every price states a strike rate. There is no bet unless our own
 probability estimate differs from the market's fair probability, and
 differs by more than a stated threshold. A team can look excellent and
 still not be a bet, because the price already says it is excellent.
+
+**Decided 13 September 2026, owner's call: minimum edge = 3 percentage
+points.** A selection qualifies only when our probability estimate
+exceeds the fair probability (section 7 formula below) by at least
+0.03. Below that, the selection is declined and logged in the
+rejected-selection audit (section 9) like any other decline, with
+`decision_reason: edge_below_threshold`.
+
+This is a starting floor, not a permanent one. It may be revisited
+after a first batch of results — but only as a deliberate, dated,
+written change to this section, never adjusted mid-run to fit how a
+bet or a run of bets turned out (frozen rules, top of this document).
 
     implied probability   = 1 / decimal odds
     overround             = sum of implied probabilities
@@ -100,11 +113,6 @@ still not be a bet, because the price already says it is excellent.
     break-even strike     = fair probability
 
 Reference implementation: `/scripts/edge_calculator.py`.
-
-**OPEN:** the minimum edge, after the margin is removed, required for
-a bet — "a floor, not a preference." No number is set. This document
-must be updated with that number, by the owner, before bet one. Until
-it is set, no selection may be entered into the live book.
 
 Our probability must come from a stated model — base rates, xG-
 derived expectations, home advantage, availability — fitted before the
@@ -190,5 +198,8 @@ from public sources only — no account login is used for research.
 1. ~~Section 4 — real-money scope of the three books.~~ Decided 12
    September 2026: all three books real, £200 each, £600 total real
    exposure.
-2. Section 7 — the minimum edge threshold. Still open; no bet may be
-   entered into any of the three live books until this is set.
+2. ~~Section 7 — the minimum edge threshold.~~ Decided 13 September
+   2026: 3 percentage points.
+
+No sections remain open. Bet one may proceed under this document as
+written.
