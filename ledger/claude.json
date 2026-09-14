@@ -67,13 +67,14 @@
       "market": "match_result",
       "selection": "away_win",
       "our_probability": 0.35,
-      "edge": 0.0337,
-      "price": 3.0,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-13T02:24:00Z",
-      "stake_gbp": 10,
-      "decision": "taken",
-      "team_news_status": "unconfirmed",
+      "edge": 0.0129,
+      "price": 2.80,
+      "price_source": "BetMGM (via sportsbettingdime.com), Sep 14 2026 03:36 ET / ~07:36 UTC -- see collaboration/claude-input.json for the full lineup-check note",
+      "price_timestamp_utc": "2026-09-14T07:36:00Z",
+      "stake_gbp": 0,
+      "decision": "declined",
+      "decision_reason": "edge_below_threshold",
+      "team_news_status": "confirmed",
       "analyst": "claude",
       "price_obtained_by_owner": null,
       "price_obtained_timestamp_utc": null,
@@ -81,9 +82,11 @@
       "clv": null,
       "result": null,
       "settled_pl_gbp": null,
-      "status": "pending_owner_placement",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "status": "declined",
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-14T18:10:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions with one mild-positive-for-Newcastle deviation (Dedic started over Livramento) -- no material change to the probability estimate, held at 0.35. But the away-win price drifted from 3.00 to 2.80 since research time; edge recomputed via scripts/edge_calculator.py against the refreshed market is now +1.29pp, below the 3pp threshold (was +3.37pp). Decision changed from taken to declined on this book; never placed (was still pending_owner_placement, so no real money is affected). Logged to requests/rejected-selections.json. Codex's own book/input still holds this selection (its independent edge remains +9.09pp at this price) -- see collaboration/codex-input.json and ledger/codex.json."
     }
   ]
 }

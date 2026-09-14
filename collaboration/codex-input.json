@@ -117,18 +117,20 @@
         "away": 1.45
       },
       "candidate_selection": "away_win",
-      "price": 3.0,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-13T02:24:00Z",
-      "overround": 0.0538,
-      "fair_probability": 0.3163,
-      "edge": 0.1117,
+      "price": 2.80,
+      "price_source": "BetMGM (via sportsbettingdime.com), Sep 14 2026 03:36 ET / ~07:36 UTC -- see collaboration/claude-input.json for the full lineup-check comparison and why oddschecker.com's raw table wasn't usable this check",
+      "price_timestamp_utc": "2026-09-14T07:36:00Z",
+      "overround": 0.0595,
+      "fair_probability": 0.3371,
+      "edge": 0.0909,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
       "confidence": "low",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-14T18:10:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups published ~1hr13min pre-kickoff (see collaboration/claude-input.json for the full XI comparison). Joelinton, Dan Burn and Osula out as assumed; Hornicek in goal (Jaouen's doubt resolved to absence, as expected); Dedic started at right-back rather than Livramento covering -- the one deviation from the pre-match assumption, and a mild positive for Newcastle's defensive solidity, not a negative. No material change to the picture; probability estimate held at 0.428. Match-result price drifted from 3.00 to 2.80 on Newcastle (normal market movement). Overround/fair-probability/edge recomputed via scripts/edge_calculator.py against the refreshed market (Leeds 2.40 / Draw 3.50 / Newcastle 2.80): edge now +9.09pp (was +11.17pp) -- still comfortably clears the 3pp threshold. Selection remains taken. Note: Claude's own independent recompute at this same price puts Claude's edge at only +1.29pp, below Claude's 3pp threshold -- Claude's book and input file decline this selection on this recheck, Codex's does not (see collaboration/claude-input.json)."
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",
@@ -138,18 +140,20 @@
         "no": 0.465
       },
       "candidate_selection": "btts_no",
-      "price": 2.2,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-13T02:24:00Z",
-      "overround": 0.0606,
-      "fair_probability": 0.4286,
-      "edge": 0.0364,
+      "price": 2.28,
+      "price_source": "BetMGM (via sportsgambler.com; BTTS Yes -175 confirmed independently at 8/13 (1.615)/best price 1.62 by LiveScore Bet and other aggregated sources per search)",
+      "price_timestamp_utc": "2026-09-12T20:28:00Z",
+      "overround": 0.0750,
+      "fair_probability": 0.4080,
+      "edge": 0.0570,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
       "confidence": "low",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true,
-      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed."
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
+      "actual_lineup_check_timestamp_utc": "2026-09-14T18:10:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups published ~1hr13min pre-kickoff (see collaboration/claude-input.json for the full XI comparison); both sides' front lines (Calvert-Lewin for Leeds; Wissa/Barnes/Fernandez-Pardo for Newcastle) and the one real change (Dedic starting over Livramento at right-back) do not materially shift a goals-both-ends view either way. No material change; probability estimate held at 0.465. BTTS price moved from 2.20 to 2.28 on No (BTTS Yes -175/1.5714 at BetMGM, corroborated in range by LiveScore Bet's 8/13 and a separately reported best price of 1.62 for Yes -- multiple sources cluster closely; oddschecker.com's own BTTS page returned no usable data on this check). Edge recomputed via scripts/edge_calculator.py: +5.70pp (was +3.64pp) -- still clears the 3pp threshold. Selection remains taken. This is the only pending pick that is Codex-solo-only (no equivalent Claude selection to compare against, per the pre-existing disagreement recorded in requests/rejected-selections.json)."
     }
   ]
 }
