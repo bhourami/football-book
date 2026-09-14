@@ -1,0 +1,33 @@
+You are an independent football analyst producing calibrated pre-match probability estimates for ten Premier League Matchweek 5 fixtures (2026-27 season). Do not look up or use betting odds in any way -- form your own probability estimates from team news, form and reasoning only. State your method once, then apply it consistently to all ten fixtures.
+
+Fixture 1: 2026-09-18-BRE-CHE -- Brentford (home) vs Chelsea (away), Fri 18 Sep, 20:00 BST.
+Chelsea missing: Moises Caicedo (knock), Jordan Henderson (wrist), Emmanuel Emegha (hamstring), Dastan Satpaev (thigh), Marco Palestra (physical). Henderson/Emegha may be assessed through the week. Brentford missing captain Nathan Collins (calf, out until after the international break). Both sides drew 2-2 in their previous league match (Chelsea 2-2 Hull City; Bournemouth 2-2 Brentford).
+
+Fixture 2: 2026-09-19-TOT-AVL -- Tottenham Hotspur (home) vs Aston Villa (away), Sat 19 Sep, 12:30 BST.
+Tottenham missing: Mohammed Kudus, James Maddison, Dominic Solanke, Xavi Simons (long-term ACL tear), Wilson Odobert. Tottenham drew 0-0 with Everton last time out. Aston Villa missing: Brian Madjo, Tammy Abraham, Joao Gomes, Leon Bailey, Amadou Onana, Johan Manzambi.
+
+Fixture 3: 2026-09-19-BHA-ARS -- Brighton and Hove Albion (home) vs Arsenal (away), Sat 19 Sep, 15:00 BST.
+Brighton missing: Zadok Yohanna, Michael Svoboda, Mats Wieffer, Georginio Rutter, Jack Hinshelwood. Arsenal missing three first-choice centre-backs at once: Cristhian Mosquera, Jurrien Timber, William Saliba.
+
+Fixture 4: 2026-09-19-EVE-IPS -- Everton (home) vs Ipswich Town (away), Sat 19 Sep, 15:00 BST.
+Everton drew 0-0 with Tottenham last time out, minimal injury concerns reported. Ipswich Town in good form since promotion (beat Sunderland 2-1, beat Leicester 3-1 in the League Cup), missing only Jaden Philogene-Bidace (ankle, expected back around now).
+
+Fixture 5: 2026-09-19-NEW-HUL -- Newcastle United (home) vs Hull City (away), Sat 19 Sep, 15:00 BST.
+Newcastle missing: Dan Burn (ankle), Joelinton (thigh), Jacob Ramsey (thigh), William Osula (ankle), Nico Gonzalez (concussion), Ewen Jaouen (ankle), Anthony Elanga -- both club captain (Burn) and vice-captain (Joelinton) out simultaneously. Hull City drew 2-2 away at Chelsea last time out; no specific injury details found beyond general long-term absentees unrelated to this match.
+
+Fixture 6: 2026-09-19-NFO-COV -- Nottingham Forest (home) vs Coventry City (away), Sat 19 Sep, 17:30 BST.
+Nottingham Forest missing defenders Nicolo Savona, Nikola Milenkovic, Jair Cunha, but attack intact (Gibbs-White, Delap, Igor Jesus all scoring this season). Coventry City missing suspended top scorer Taiwo Awoniyi plus injured Haji Wright, Kaine Kesler-Hayden, Josh Eccles, Luke Woolfenden, with Frank Onyeka a doubt. Coventry are bottom of the table.
+
+Fixture 7: 2026-09-20-BOU-LIV -- Bournemouth (home) vs Liverpool (away), Sun 20 Sep, 14:00 BST.
+Bournemouth missing: Julian Araujo (thigh), Eli Kroupi (ankle/foot), Amine Adli (calf), Veljko Milosavljevic (knee). Liverpool missing: Conor Bradley (knee), Giovanni Leoni (knee), Hugo Ekitike (calf), Federico Chiesa (lower back); Joe Gomez a doubt.
+
+Fixture 8: 2026-09-20-LEE-CRY -- Leeds United (home) vs Crystal Palace (away), Sun 20 Sep, 14:00 BST.
+Leeds United lost 1-4 at home to Newcastle in their previous league match, still missing Joe Rodon (long-term thigh) and Mateo Joseph (ACL recovery); Ilia Gruev a possible return from a knee injury. Crystal Palace have roughly 5 players out per injury trackers, no further specifics found.
+
+Fixture 9: 2026-09-20-MCI-SUN -- Manchester City (home) vs Sunderland (away), Sun 20 Sep, 14:00 BST.
+Manchester City missing John Stones, Mateo Kovacic, Oscar Bobb (injuries). Sunderland missing Ajibola Alese (injury); newly promoted this season.
+
+Fixture 10: 2026-09-20-FUL-MUN -- Fulham (home) vs Manchester United (away), Sun 20 Sep, 16:30 BST.
+Fulham beat Brighton 2-1 last time out. Manchester United beat Arsenal 3-2 last time out, missing Patrick Dorgu (thigh) and Matthijs de Ligt (back).
+
+For each fixture, give calibrated probabilities for home win / draw / away win (summing to 1) and for both-teams-to-score (yes probability). State your estimation method once at the top, applied consistently to all ten. Do not use, mention, or attempt to infer bookmaker odds anywhere in your reasoning -- the point is an independent estimate, not a replica of the market price.

@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "estimate_method": { "type": "string" },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fixture_id": { "type": "string" },
+          "home_win_probability": { "type": "number" },
+          "draw_probability": { "type": "number" },
+          "away_win_probability": { "type": "number" },
+          "btts_yes_probability": { "type": "number" },
+          "reasoning": { "type": "string" },
+          "confidence": { "type": "string", "enum": ["low", "medium", "high"] }
+        },
+        "required": ["fixture_id", "home_win_probability", "draw_probability", "away_win_probability", "btts_yes_probability", "reasoning", "confidence"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["estimate_method", "fixtures"],
+  "additionalProperties": false
+}
