@@ -1,0 +1,89 @@
+{
+  "$comment": "Matchweek 5, 2026-27 season, verified against premierleague.com/en/matches by the coordinating session before this prep was delegated.",
+  "gameweek": 5,
+  "season": "2026-27",
+  "verified_at_utc": "2026-09-15T00:00:00Z",
+  "source": "https://www.premierleague.com/en/matches/premier-league/2026-27/matchweek-5",
+  "fixtures": [
+    {
+      "fixture_id": "2026-09-18-BRE-CHE",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-18T19:00:00Z",
+      "kickoff_local": "2026-09-18T20:00:00+01:00",
+      "home_team": "Brentford",
+      "away_team": "Chelsea"
+    },
+    {
+      "fixture_id": "2026-09-19-TOT-AVL",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-19T11:30:00Z",
+      "kickoff_local": "2026-09-19T12:30:00+01:00",
+      "home_team": "Tottenham Hotspur",
+      "away_team": "Aston Villa"
+    },
+    {
+      "fixture_id": "2026-09-19-BHA-ARS",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "kickoff_local": "2026-09-19T15:00:00+01:00",
+      "home_team": "Brighton and Hove Albion",
+      "away_team": "Arsenal"
+    },
+    {
+      "fixture_id": "2026-09-19-EVE-IPS",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "kickoff_local": "2026-09-19T15:00:00+01:00",
+      "home_team": "Everton",
+      "away_team": "Ipswich Town"
+    },
+    {
+      "fixture_id": "2026-09-19-NEW-HUL",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "kickoff_local": "2026-09-19T15:00:00+01:00",
+      "home_team": "Newcastle United",
+      "away_team": "Hull City"
+    },
+    {
+      "fixture_id": "2026-09-19-NFO-COV",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-19T16:30:00Z",
+      "kickoff_local": "2026-09-19T17:30:00+01:00",
+      "home_team": "Nottingham Forest",
+      "away_team": "Coventry City"
+    },
+    {
+      "fixture_id": "2026-09-20-BOU-LIV",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-20T13:00:00Z",
+      "kickoff_local": "2026-09-20T14:00:00+01:00",
+      "home_team": "Bournemouth",
+      "away_team": "Liverpool"
+    },
+    {
+      "fixture_id": "2026-09-20-LEE-CRY",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-20T13:00:00Z",
+      "kickoff_local": "2026-09-20T14:00:00+01:00",
+      "home_team": "Leeds United",
+      "away_team": "Crystal Palace"
+    },
+    {
+      "fixture_id": "2026-09-20-MCI-SUN",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-20T13:00:00Z",
+      "kickoff_local": "2026-09-20T14:00:00+01:00",
+      "home_team": "Manchester City",
+      "away_team": "Sunderland"
+    },
+    {
+      "fixture_id": "2026-09-20-FUL-MUN",
+      "competition": "Premier League",
+      "kickoff_utc": "2026-09-20T15:30:00Z",
+      "kickoff_local": "2026-09-20T16:30:00+01:00",
+      "home_team": "Fulham",
+      "away_team": "Manchester United"
+    }
+  ]
+}
