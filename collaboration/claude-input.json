@@ -34,11 +34,12 @@
     {
       "fixture_id": "2026-09-19-BHA-ARS", "market": "match_result",
       "our_probabilities": { "home_win": 0.20, "draw": 0.28, "away_win": 0.52 },
-      "reasoning": "Arsenal missing three first-choice central defenders at once (Mosquera, Timber, Saliba) -- a genuine defensive crisis for the league's best defence, not a minor absence. Brighton also weakened (Yohanna, Svoboda, Wieffer, Rutter, Hinshelwood) but the Arsenal defensive gap is the more decision-relevant fact here.",
+      "reasoning": "SUPERSEDED -- see correction_note. Original text: 'Arsenal missing three first-choice central defenders at once (Mosquera, Timber, Saliba) -- a genuine defensive crisis for the league's best defence, not a minor absence.' This was wrong: treated season-long, already-priced-in absences as fresh news and never checked Arsenal's actual results with this lineup situation.",
       "candidate_selection": "draw", "price": 3.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:25:00Z",
       "overround": 0.0859, "fair_probability": 0.2456, "edge": 0.0344,
-      "decision": "taken", "decision_reason": "edge clears 3pp threshold, narrowly",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "decision": "declined", "decision_reason": "reasoning_error -- caught by the owner, not the process. Arsenal are 6 wins from 6 in all competitions this season, including matches missing this same back-three combination: Saliba out long-term since before the season got going (targeting ~21 Nov return), Timber recovering (expected back around the first international break, so already out for most of the wins), Mosquera out 3 games (hamstring vs Aston Villa, also during a run of wins). None of that is a fresh 'crisis' -- it's the status quo the team has already won through repeatedly. Declined because the premise was factually wrong, not because the edge (+3.44pp) was disliked or adjusted to fit a result. No revised pick issued -- would need a proper re-analysis weighing recent form/results alongside injuries, not just an injury list read in isolation.",
+      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true,
+      "correction_note": "Verified 2026-09-15 via Arsenal.com and other outlets. This is now a standing process lesson (see CLAUDE.md): weigh recent form/results with the current lineup situation, not just a raw injury list, before calling any absence pattern a 'crisis'."
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS", "market": "match_result",

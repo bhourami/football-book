@@ -79,3 +79,18 @@ mishap, not two separate ones. Recorded honestly as accidental rather than
 presented as a considered decision. When recording
 `price_obtained_by_owner`, if the product, price or structure looks unusual
 next to what was modelled, ask rather than assume it was intentional.
+
+## Injury lists need a form check, not just a headcount
+
+On Matchweek 5, Brighton v Arsenal's Draw pick was built on "Arsenal
+missing three first-choice central defenders -- a genuine defensive
+crisis." The owner caught what the process should have: Arsenal were 6
+wins from 6 in all competitions with that same absence pattern already
+in place (Saliba out long-term since before the season started, Timber
+out for most of those wins, Mosquera's absence also mid-run). An injury
+list is only decision-relevant if it's *new* relative to what the team
+has already shown it can do without those players. Before treating any
+absence as a "crisis" or a material factor, check the team's actual
+recent results with the current lineup situation, not just the list of
+names. See `collaboration/claude-input.json` (2026-09-19-BHA-ARS) and
+`requests/rejected-selections.json` for the correction.

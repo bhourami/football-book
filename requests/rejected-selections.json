@@ -30,6 +30,14 @@
       "decision": "declined", "decision_reason": "edge_below_threshold",
       "team_news_status": "confirmed",
       "note": "Originally taken at sealed opening (edge +3.37pp at price 3.00, oddschecker.com, 2026-09-13T02:24:00Z). Re-checked at the mandatory pre-kickoff confirmed-lineup point (methodology.md section 6): official lineups matched pre-match assumptions with no material negative change (one mild deviation in Newcastle's favour -- Dedic started over Livramento at right-back -- see collaboration/claude-input.json for the full comparison). The away-win price independently drifted from 3.00 to 2.80 in the meantime; recomputed via scripts/edge_calculator.py, Claude's own edge fell to +1.29pp, below the 3pp threshold. This decline applies to Claude's book only. Codex's own independent probability (0.428) still clears the threshold comfortably at this price (+9.09pp) -- Codex's input file and ledger continue to hold this selection, see collaboration/codex-input.json and ledger/codex.json. Note also: the debated-conclusion book already placed this exact selection as a real-money bet at 2.90 on 2026-09-13T13:01:00Z, over a day before this check -- that placement predates both the lineup confirmation and this price drift and is left untouched (see ledger/conclusion.json and collaboration/debate-conclusions.json for the flagged sequencing gap)."
+    },
+    {
+      "fixture_id": "2026-09-19-BHA-ARS", "market": "match_result", "selection": "draw",
+      "analyst": "claude", "our_probability": 0.28, "edge": 0.0344,
+      "price": 3.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:25:00Z",
+      "decision": "declined", "decision_reason": "reasoning_error",
+      "team_news_status": "unconfirmed",
+      "note": "Originally taken at sealed opening on the premise that Arsenal missing Mosquera/Timber/Saliba was 'a genuine defensive crisis.' Owner caught the error, not the process: Arsenal are 6 wins from 6 in all competitions this season, including matches missing this exact back-three combination -- Saliba out long-term since before the season got going, Timber already out for most of those wins, Mosquera's 3-game absence also during the winning run. Old, already-priced-in news was treated as fresh and decision-relevant, without checking the team's actual results with the current lineup situation. Declined because the premise was wrong, independent of the price -- not adjusted to fit a smaller or larger edge. See collaboration/claude-input.json for the full correction and CLAUDE.md for the resulting standing process note (weigh recent form/results, not just an injury list in isolation)."
     }
   ]
 }
