@@ -194,3 +194,16 @@ current estimates remain qualitative judgment applied to this checklist,
 not a calibrated statistical model. That gap is real and should be
 closed before leaning harder on this method's numbers than the
 methodology's own confidence caveats already allow.
+
+## Backlog: player props / specials markets
+
+Owner asked about goalscorer, shots-on-target and similar specials on
+19 September 2026, mid-gameweek. Explicitly out of scope for now --
+`spec/methodology.md` section 1 covers only match result and BTTS, and
+there is no research process, price source or edge threshold defined
+for prop markets. Do not improvise a pick on request, even an
+"informal" one framed as not-tracked -- if the owner wants this as a
+real addition, it needs the same deliberate groundwork accumulators
+got (data source, what counts as edge in a very differently-shaped
+market, a real threshold), designed with no kickoff pressure, not
+generated on demand minutes before a match.
