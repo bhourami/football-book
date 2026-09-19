@@ -1,7 +1,8 @@
 # Football Book — Frozen Methodology
 Version: V1
 Frozen: 12 September 2026
-Last amended: 13 September 2026 (section 7 edge threshold set)
+Last amended: 19 September 2026 (section 7: BTTS market paused pending
+a real data-grounded model)
 Status: authoritative. No session may change or reinterpret any
 definition below. Conflicts are raised as errors, never resolved
 locally. Source: `football-book-handoff.md`, written 12 September 2026
@@ -135,7 +136,24 @@ estimate to the odds and then declaring an edge is the easiest self-
 deception available here; it produces a book that always agrees with
 itself and must not happen.
 
-## 8. Selection card
+**BTTS market paused, 19 September 2026, owner's call.** Across every
+Matchweek 5 fixture where either analyst took a BTTS position (9 of 9
+for Codex, 2 of 2 taken for Claude), the "No" side's own estimated
+probability came out higher than the market's fair "No" probability —
+every single time, regardless of the specific matchup. That is not
+fixture-specific value-finding; it is a systematic skew, shown
+independently by two separately-built methods, almost certainly because
+neither is grounded in real scoring data — "expected goals" in the
+current method is a qualitative guess per fixture, not computed from
+actual goals-scored/conceded. **No new BTTS selection may be taken by
+either book until the estimate method for this market is rebuilt on
+real data** (actual season goals for/against, or real xG from
+Understat — see `/reference/data-sources.md`) and shown not to produce
+this pattern. Match-result selections are not paused, but should be
+read with the same skepticism until the same grounding exists there
+too. This is a pause on new selections, not a reason to reopen or
+retroactively decline what's already been staked — those stand,
+recorded honestly, and settle on their actual results.
 Every selection — taken or rejected — records these fields before
 kick-off:
 

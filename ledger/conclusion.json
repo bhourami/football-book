@@ -228,7 +228,8 @@
       "provisional_pending_lineup_check": true,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Claude edge +10.0pp, Codex edge +6.1pp (same price both times) -- see reconciliation.md",
-      "price_obtained_by_owner_note": "Odds 7/10 on Ladbrokes, plain BTTS single. Price drifted down from 1.80 recorded at selection time -- normal market movement, recorded as obtained."
+      "price_obtained_by_owner_note": "Odds 7/10 on Ladbrokes, plain BTTS single. Price drifted down from 1.80 recorded at selection time -- normal market movement, recorded as obtained.",
+      "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks."
     }
   ]
 }

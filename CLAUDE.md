@@ -223,3 +223,48 @@ directly (the live scores/results table, browsed, not summarized by a
 fetch tool's own model) before writing a final score or any goal-level
 detail into the ledger. Treat a WebFetch or WebSearch summary of a
 score as unverified until cross-checked there.
+
+## BTTS market paused: a systematic bias, not independent value-finds
+
+19 September 2026, owner-caught: "your BTTS is a no in every match --
+what's that based on, I can't see goalless matches from one team in
+every match." Checked the actual numbers rather than defending the
+picks. The pattern is real:
+
+| Fixture | Codex's own "No" prob | Market's fair "No" prob | Codex took |
+|---|---|---|---|
+| TOT-AVL | 0.544 | 0.4233 | No |
+| EVE-IPS | 0.538 | 0.4425 | No |
+| NFO-COV | 0.540 | 0.4667 | No |
+| BOU-LIV | 0.414 | 0.3549 | No |
+| LEE-CRY | 0.485 | 0.4533 | No |
+| MCI-SUN | 0.581 | 0.5200 | No |
+| FUL-MUN | 0.409 | 0.3750 | No |
+
+Every single BTTS position either analyst took this gameweek was "No"
+(9 of 9 for Codex, 2 of 2 taken for Claude) -- and in every one,
+Codex's own "No" probability estimate exceeded the market's fair "No"
+probability. That is not "the market is wrong about this specific
+match, found value" happening seven times independently -- a
+well-calibrated model checked against an efficient market should
+disagree in both directions sometimes. A skew this total, across two
+independently-built methods, means the models' own expected-goals
+estimates are running systematically low, not that BTTS No is
+genuinely underpriced across an entire slate. Most likely cause:
+"expected goals" in the current method is a qualitative per-fixture
+guess (see estimate_method in every collaboration/*-input.json), not
+computed from real goals-scored/conceded data or actual xG -- so it
+carries no real anchor against underestimating how often either side
+finds the net.
+
+**Consequence, written into spec/methodology.md section 7: no new BTTS
+selection from either book until the estimate method is rebuilt on
+real data** (actual season goals for/against, or real xG pulled from
+Understat -- both already listed as available in
+`/reference/data-sources.md` and never actually used). Already-staked
+BTTS selections are not retroactively declined -- they're real money,
+already placed, and settle on their actual results -- but every
+pending one is flagged with this note rather than treated as sound.
+Do not lift this pause by just picking a few counter-examples where
+"No" would have been right; it lifts when the method itself is shown,
+across a real sample, not to produce this skew.
