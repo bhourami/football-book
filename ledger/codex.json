@@ -288,9 +288,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "lost",
+      "settled_pl_gbp": -10,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Narrow, barely above threshold.",
@@ -298,7 +298,8 @@
       "confidence_rank_note": "LOW-MEDIUM -- narrow edge (+3.0pp), backing the away side (Ipswich) somewhat speculatively.",
       "price_obtained_by_owner_note": "16/5 on Ladbrokes.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
-      "actual_lineup_check_note": "No material team-news surprise (Everton's rested pair -- Tarkowski, Branthwaite -- back as assumed; Ipswich have 'no injury crisis' per Gary O'Neil bar the already-known Jack Taylor absence). Edge recomputed against today's price (Ipswich drifted to 4.50 from 4.20) rises to +4.36pp. FLAGGED: this bet shows price_obtained_by_owner=4.20 timestamped 2026-09-19T11:04:00Z, over two hours before this official-lineup check -- placed ahead of the methodology.md section 6 confirmation bar, same sequencing gap already flagged on MUN-MCI and LEE-NEW. Raised for the owner, not resolved here."
+      "actual_lineup_check_note": "No material team-news surprise (Everton's rested pair -- Tarkowski, Branthwaite -- back as assumed; Ipswich have 'no injury crisis' per Gary O'Neil bar the already-known Jack Taylor absence). Edge recomputed against today's price (Ipswich drifted to 4.50 from 4.20) rises to +4.36pp. FLAGGED: this bet shows price_obtained_by_owner=4.20 timestamped 2026-09-19T11:04:00Z, over two hours before this official-lineup check -- placed ahead of the methodology.md section 6 confirmation bar, same sequencing gap already flagged on MUN-MCI and LEE-NEW. Raised for the owner, not resolved here.",
+      "final_score": "Everton 1-0 Ipswich Town"
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS",
@@ -317,9 +318,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "won",
+      "settled_pl_gbp": 10.5,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "confidence_rank": 5,
@@ -327,7 +328,9 @@
       "price_obtained_by_owner_note": "21/20 on Ladbrokes.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
       "actual_lineup_check_note": "Same lineup facts as the match-result entry above -- no surprise. Price/edge unchanged (+9.55pp). Same sequencing-gap flag applies: price_obtained_by_owner=2.05 timestamped 2026-09-19T11:04:00Z, ahead of this official-lineup check.",
-      "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks."
+      "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks.",
+      "final_score": "Everton 1-0 Ipswich Town",
+      "result_note": "BTTS No landed -- only Everton scored. Noted: one BTTS No winning does not bear on the systematic-bias finding, which was measured across 1,180 matches, and which predicts BTTS-No lands ~45% of the time anyway."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV",

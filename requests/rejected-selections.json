@@ -74,7 +74,8 @@
       "team_news_status": "confirmed",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
       "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official Arsenal lineup (arsenal.com) confirms Timber AND Mosquera both start; only Saliba out. Reinforces this decline -- no revision.",
-      "note": "Originally taken at sealed opening on the premise that Arsenal missing Mosquera/Timber/Saliba was 'a genuine defensive crisis.' Owner caught the error, not the process: Arsenal are 6 wins from 6 in all competitions this season, including matches missing this exact back-three combination -- Saliba out long-term since before the season got going, Timber already out for most of those wins, Mosquera's 3-game absence also during the winning run. Old, already-priced-in news was treated as fresh and decision-relevant, without checking the team's actual results with the current lineup situation. Declined because the premise was wrong, independent of the price -- not adjusted to fit a smaller or larger edge. See collaboration/claude-input.json for the full correction and CLAUDE.md for the resulting standing process note (weigh recent form/results, not just an injury list in isolation)."
+      "note": "Originally taken at sealed opening on the premise that Arsenal missing Mosquera/Timber/Saliba was 'a genuine defensive crisis.' Owner caught the error, not the process: Arsenal are 6 wins from 6 in all competitions this season, including matches missing this exact back-three combination -- Saliba out long-term since before the season got going, Timber already out for most of those wins, Mosquera's 3-game absence also during the winning run. Old, already-priced-in news was treated as fresh and decision-relevant, without checking the team's actual results with the current lineup situation. Declined because the premise was wrong, independent of the price -- not adjusted to fit a smaller or larger edge. See collaboration/claude-input.json for the full correction and CLAUDE.md for the resulting standing process note (weigh recent form/results, not just an injury list in isolation).",
+      "would_have_result": "WOULD HAVE LOST -- Brighton won 3-0, not a draw."
     },
     {
       "fixture_id": "2026-09-18-BRE-CHE",
@@ -105,7 +106,8 @@
       "team_news_status": "confirmed",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
       "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official Arsenal lineup (arsenal.com) confirms Timber AND Mosquera both start; only Saliba out. Reinforces this decline -- no revision.",
-      "note": "Full correction in collaboration/claude-input.json and CLAUDE.md."
+      "note": "Full correction in collaboration/claude-input.json and CLAUDE.md.",
+      "would_have_result": "WOULD HAVE LOST -- Brighton won 3-0, not a draw."
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS",
@@ -211,30 +213,55 @@
       "note": "Best of Codex's three match-result outcomes for this fixture, narrowly below the 3pp threshold."
     },
     {
-      "fixture_id": "2026-09-19-BHA-ARS", "market": "match_result", "selection": "home_win",
-      "analyst": "codex", "our_probability": 0.277, "edge": -0.0364,
-      "price": 3.00, "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-19 ~1hr pre-kickoff", "price_timestamp_utc": "2026-09-19T13:05:00Z",
-      "decision": "declined", "decision_reason": "reasoning_error (standing), and edge_below_threshold as of the refreshed price",
+      "fixture_id": "2026-09-19-BHA-ARS",
+      "market": "match_result",
+      "selection": "home_win",
+      "analyst": "codex",
+      "our_probability": 0.277,
+      "edge": -0.0364,
+      "price": 3.0,
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-19 ~1hr pre-kickoff",
+      "price_timestamp_utc": "2026-09-19T13:05:00Z",
+      "decision": "declined",
+      "decision_reason": "reasoning_error (standing), and edge_below_threshold as of the refreshed price",
       "team_news_status": "confirmed",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
       "actual_lineup_check_note": "Official Arsenal lineup confirms only Saliba out; Timber and Mosquera both start. Refreshed price (Brighton 3.00, was 4.75) turns the edge negative (-3.64pp). Decline reinforced on both reasoning and arithmetic grounds.",
-      "note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book (see CLAUDE.md, collaboration/claude-input.json 2026-09-19-BHA-ARS). Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19."
+      "note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book (see CLAUDE.md, collaboration/claude-input.json 2026-09-19-BHA-ARS). Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19.",
+      "would_have_result": "WOULD HAVE WON -- Brighton won 3-0 (price 4.75, so +\u00a337.50 on a \u00a310 stake).",
+      "would_have_note": "Recorded honestly per methodology section 9. This does not reopen the decision: the premise the pick rested on ('Arsenal missing three first-choice centre-backs, a defensive crisis') was factually wrong on the day -- only Saliba was absent; Timber and Mosquera both started. Brighton won for reasons unconnected to the stated reasoning. A bet winning for reasons other than why it was placed is the clearest possible illustration of why decision quality and outcome are scored separately here."
     },
     {
-      "fixture_id": "2026-09-19-BHA-ARS", "market": "btts", "selection": "btts_yes",
-      "analyst": "codex", "our_probability": 0.607, "edge": 0.0737,
-      "price": 1.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
-      "decision": "declined", "decision_reason": "reasoning_error",
+      "fixture_id": "2026-09-19-BHA-ARS",
+      "market": "btts",
+      "selection": "btts_yes",
+      "analyst": "codex",
+      "our_probability": 0.607,
+      "edge": 0.0737,
+      "price": 1.75,
+      "price_source": "oddschecker.com (Bet365 line)",
+      "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "decision": "declined",
+      "decision_reason": "reasoning_error",
       "team_news_status": "confirmed",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
       "actual_lineup_check_note": "Same official Arsenal lineup as above. Price/edge unchanged (+7.37pp); decline stands because the input probability, not the price, rests on the corrected 'defensive crisis' premise.",
-      "note": "Same premise and same correction as the match-result entry above -- derived from the same flawed expected-goals estimate."
+      "note": "Same premise and same correction as the match-result entry above -- derived from the same flawed expected-goals estimate.",
+      "would_have_result": "WOULD HAVE LOST -- Arsenal did not score (Brighton 3-0). BTTS was No.",
+      "would_have_note": "Worth stating plainly because it corrects an easy assumption: of the two withdrawn Codex-solo picks on this fixture, one would have won and one would have lost. Net on the pair would have been +\u00a327.50, not a clean sweep."
     },
     {
-      "fixture_id": "2026-09-20-LEE-CRY", "market": "match_result", "selection": "away_win",
-      "analyst": "codex", "our_probability": null, "edge": 0.2263,
-      "price": 4.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
-      "decision": "declined", "decision_reason": "reasoning_error",
+      "fixture_id": "2026-09-20-LEE-CRY",
+      "market": "match_result",
+      "selection": "away_win",
+      "analyst": "codex",
+      "our_probability": null,
+      "edge": 0.2263,
+      "price": 4.75,
+      "price_source": "oddschecker.com (Bet365 line)",
+      "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "decision": "declined",
+      "decision_reason": "reasoning_error",
       "team_news_status": "unconfirmed",
       "note": "Confirmed via live table check 2026-09-19: Leeds are 4th, unbeaten (2W-2D-0L, GD+4); Crystal Palace are 16th, 1 win in 4 (GD-5). A +22.6pp edge backing 16th-place Palace over an unbeaten top-4 side -- the largest edge recorded anywhere in this project -- is the same failure pattern as the Brighton-Arsenal error: a large claimed edge the actual table directly contradicts. Declined, not re-priced."
     }
