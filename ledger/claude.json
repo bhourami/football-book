@@ -112,7 +112,7 @@
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T10:30:00Z",
       "actual_lineup_check_note": "Official confirmed lineup (tottenhamhotspur.com, corroborated by spurs-web.com and lastwordonsports.com) checked ~1hr pre-kickoff. Material difference from the pre-match assumption: Solanke starts for Tottenham (was assumed absent), Kudus and Maddison fit enough for the bench, so only Simons (long-term ACL) and Odobert genuinely remain out. Revised probability (0.31->0.29) and reasoning in full at collaboration/claude-input.json. Price also refreshed to today's confirmed Bet365 line (3.70->3.80). Edge recomputed via scripts/edge_calculator.py: +4.03pp (was +5.71pp) -- still clears the 3pp threshold but only just, and is flagged to the owner as a borderline call given how much the result depends on judgement about how far to move the estimate for the lineup news versus both teams' poor scoring form this season.",
-      "hypothetical_result_if_placed": "won -- Villa won 3-1 at Tottenham"
+      "hypothetical_result_if_placed": "won -- Villa won 3-2 at Tottenham"
     },
     {
       "fixture_id": "2026-09-19-TOT-AVL",

@@ -76,7 +76,7 @@
       "status": "settled",
       "result": "lost",
       "settled_pl_gbp": -10,
-      "result_note": "Dead as soon as the Tottenham-Villa BTTS No leg lost (final: Tottenham 1-3 Villa, both teams scored). An accumulator needs every leg to win. The other 9 legs have not all played yet, but nothing they do can change this outcome. Official bookmaker settlement will lag until the last leg concludes; recorded as lost now since the result is already mathematically certain."
+      "result_note": "Dead as soon as the Tottenham-Villa BTTS No leg lost (final: Tottenham 2-3 Villa (corrected -- see ledger/conclusion.json), both teams scored). An accumulator needs every leg to win. The other 9 legs have not all played yet, but nothing they do can change this outcome. Official bookmaker settlement will lag until the last leg concludes; recorded as lost now since the result is already mathematically certain."
     }
   ]
 }

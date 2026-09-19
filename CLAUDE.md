@@ -207,3 +207,19 @@ real addition, it needs the same deliberate groundwork accumulators
 got (data source, what counts as edge in a very differently-shaped
 market, a real threshold), designed with no kickoff pressure, not
 generated on demand minutes before a match.
+
+## Settling a result: use premierleague.com, not a general fetch/search
+
+19 September 2026: recorded Tottenham v Aston Villa as finishing 1-3,
+with specific fabricated goal-scorer/minute detail, sourced from an
+ESPN page fetch. The owner caught it -- actual score was 2-3. This is
+not the first time a general web fetch or search summary produced
+plausible-but-wrong football content in this project (see the
+premierleague.com fixture-list hallucination from the very first
+gameweek). The betting outcome happened to be unaffected here (Villa
+won and both teams scored either way), but it won't always be. Settle
+every result against `premierleague.com/en/matches/premier-league/2026-27/matchweek-N`
+directly (the live scores/results table, browsed, not summarized by a
+fetch tool's own model) before writing a final score or any goal-level
+detail into the ledger. Treat a WebFetch or WebSearch summary of a
+score as unverified until cross-checked there.

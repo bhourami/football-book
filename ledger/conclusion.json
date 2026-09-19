@@ -164,7 +164,7 @@
       "closing_price_note": "Proxy: last price captured at the 10:30 UTC lineup check, ~1hr pre-kickoff. No dedicated closing-price capture exists yet.",
       "clv": 0.0,
       "result": "won",
-      "final_score": "Tottenham Hotspur 1-3 Aston Villa",
+      "final_score": "Tottenham Hotspur 2-3 Aston Villa",
       "settled_pl_gbp": 28,
       "status": "settled",
       "provisional_pending_lineup_check": false,
@@ -172,7 +172,8 @@
       "actual_lineup_check_timestamp_utc": "2026-09-19T10:30:00Z",
       "actual_lineup_check_note": "Official confirmed lineup (tottenhamhotspur.com, corroborated by spurs-web.com and lastwordonsports.com): Solanke starts for Tottenham, Gomes and Manzambi start for Villa -- all five were assumed absent pre-match. Claude revised its own probability (0.31->0.29) given this, thinning its edge to +4.03pp (was +5.71pp) -- flagged as a borderline call for the owner. Codex's probability was not independently re-run (no live Codex process available this session); its edge recomputed against today's price only is +10.93pp (was +11.41pp). Both still clear the 3pp threshold as of this check, so the conclusion selection continues to hold, on a thinner and partly unverified basis than at opening -- see collaboration/debate-conclusions.json for the full note.",
       "note": "Claude edge +4.0pp (revised probability, current price 3.80), Codex edge +10.9pp (unrevised probability, current price 3.80) -- see collaboration/debates/gw5-2026-09-18/reconciliation.md and collaboration/debate-conclusions.json",
-      "price_obtained_by_owner_note": "Odds 14/5 on Ladbrokes, plain match betting single. Matches the lineup-checked revised price exactly."
+      "price_obtained_by_owner_note": "Odds 14/5 on Ladbrokes, plain match betting single. Matches the lineup-checked revised price exactly.",
+      "final_score_correction": "Original 1-3 came from an ESPN fetch that misreported the score (and fabricated specific goal-scorer/minute detail that could not be corroborated). Owner caught it. Corrected 2026-09-19 via premierleague.com official results page: Tottenham 2-3 Aston Villa, full time. The settled result (Villa win WON, BTTS No LOST) is unaffected -- both teams scored and Villa won either way -- only the recorded score and the now-removed fabricated goal details were wrong."
     },
     {
       "fixture_id": "2026-09-19-TOT-AVL",
@@ -193,7 +194,7 @@
       "closing_price_note": "Proxy: last price captured at the 10:30 UTC lineup check, ~1hr pre-kickoff. No dedicated closing-price capture exists yet.",
       "clv": 0.0101,
       "result": "lost",
-      "final_score": "Tottenham Hotspur 1-3 Aston Villa",
+      "final_score": "Tottenham Hotspur 2-3 Aston Villa",
       "settled_pl_gbp": -10,
       "status": "settled",
       "provisional_pending_lineup_check": false,
@@ -201,7 +202,8 @@
       "actual_lineup_check_timestamp_utc": "2026-09-19T10:30:00Z",
       "actual_lineup_check_note": "Same lineup facts as the match-result entry above. Claude revised its own BTTS probability modestly (0.52->0.50), edge falling from +9.7pp to +7.7pp but still clearing the threshold comfortably. Codex's probability was not independently re-run; its edge is unchanged since the price could not be refreshed either. Selection continues to hold.",
       "note": "Claude edge +7.7pp (revised), Codex edge +12.1pp (unrevised, same price both times) -- see reconciliation.md",
-      "price_obtained_by_owner_note": "Odds 5/4 on Ladbrokes, plain BTTS single. Slightly better than the 2.20 recorded at the lineup check."
+      "price_obtained_by_owner_note": "Odds 5/4 on Ladbrokes, plain BTTS single. Slightly better than the 2.20 recorded at the lineup check.",
+      "final_score_correction": "Original 1-3 came from an ESPN fetch that misreported the score (and fabricated specific goal-scorer/minute detail that could not be corroborated). Owner caught it. Corrected 2026-09-19 via premierleague.com official results page: Tottenham 2-3 Aston Villa, full time. The settled result (Villa win WON, BTTS No LOST) is unaffected -- both teams scored and Villa won either way -- only the recorded score and the now-removed fabricated goal details were wrong."
     },
     {
       "fixture_id": "2026-09-20-MCI-SUN",
