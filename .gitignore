@@ -11,3 +11,6 @@ __pycache__/
 # Advisory locks and atomic replacement scratch files.
 *.json.lock
 .pending-*
+
+# Cached raw data downloads. Re-fetchable; never committed.
+data/
