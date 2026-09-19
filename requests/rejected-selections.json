@@ -71,7 +71,9 @@
       "price_timestamp_utc": "2026-09-15T00:25:00Z",
       "decision": "declined",
       "decision_reason": "reasoning_error",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official Arsenal lineup (arsenal.com) confirms Timber AND Mosquera both start; only Saliba out. Reinforces this decline -- no revision.",
       "note": "Originally taken at sealed opening on the premise that Arsenal missing Mosquera/Timber/Saliba was 'a genuine defensive crisis.' Owner caught the error, not the process: Arsenal are 6 wins from 6 in all competitions this season, including matches missing this exact back-three combination -- Saliba out long-term since before the season got going, Timber already out for most of those wins, Mosquera's 3-game absence also during the winning run. Old, already-priced-in news was treated as fresh and decision-relevant, without checking the team's actual results with the current lineup situation. Declined because the premise was wrong, independent of the price -- not adjusted to fit a smaller or larger edge. See collaboration/claude-input.json for the full correction and CLAUDE.md for the resulting standing process note (weigh recent form/results, not just an injury list in isolation)."
     },
     {
@@ -100,7 +102,9 @@
       "price_timestamp_utc": "2026-09-15T00:25:00Z",
       "decision": "declined",
       "decision_reason": "reasoning_error",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official Arsenal lineup (arsenal.com) confirms Timber AND Mosquera both start; only Saliba out. Reinforces this decline -- no revision.",
       "note": "Full correction in collaboration/claude-input.json and CLAUDE.md."
     },
     {
@@ -115,7 +119,9 @@
       "price_timestamp_utc": "2026-09-15T00:26:00Z",
       "decision": "declined",
       "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed"
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: no material team-news surprise for either side (Everton's rested pair back; Ipswich fit bar the long-standing Jack Taylor absence). Decline stands, unaffected by lineup."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV",
@@ -206,10 +212,12 @@
     },
     {
       "fixture_id": "2026-09-19-BHA-ARS", "market": "match_result", "selection": "home_win",
-      "analyst": "codex", "our_probability": 0.277, "edge": 0.0775,
-      "price": 4.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
-      "decision": "declined", "decision_reason": "reasoning_error",
-      "team_news_status": "unconfirmed",
+      "analyst": "codex", "our_probability": 0.277, "edge": -0.0364,
+      "price": 3.00, "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-19 ~1hr pre-kickoff", "price_timestamp_utc": "2026-09-19T13:05:00Z",
+      "decision": "declined", "decision_reason": "reasoning_error (standing), and edge_below_threshold as of the refreshed price",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Official Arsenal lineup confirms only Saliba out; Timber and Mosquera both start. Refreshed price (Brighton 3.00, was 4.75) turns the edge negative (-3.64pp). Decline reinforced on both reasoning and arithmetic grounds.",
       "note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book (see CLAUDE.md, collaboration/claude-input.json 2026-09-19-BHA-ARS). Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19."
     },
     {
@@ -217,7 +225,9 @@
       "analyst": "codex", "our_probability": 0.607, "edge": 0.0737,
       "price": 1.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
       "decision": "declined", "decision_reason": "reasoning_error",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Same official Arsenal lineup as above. Price/edge unchanged (+7.37pp); decline stands because the input probability, not the price, rests on the corrected 'defensive crisis' premise.",
       "note": "Same premise and same correction as the match-result entry above -- derived from the same flawed expected-goals estimate."
     },
     {

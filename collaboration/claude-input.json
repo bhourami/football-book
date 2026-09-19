@@ -43,8 +43,10 @@
       "candidate_selection": "draw", "price": 3.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:25:00Z",
       "overround": 0.0859, "fair_probability": 0.2456, "edge": 0.0344,
       "decision": "declined", "decision_reason": "reasoning_error -- caught by the owner, not the process. Arsenal are 6 wins from 6 in all competitions this season, including matches missing this same back-three combination: Saliba out long-term since before the season got going (targeting ~21 Nov return), Timber recovering (expected back around the first international break, so already out for most of the wins), Mosquera out 3 games (hamstring vs Aston Villa, also during a run of wins). None of that is a fresh 'crisis' -- it's the status quo the team has already won through repeatedly. Declined because the premise was factually wrong, not because the edge (+3.44pp) was disliked or adjusted to fit a result. No revised pick issued -- would need a proper re-analysis weighing recent form/results alongside injuries, not just an injury list read in isolation.",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true,
-      "correction_note": "Verified 2026-09-15 via Arsenal.com and other outlets. This is now a standing process lesson (see CLAUDE.md): weigh recent form/results with the current lineup situation, not just a raw injury list, before calling any absence pattern a 'crisis'."
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "correction_note": "Verified 2026-09-15 via Arsenal.com and other outlets. This is now a standing process lesson (see CLAUDE.md): weigh recent form/results with the current lineup situation, not just a raw injury list, before calling any absence pattern a 'crisis'.",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Official confirmed lineup (arsenal.com, 'Team news: Mosquera starts away to Brighton'): Raya; Timber, Mosquera, Gabriel, Hincapie; Zubimendi, Rice; Eze, Saka (c), Martinelli, Gyokeres. Only Saliba is out -- Timber and Mosquera, the other two 'missing centre-backs' the original (declined) reasoning leaned on, both start. This directly reinforces, rather than reopens, the standing correction: not only was the 6-0-0 record already evidence the absence pattern wasn't a fresh crisis, today's actual team news shows two-thirds of the assumed absentees are playing anyway. No re-analysis performed here -- this fixture remains declined; there is no revised probability to price, since the decline was never about the price."
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS", "market": "match_result",
@@ -53,16 +55,20 @@
       "candidate_selection": "draw", "price": 3.80, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:27:00Z",
       "overround": 0.0409, "fair_probability": 0.2528, "edge": 0.0272,
       "decision": "declined", "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "No material team-news surprise: Everton have Tarkowski and Branthwaite back from being rested (fit, as this candidate assumed); Ipswich manager Gary O'Neil says the squad has no injury crisis beyond the long-standing absence of Jack Taylor. This candidate (draw, 0.0272 edge) remains declined -- edge_below_threshold, unaffected by today's lineup check."
     },
     {
       "fixture_id": "2026-09-19-NEW-HUL", "market": "match_result",
       "our_probabilities": { "home_win": 0.52, "draw": 0.26, "away_win": 0.22 },
       "reasoning": "Newcastle carrying an unusually severe injury list -- Dan Burn, Joelinton, Jacob Ramsey, William Osula, Nico Gonzalez, Ewen Jaouen and Anthony Elanga all out, including both club captain and vice-captain. Hull drew 2-2 away at Chelsea in MW4, a credible result for a promoted side. Shaded down from the market's heavier Newcastle favouritism given the scale of the absences.",
-      "candidate_selection": "draw", "price": 4.50, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:29:00Z",
-      "overround": 0.0588, "fair_probability": 0.2099, "edge": 0.0501,
-      "decision": "taken", "decision_reason": "edge clears 3pp threshold. Note: Hull win also clears the threshold independently (+3.11pp) but is not taken separately -- one candidate per market, per established convention, and Draw carries the larger edge.",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "candidate_selection": "draw", "price": 4.333, "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-19 ~1hr pre-kickoff (Newcastle 3/5, Draw 10/3, Hull 4/1 with Bet365)", "price_timestamp_utc": "2026-09-19T13:05:00Z",
+      "overround": 0.0558, "fair_probability": 0.2186, "edge": 0.0414,
+      "decision": "taken", "decision_reason": "edge clears 3pp threshold. Note: Hull win also clears the threshold independently (+3.11pp at the original price) but is not taken separately -- one candidate per market, per established convention, and Draw carries the larger edge.",
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
+      "actual_lineup_check_note": "Official confirmed Newcastle lineup (insidefutbol.com, published 13:48 BST): Hornicek; Miley, Thiaw, Botman, Hall; Steur, Willock; Murphy, Barnes, Fernandez-Pardo, Wissa. All seven originally-modelled absentees (Burn, Joelinton, Ramsey, Osula, Nico Gonzalez, Jaouen, Elanga) remain out, and Nico Gonzalez's absence is now confirmed for a specific reason (concussion protocol from the 4-1 defeat at Leeds) rather than the general knock originally assumed -- a genuinely new fact, and if anything it reinforces rather than undercuts the discount already applied to Newcastle. No unmodelled return of a key absentee. Edge recomputed against today's Bet365 price (draw shortened slightly from 4.50 to 4.333): +4.14pp, still clears the 3pp threshold. Selection continues to hold; not yet placed by the owner as of this check."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV", "market": "btts",

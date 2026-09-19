@@ -121,27 +121,27 @@
     {
       "fixture_id": "2026-09-19-BHA-ARS",
       "market": "match_result",
-      "reason": "Claude declined the entire fixture (reasoning_error -- the original 'Arsenal defensive crisis' premise was factually wrong, caught by the owner). Codex took Brighton to win (+7.75pp) on the same flawed premise its reasoning independently arrived at. No Claude position exists to agree with -- Codex-solo only, flagged."
+      "reason": "Claude declined the entire fixture (reasoning_error -- the original 'Arsenal defensive crisis' premise was factually wrong, caught by the owner). Codex took Brighton to win (+7.75pp) on the same flawed premise its reasoning independently arrived at. No Claude position exists to agree with -- Codex-solo only, flagged. Pre-kickoff lineup check (2026-09-19T13:05Z): official Arsenal team news (arsenal.com) confirms Timber AND Mosquera both start -- only Saliba out. Codex's edge on this selection, recomputed against today's Bet365 price (Brighton drifted from 4.75 to 3.00), is now negative (-3.64pp). No conclusion position existed or now exists for this market."
     },
     {
       "fixture_id": "2026-09-19-BHA-ARS",
       "market": "btts",
-      "reason": "Same as above -- Claude never recorded a BTTS view for this fixture (declined the whole match). Codex took BTTS Yes (+7.37pp), also resting on the same flawed Arsenal-crisis premise. Codex-solo only, flagged."
+      "reason": "Same as above -- Claude never recorded a BTTS view for this fixture (declined the whole match). Codex took BTTS Yes (+7.37pp), also resting on the same flawed Arsenal-crisis premise. Codex-solo only, flagged. Pre-kickoff lineup check (2026-09-19T13:05Z): same official Arsenal lineup as above. Price and edge unchanged (+7.37pp) but decline stands on reasoning grounds -- the input probability itself rests on the corrected 'defensive crisis' premise. No conclusion position existed or now exists for this market."
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS",
       "market": "match_result",
-      "reason": "Claude's original candidate was home_win (declined, edge negative-to-low). Codex's positive-edge candidate is a different selection, away_win (+3.04pp, narrow). No overlapping agreement possible. Codex-solo only."
+      "reason": "Claude's original candidate was home_win (declined, edge negative-to-low). Codex's positive-edge candidate is a different selection, away_win (+3.04pp, narrow). No overlapping agreement possible. Codex-solo only. Pre-kickoff lineup check (2026-09-19T13:05Z): no material team-news surprise for either side. Codex's edge, recomputed against today's price (Ipswich drifted from 4.20 to 4.50), rises to +4.36pp. Still no Claude position to agree with (Claude's own candidate here, draw, remains declined below threshold) -- no conclusion position."
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS",
       "market": "btts",
-      "reason": "Claude never recorded a BTTS view for this fixture. Codex took BTTS No (+9.55pp). Codex-solo only."
+      "reason": "Claude never recorded a BTTS view for this fixture. Codex took BTTS No (+9.55pp). Codex-solo only. Pre-kickoff lineup check (2026-09-19T13:05Z): no material team-news surprise. Price and Codex's edge unchanged (+9.55pp). Claude never recorded a BTTS view here -- no conclusion position."
     },
     {
       "fixture_id": "2026-09-19-NEW-HUL",
       "market": "match_result",
-      "reason": "Claude took Draw (+5.01pp at original price). Codex's own numbers at the fresh price don't clear the 3pp threshold on any outcome (best is away_win at +1.06pp) -- a genuine disagreement, not a data gap. No conclusion bet."
+      "reason": "Claude took Draw (+5.01pp at original price). Codex's own numbers at the fresh price don't clear the 3pp threshold on any outcome (best is away_win at +1.06pp) -- a genuine disagreement, not a data gap. No conclusion bet. Pre-kickoff lineup check (2026-09-19T13:05Z): official Newcastle team news confirms the expected absentee list (Burn, Joelinton, Osula, Jaouen) plus Nico Gonzalez now also out (concussion, sustained in the Leeds defeat -- a new absence since this file was written, not previously modelled). Claude's own Draw edge, recomputed against today's price, is +4.14pp and still clears the threshold on Claude's book alone. This does not change the genuine disagreement recorded here -- Codex's own numbers were already below threshold on every outcome and have not been independently rerun this session -- so no conclusion position."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV",
