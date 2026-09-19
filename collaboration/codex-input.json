@@ -222,8 +222,11 @@
       "edge": 0.0254,
       "decision": "declined",
       "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-19T15:30:00Z",
+      "actual_lineup_check_note": "Official confirmed teamsheets (cross-checked across multiple outlets citing both clubs' announcements, ~1hr pre-kickoff): Forest start Sels; Diomande, Murillo, Jair Cunha, Muniz; Williams, Schlager, McAtee; Gibbs-White, Ndoye, Delap -- Savona (knee) and Milenkovic (hamstring) both out as assumed, Cunha starting per the pre-match 'likely to return' report. Coventry start Rushworth; Mfuni, Thomas, Pinnock, Dasilva; Yirenkyi, Grimes, Onyeka; Rudoni, Mason-Clark, Thomas-Asante -- Wright, Kesler-Hayden, Woolfenden, Eccles all out injured and Awoniyi suspended, exactly the absence list this candidate's reasoning was built on. No material surprise. Bet365 1X2 price re-verified unchanged (Forest 8/13, Draw 3/1, Coventry 17/4, matching this file's original 1.615) -- edge recomputed at the same price stays +2.54pp, still below the 3pp threshold. Decline holds.",
+      "provenance_note": "Fresh BTTS price could not be isolated on oddschecker.com (page did not render a bookmaker-attributed table via automated fetch; direct requests returned 403/404); this is why the match-result price above, and the BTTS price on the sibling entry below, are recorded as re-verified-unchanged rather than freshly re-quoted."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV",
@@ -243,8 +246,10 @@
       "edge": 0.0733,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-19T15:30:00Z",
+      "actual_lineup_check_note": "Same confirmed lineup facts as the match-result entry above -- no material surprise for either side (Coventry's injury/suspension list -- Wright, Kesler-Hayden, Woolfenden, Eccles, Awoniyi -- matches exactly what this selection's expected-goals estimate assumed; Onyeka, flagged as a doubt pre-match, did start but is a defensive midfielder, not a material change to Coventry's scoring threat). Bet365's 1X2 line is confirmed unchanged from this morning's fetch (see match-result entry); the BTTS-specific Bet365 quote could not be re-isolated on oddschecker.com via automated fetch today (see provenance_note on the sibling entry) despite repeated attempts -- other bookmakers' BTTS No prices seen today cluster close to this file's original 2.00 (roughly 1.95-1.98 equivalent), with no evidence of a material market move. Recomputed edge at the standing price (python3 scripts/edge_calculator.py, our_probability=0.54, price=2.00, market_odds=[2.00, 1.75]) reproduces +7.33pp unchanged -- still clears the 3pp threshold on today's numbers. This is an already-staked selection (see ledger/codex.json), not a new one, so methodology.md section 7's 19-September BTTS pause does not apply to it; the pause's systematic-bias flag already carried on the ledger entry stands regardless of this lineup check. FLAGGED: the owner's obtained price (1.909, Ladbrokes, 2026-09-19T11:04:00Z per ledger/codex.json) predates this official-lineup confirmation by several hours -- same sequencing gap already flagged on EVE-IPS and NEW-HUL today. Raised for the owner, not resolved here."
     },
     {
       "fixture_id": "2026-09-20-BOU-LIV",

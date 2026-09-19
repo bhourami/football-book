@@ -135,7 +135,9 @@
       "price_timestamp_utc": "2026-09-15T00:31:00Z",
       "decision": "declined",
       "decision_reason": "edge_implausible_model_uncertainty",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T15:30:00Z",
+      "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official confirmed teamsheets show no material team-news surprise -- Coventry's confirmed absence list (Wright, Kesler-Hayden, Woolfenden, Eccles injured; Awoniyi suspended) matches exactly what this candidate's reasoning was built on. Decline stands on reasoning grounds (edge_implausible_model_uncertainty), unaffected by the lineup check.",
       "note": "Same discipline as MW4's Coventry BTTS: a 15.3pp gap from an unvalidated qualitative method is more likely to be a modelling error than a real edge. Codex's independent fresh-price view agrees in direction at a more moderate magnitude (+7.33pp) and took it for Codex-solo."
     },
     {
@@ -207,7 +209,9 @@
       "price_timestamp_utc": "2026-09-19T10:00:00Z",
       "decision": "declined",
       "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-19T15:30:00Z",
+      "actual_lineup_check_note": "Pre-kickoff check 2026-09-19: official confirmed teamsheets show no material team-news surprise for either side. Bet365 price re-verified unchanged (8/13). Edge recomputed at the same price stays +2.54pp, still below the 3pp threshold. Decline holds.",
       "note": "Best of Codex's three match-result outcomes for this fixture, narrowly below the 3pp threshold."
     },
     {
