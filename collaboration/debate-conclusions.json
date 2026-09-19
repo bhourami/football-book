@@ -146,12 +146,12 @@
     {
       "fixture_id": "2026-09-19-NFO-COV",
       "market": "match_result",
-      "reason": "Neither analyst has a positive-edge candidate clearing the 3pp threshold on any outcome at current prices."
+      "reason": "Neither analyst has a positive-edge candidate clearing the 3pp threshold on any outcome at current prices. Pre-kickoff lineup check (2026-09-19T15:30Z): official confirmed teamsheets match the injury/suspension list both analysts assumed (Coventry missing Wright, Kesler-Hayden, Woolfenden, Eccles, Awoniyi; Forest missing Savona, Milenkovic) -- no material surprise. Bet365 price unchanged. No conclusion position."
     },
     {
       "fixture_id": "2026-09-19-NFO-COV",
       "market": "btts",
-      "reason": "Claude declined BTTS No despite a large original edge (+15.33pp) -- flagged as implausible from an unvalidated qualitative method, same discipline as Matchweek 4's Coventry BTTS. Codex took BTTS No at a fresh price with a more moderate but still elevated edge (+7.33pp). No Claude position to agree with -- Codex-solo only."
+      "reason": "Claude declined BTTS No despite a large original edge (+15.33pp) -- flagged as implausible from an unvalidated qualitative method, same discipline as Matchweek 4's Coventry BTTS. Codex took BTTS No at a fresh price with a more moderate but still elevated edge (+7.33pp). No Claude position to agree with -- Codex-solo only. Pre-kickoff lineup check (2026-09-19T15:30Z): official confirmed teamsheets show no material team-news surprise -- Coventry's confirmed absence list matches exactly what Codex's estimate assumed. Bet365 1X2 price re-verified unchanged; the BTTS-specific Bet365 quote could not be re-isolated via automated fetch of oddschecker.com today, but no evidence of a material market move was found elsewhere. Codex's edge recomputed at the standing price is unchanged at +7.33pp. This selection is already staked (real money, placed by the owner at 2026-09-19T11:04:00Z, ahead of this lineup check -- see ledger/codex.json), so it is not subject to methodology.md section 7's 19-September BTTS pause on new selections; it remains flagged under that pause's systematic-bias note and settles on its actual result. Still Codex-solo only -- no Claude position to agree with."
     },
     {
       "fixture_id": "2026-09-20-BOU-LIV",
