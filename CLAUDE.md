@@ -114,17 +114,83 @@ scrutiny as a "crisis" injury narrative -- both are ways of overriding
 what the season has actually shown with a story that sounds compelling
 in isolation.
 
-## Head-to-head history is a real input, not checked yet
+## Head-to-head history: check it, but don't lean on it alone
 
-Owner-prompted, 2026-09-19: neither analyst's method currently looks at
-head-to-head record between the two specific teams at all -- only
-current-season form and team news. History matters in football (a team
-that has a specific hoodoo over an opponent, or dominates a fixture
-regardless of league position, is a real and common pattern). Check the
-last 4-6 meetings between the two sides as a standard part of forming
-the pre-match estimate, alongside form and team news -- not as a
-tie-breaker only reached for after the fact. First application:
-Tottenham v Aston Villa (see `collaboration/claude-input.json`) --
-Villa have won 4 of the last 5 meetings, which turned out to support
-the pick already made rather than contradict it, but the process should
-have looked regardless of which way it cut.
+Owner-prompted, 2026-09-19: neither analyst's method was looking at
+head-to-head record between the two specific teams at all. Check the
+last 4-6 meetings as standard, alongside form and team news -- not as a
+tie-breaker reached for after the fact. First application: Tottenham v
+Aston Villa, where Villa had won 4 of the last 5 meetings.
+
+**Correction, same day, after discussing this with Codex:** that record
+was initially logged as supporting evidence for a pick. Codex's
+pushback, and now the standing rule: a head-to-head pattern is only
+evidence if a repeatable mechanism survives changes in manager, squad
+and venue -- otherwise 4-from-5 is a small sample doing the same job
+the Arsenal "crisis" narrative did, just in the other direction. Check
+H2H, record it, but only let it move a probability if you can name the
+mechanism that would make it repeat.
+
+## Estimate method: the full factor set, and the discipline for using it
+
+Owner-prompted, 2026-09-19: "think of other factors affecting football
+matches... we're trying to make informed decisions from research just
+like the bookies do." Discussed directly with Codex (a genuine
+methodology debate, not a pick-level one). Codex's ranked list of what
+a professional odds-setter actually weighs, checkable from public
+sources, roughly most to least impactful for an ordinary Premier League
+fixture:
+
+1. **Underlying team strength, adjusted for opponent quality** -- not
+   just table position; a run against weak opponents shouldn't outweigh
+   everything known before the season.
+2. **Home advantage / venue** -- already baked into most baselines;
+   don't add it twice.
+3. **Actual expected XI vs. what was assumed** -- the lineup check
+   already does this; the largest routine adjustment, and the one place
+   a real, specific, *new* fact belongs.
+4. **Underlying performance beneath the scoreline** -- public xG
+   (Understat), shot quality, whether results hinged on penalties/red
+   cards/exceptional finishing. Refines factor 1; not a separate bonus.
+5. **Rest, workload, travel, rotation risk** -- who actually played
+   midweek and how many minutes, not just "they had a game."
+6. **Specific tactical matchups** -- named players and mechanisms
+   (e.g. "their exposed full-back vs. this winger"), not vibes.
+7. **Genuine step-change** -- new manager, formation, key signing
+   settling in. Needs evidence of *changed behaviour*, not just a
+   headline.
+8. **Scoring environment / draw propensity** -- can move the draw
+   probability without changing who's "stronger."
+9. **Competitive incentives** -- relegation/European stakes; usually
+   minor in an ordinary midweek-table fixture.
+10. **Weather/pitch** -- usually negligible.
+11. **Referee assignment** -- public (premierleague.com publishes
+    appointments), usually a small consideration, more relevant to
+    cards/penalties than the 1X2 price.
+12. **Head-to-head** -- real, but weak on its own; see above.
+13. **Morale/off-field narrative** -- essentially zero weight without
+    concrete, verifiable disruption. "Wanting it more" is not evidence.
+
+**The more important rule than the list itself:** "finding another fact
+is not necessarily finding another reason to change the price... broad
+research, selective and explainable adjustments" (Codex's framing,
+adopted here). Every fixture's reasoning should be able to say, for
+each factor actually used: what the fact is, the source and date,
+whether it's *new* relative to what the team has already shown, and
+roughly how many points it should move the estimate -- single-digit
+moves are the norm; a double-digit swing from anything other than a
+major, specific lineup change demands unusually strong evidence, not a
+compelling story. This is exactly what went wrong on Brighton-Arsenal
+and Leeds-Crystal Palace: a narrative-sized adjustment with
+results-sized evidence against it.
+
+Public data actually available for this, corrected from an earlier
+assumption that some of it wasn't: Understat (xG), football-data.co.uk
+(results/odds history), and premierleague.com (referee appointments)
+are all public. What's genuinely inaccessible: internal medical/training
+data, private tactical plans, and bookmaker order flow. Not yet built:
+an actual fitted attack/defence strength model (Dixon-Robinson-style) --
+current estimates remain qualitative judgment applied to this checklist,
+not a calibrated statistical model. That gap is real and should be
+closed before leaning harder on this method's numbers than the
+methodology's own confidence caveats already allow.
