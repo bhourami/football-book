@@ -203,6 +203,30 @@
       "decision_reason": "edge_below_threshold",
       "team_news_status": "unconfirmed",
       "note": "Best of Codex's three match-result outcomes for this fixture, narrowly below the 3pp threshold."
+    },
+    {
+      "fixture_id": "2026-09-19-BHA-ARS", "market": "match_result", "selection": "home_win",
+      "analyst": "codex", "our_probability": 0.277, "edge": 0.0775,
+      "price": 4.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "decision": "declined", "decision_reason": "reasoning_error",
+      "team_news_status": "unconfirmed",
+      "note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book (see CLAUDE.md, collaboration/claude-input.json 2026-09-19-BHA-ARS). Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19."
+    },
+    {
+      "fixture_id": "2026-09-19-BHA-ARS", "market": "btts", "selection": "btts_yes",
+      "analyst": "codex", "our_probability": 0.607, "edge": 0.0737,
+      "price": 1.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "decision": "declined", "decision_reason": "reasoning_error",
+      "team_news_status": "unconfirmed",
+      "note": "Same premise and same correction as the match-result entry above -- derived from the same flawed expected-goals estimate."
+    },
+    {
+      "fixture_id": "2026-09-20-LEE-CRY", "market": "match_result", "selection": "away_win",
+      "analyst": "codex", "our_probability": null, "edge": 0.2263,
+      "price": 4.75, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "decision": "declined", "decision_reason": "reasoning_error",
+      "team_news_status": "unconfirmed",
+      "note": "Confirmed via live table check 2026-09-19: Leeds are 4th, unbeaten (2W-2D-0L, GD+4); Crystal Palace are 16th, 1 win in 4 (GD-5). A +22.6pp edge backing 16th-place Palace over an unbeaten top-4 side -- the largest edge recorded anywhere in this project -- is the same failure pattern as the Brighton-Arsenal error: a large claimed edge the actual table directly contradicts. Declined, not re-priced."
     }
   ]
 }
