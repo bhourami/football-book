@@ -18,7 +18,9 @@
       "bookmaker": "Ladbrokes",
       "stake_gbp": 10,
       "combined_price": "1724.91/1",
-      "status": "RULE VIOLATION -- recorded, not endorsed",
+      "status": "MOVED",
+      "moved_to": "ledger/accumulators.json",
+      "moved_reason": "methodology.md section 12 amended again 19 September 2026 to permit cross-book accumulators, at the owner's instruction ('the acca is an outlier based on the research' -- every leg had already independently cleared its own book's threshold). No longer a rule violation as of that amendment.",
       "legs": [
         {"fixture_id": "2026-09-19-TOT-AVL", "market": "match_result", "selection": "away_win", "book": "conclusion"},
         {"fixture_id": "2026-09-19-TOT-AVL", "market": "btts", "selection": "btts_no", "book": "conclusion"},

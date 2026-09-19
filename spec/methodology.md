@@ -206,6 +206,23 @@ rules:
 - Recorded as its own entry, showing every leg's price and the
   combined price, never merged into the single-selection rows.
 
+**Amended again 19 September 2026, owner's call: a cross-book
+accumulator is now also permitted.** The single-book restriction above
+is relaxed, not removed — every leg must still be a selection some
+book actually took (cleared the threshold, wasn't declined); the
+change is that those legs no longer need to come from the same book.
+Owner's stated reasoning: every leg is already research-backed
+regardless of which book took it, so the book boundary doesn't add
+anything the underlying research process didn't already provide.
+- A cross-book accumulator is tracked in its own record
+  (`ledger/accumulators.json`), not charged against any single book's
+  £200 bank or 20-bet ceiling — it draws on selections already scored
+  under their own book, so counting it against one book's bank would
+  attribute exposure to a book that didn't choose it alone.
+- Still not itself edge-gated (no combined-edge threshold exists —
+  see below), still its own flat £10 stake, still recorded with every
+  leg's price and the combined price.
+
 **OPEN — no combined-edge threshold is defined for accumulators.**
 Section 7's 3pp threshold gates each single leg's *individual*
 selection, not the combined accumulator price. Until this is set, an
