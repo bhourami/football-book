@@ -4,6 +4,35 @@
 owner caught, and to his broader point: *"you guys ain't doing enough
 research for the picks, you're gambling 50/50 right now."*
 
+> **CORRECTIONS, added 19 September 2026 after Codex reviewed this
+> document.** Three claims below were overstated or mislabelled. The
+> headline conclusion (no demonstrated edge) survives all three, but
+> the reasoning behind it must be stated accurately:
+>
+> 1. **What is called "CLV" here is not CLV.** Closing line value means
+>    comparing *the price you could actually have taken at decision
+>    time* against the closing price. This backtest compares *model
+>    probabilities* against *closing probabilities*. That is
+>    model-versus-market disagreement, not CLV, and the "~50% beat the
+>    close" figure has no automatic coin-flip null — the null depends
+>    on exactly what was counted. Read every "CLV" in this document as
+>    "model-vs-closing-price disagreement" until the metric is rebuilt
+>    properly.
+> 2. **The headline calibration number is arithmetically forced.** The
+>    "Overall 0.333 predicted vs 0.333 actual" line proves nothing:
+>    pooling all three match-result outcomes means every probability
+>    triplet sums to 1 and exactly one outcome occurs, so the pooled
+>    mean must equal the base rate. The per-bucket rows are still
+>    informative; the overall row should be ignored. It was quoted as
+>    evidence of a well-behaved model and it is not evidence of
+>    anything.
+> 3. **The BTTS cause is a hypothesis, not a finding.** Positive
+>    correlation between the two teams' scoring is *one* explanation
+>    for under-predicting BTTS-yes. Wrong marginal scoring rates,
+>    overdispersion, or a mixture of match types would produce the same
+>    signature. The measured 3.85pp gap is real; the stated mechanism
+>    is unproven.
+
 ## The headline: the model does not beat the closing line
 
 **It does not. Not at any edge threshold. This is the most important
@@ -54,7 +83,14 @@ It is not a broken model. Match-result calibration is genuinely good:
 | 0.6-0.7 | 211 | 0.648 | 0.635 | -0.013 |
 | 0.7-0.8 | 89 | 0.751 | 0.708 | -0.043 |
 | 0.8-1.0 | 41 | 0.847 | 0.878 | +0.031 |
-| **Overall** | **3,540** | **0.333** | **0.333** | **+0.000** |
+| ~~**Overall**~~ | ~~3,540~~ | ~~0.333~~ | ~~0.333~~ | ~~+0.000~~ |
+
+**Ignore that overall row** — see correction 2 at the top. Pooling all
+three outcomes forces predicted mean to equal realised base rate; it is
+arithmetic, not evidence. The bucket rows above it are the informative
+part, and they are reasonable but unremarkable: the two largest
+deviations (0.4-0.5 at -0.046, 0.7-0.8 at -0.043) sit on 398 and 89
+observations respectively.
 
 So the model describes football reasonably well. It just describes it no
 better than a bookmaker who has already priced it — which is the entire
