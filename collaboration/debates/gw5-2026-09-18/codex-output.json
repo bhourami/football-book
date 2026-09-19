@@ -1,0 +1,95 @@
+{
+  "estimate_method": "Conditional pre-match estimates using only the supplied news and results, without subsequent match information. For each fixture, I assign expected goals from a conservative qualitative team-strength prior, home advantage, and role-specific injury adjustments. Recent results receive limited weight; clustered absences matter more than raw injury counts, and uncertain availability reduces confidence. Independent Poisson goal distributions then generate all outcome probabilities; BTTS = (1−exp(−home expected goals)) × (1−exp(−away expected goals)). Expected goals are stated home/away in each explanation. Probabilities are rounded to three decimals, with win/draw/loss summing to 1. These are judgment-based estimates, not empirically validated calibration; confidence describes input reliability.",
+  "fixtures": [
+    {
+      "fixture_id": "2026-09-18-BRE-CHE",
+      "home_win_probability": 0.314,
+      "draw_probability": 0.24,
+      "away_win_probability": 0.446,
+      "btts_yes_probability": 0.598,
+      "reasoning": "Expected goals: 1.35/1.65. Chelsea's assumed underlying strength gives them a modest away edge. Caicedo's absence weakens midfield protection, while Collins's absence weakens Brentford's central defence. The recent 2-2 results offer limited additional support for both teams scoring.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-19-TOT-AVL",
+      "home_win_probability": 0.354,
+      "draw_probability": 0.287,
+      "away_win_probability": 0.359,
+      "btts_yes_probability": 0.456,
+      "reasoning": "Expected goals: 1.12/1.13. Tottenham's concentrated losses in creation and finishing largely offset home advantage. Villa's attacking and midfield absences also suppress their scoring expectation. A close, relatively low-scoring match follows, with Tottenham's recent goalless draw receiving only modest weight.",
+      "confidence": "low"
+    },
+    {
+      "fixture_id": "2026-09-19-BHA-ARS",
+      "home_win_probability": 0.277,
+      "draw_probability": 0.231,
+      "away_win_probability": 0.492,
+      "btts_yes_probability": 0.607,
+      "reasoning": "Expected goals: 1.30/1.80. Arsenal retain the stronger assumed attacking baseline, but losing three first-choice centre-backs materially raises Brighton's scoring expectation. Brighton's own midfield and attacking absences limit how far that adjustment goes.",
+      "confidence": "low"
+    },
+    {
+      "fixture_id": "2026-09-19-EVE-IPS",
+      "home_win_probability": 0.474,
+      "draw_probability": 0.271,
+      "away_win_probability": 0.255,
+      "btts_yes_probability": 0.462,
+      "reasoning": "Expected goals: 1.40/0.95. Home advantage and relatively good availability make Everton moderate favourites. Ipswich's positive results narrow the strength gap slightly, with the cup win given less weight than league evidence. Everton's recent clean sheet modestly supports a restrained away scoring expectation.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-19-NEW-HUL",
+      "home_win_probability": 0.583,
+      "draw_probability": 0.217,
+      "away_win_probability": 0.2,
+      "btts_yes_probability": 0.558,
+      "reasoning": "Expected goals: 1.95/1.05. Newcastle's assumed strength and home advantage sustain favouritism despite substantial absences. Missing Burn and Joelinton weakens defensive organisation and midfield resistance; other absences reduce attacking depth. Hull's draw at Chelsea gives their attacking outlook a small upward adjustment.",
+      "confidence": "low"
+    },
+    {
+      "fixture_id": "2026-09-19-NFO-COV",
+      "home_win_probability": 0.611,
+      "draw_probability": 0.226,
+      "away_win_probability": 0.163,
+      "btts_yes_probability": 0.46,
+      "reasoning": "Expected goals: 1.80/0.80. Forest's intact attack and home advantage face a depleted, bottom-placed opponent. Coventry's missing top scorer and Wright substantially reduce their ability to exploit Forest's defensive absences, keeping BTTS below 50%.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-20-BOU-LIV",
+      "home_win_probability": 0.221,
+      "draw_probability": 0.219,
+      "away_win_probability": 0.56,
+      "btts_yes_probability": 0.586,
+      "reasoning": "Expected goals: 1.15/1.95. Liverpool's assumed quality advantage outweighs Bournemouth's home advantage. Liverpool's attacking absences temper their scoring projection, while defensive availability concerns sustain Bournemouth's scoring chances. Bournemouth's own attacking losses constrain the home expectation.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-20-LEE-CRY",
+      "home_win_probability": 0.309,
+      "draw_probability": 0.264,
+      "away_win_probability": 0.427,
+      "btts_yes_probability": 0.515,
+      "reasoning": "Expected goals: 1.15/1.40. Palace receive a modest underlying-strength advantage, reinforced by Rodon's absence and limited evidence from Leeds's heavy defeat. Home advantage keeps Leeds competitive. Palace's unspecified absences warrant restraint and make this estimate particularly uncertain.",
+      "confidence": "low"
+    },
+    {
+      "fixture_id": "2026-09-20-MCI-SUN",
+      "home_win_probability": 0.809,
+      "draw_probability": 0.13,
+      "away_win_probability": 0.061,
+      "btts_yes_probability": 0.419,
+      "reasoning": "Expected goals: 2.65/0.60. A large assumed strength gap and home advantage make City strong favourites against the described newly promoted visitors. City's listed absences modestly reduce their advantage. Sunderland's low scoring expectation keeps BTTS below 50% despite City's high projected output.",
+      "confidence": "medium"
+    },
+    {
+      "fixture_id": "2026-09-20-FUL-MUN",
+      "home_win_probability": 0.323,
+      "draw_probability": 0.243,
+      "away_win_probability": 0.434,
+      "btts_yes_probability": 0.591,
+      "reasoning": "Expected goals: 1.35/1.60. United's assumed attacking advantage produces a modest away edge. Fulham's home advantage and United's defensive absences keep the contest competitive and support BTTS. Both recent wins receive small positive adjustments without treating either result as decisive.",
+      "confidence": "medium"
+    }
+  ]
+}
