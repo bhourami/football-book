@@ -1,0 +1,267 @@
+{
+  "fixture_id": "2026-09-20-FUL-MUN",
+  "fixture": "Fulham v Man Utd",
+  "market": "match_result",
+  "captured_at_utc": "2026-09-19T18:28:00Z",
+  "source": "oddschecker.com",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league/fulham-v-man-utd/winner",
+  "outcomes": [
+    "home_win",
+    "draw",
+    "away_win"
+  ],
+  "outcome_labels": {
+    "home_win": "Fulham",
+    "draw": "Draw",
+    "away_win": "Man Utd"
+  },
+  "prices": {
+    "bet365": [
+      3.5,
+      3.8,
+      2.0
+    ],
+    "William Hill": [
+      3.4,
+      3.6,
+      2.0
+    ],
+    "Unibet": [
+      3.4,
+      3.75,
+      2.05
+    ],
+    "Betfred": [
+      3.3,
+      3.75,
+      2.05
+    ],
+    "Spreadex": [
+      3.5,
+      3.8,
+      2.0
+    ],
+    "Ladbrokes": [
+      3.3,
+      3.7,
+      2.05
+    ],
+    "BetVictor": [
+      3.4,
+      3.8,
+      2.0
+    ],
+    "BetMGM": [
+      3.25,
+      3.6,
+      2.0
+    ],
+    "BoyleSports": [
+      3.5,
+      3.75,
+      2.0
+    ],
+    "ForTheBettor": [
+      3.5,
+      3.7,
+      2.02
+    ],
+    "Star Sports": [
+      3.25,
+      3.6,
+      2.0
+    ],
+    "PricedUp": [
+      3.25,
+      3.6,
+      2.0
+    ],
+    "Sporting Index": [
+      3.5,
+      3.8,
+      2.0
+    ],
+    "Bet Goodwin": [
+      3.3,
+      3.75,
+      1.95
+    ],
+    "QuinnBet": [
+      3.2,
+      3.7,
+      2.0
+    ],
+    "Betway": [
+      3.3,
+      3.8,
+      2.0
+    ],
+    "Coral": [
+      3.3,
+      3.7,
+      2.05
+    ],
+    "BetAhoy": [
+      3.3,
+      3.6,
+      1.95
+    ],
+    "BetTOM": [
+      3.3,
+      3.6,
+      1.95
+    ],
+    "Ivy Bet": [
+      3.454545,
+      3.8,
+      2.05
+    ],
+    "Sky Bet": [
+      3.3,
+      3.6,
+      2.0
+    ],
+    "Paddy Power": [
+      3.4,
+      3.7,
+      2.0
+    ],
+    "AK Bets": [
+      3.6,
+      3.8,
+      2.05
+    ]
+  },
+  "exchange_prices": {
+    "Betfair Exchange": [
+      3.6,
+      3.8,
+      2.05
+    ],
+    "Matchbook": [
+      3.6,
+      3.8,
+      2.05
+    ]
+  },
+  "exchanges_excluded_from_consensus": [
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "bookmakers_not_read": [],
+  "prices_as_displayed": {
+    "home_win": [
+      "5/2",
+      "12/5",
+      "12/5",
+      "23/10",
+      "5/2",
+      "23/10",
+      "12/5",
+      "9/4",
+      "5/2",
+      "5/2",
+      "9/4",
+      "9/4",
+      "5/2",
+      "23/10",
+      "11/5",
+      "23/10",
+      "23/10",
+      "23/10",
+      "23/10",
+      "27/11",
+      "23/10",
+      "12/5",
+      "13/5",
+      "13/5",
+      "13/5"
+    ],
+    "draw": [
+      "14/5",
+      "13/5",
+      "11/4",
+      "11/4",
+      "14/5",
+      "27/10",
+      "14/5",
+      "13/5",
+      "11/4",
+      "27/10",
+      "13/5",
+      "13/5",
+      "14/5",
+      "11/4",
+      "27/10",
+      "14/5",
+      "27/10",
+      "13/5",
+      "13/5",
+      "14/5",
+      "13/5",
+      "27/10",
+      "14/5",
+      "14/5",
+      "14/5"
+    ],
+    "away_win": [
+      "1/1",
+      "1/1",
+      "21/20",
+      "21/20",
+      "1/1",
+      "21/20",
+      "1/1",
+      "1/1",
+      "1/1",
+      "102/100",
+      "1/1",
+      "1/1",
+      "1/1",
+      "19/20",
+      "1/1",
+      "1/1",
+      "21/20",
+      "19/20",
+      "19/20",
+      "21/20",
+      "1/1",
+      "1/1",
+      "21/20",
+      "21/20",
+      "21/20"
+    ]
+  },
+  "column_order": [
+    "bet365",
+    "William Hill",
+    "Unibet",
+    "Betfred",
+    "Spreadex",
+    "Ladbrokes",
+    "BetVictor",
+    "BetMGM",
+    "BoyleSports",
+    "ForTheBettor",
+    "Star Sports",
+    "PricedUp",
+    "Sporting Index",
+    "Bet Goodwin",
+    "QuinnBet",
+    "Betway",
+    "Coral",
+    "BetAhoy",
+    "BetTOM",
+    "Ivy Bet",
+    "Sky Bet",
+    "Paddy Power",
+    "AK Bets",
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "provenance": "screenshot ss_6047wx015, column 6 (x=442) is Ladbrokes; values 23/10 (Fulham) / 27/10 (Draw) / 21/20 (Man Utd); booksum 1.0611",
+  "notes": [
+    "All 25 columns populated.",
+    "Row order on this page is Man Utd / Fulham / Draw -- the away team first, and the draw last. Row order differs on every one of the four pages captured; labels must be read each time and never assumed."
+  ]
+}

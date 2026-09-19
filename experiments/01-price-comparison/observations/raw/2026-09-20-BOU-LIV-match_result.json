@@ -1,0 +1,33 @@
+{
+  "fixture_id": "2026-09-20-BOU-LIV",
+  "fixture": "Bournemouth v Liverpool",
+  "kickoff_local": "2026-09-20 14:00 BST",
+  "market": "match_result",
+  "source": "oddschecker.com",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league/bournemouth-v-liverpool/winner",
+  "captured_at_utc": "2026-09-19T18:25:00Z",
+  "column_order": [
+    "bet365", "William Hill", "Unibet", "Betfred", "Spreadex",
+    "Ladbrokes", "BetVictor", "BetMGM", "BoyleSports", "ForTheBettor",
+    "Star Sports", "PricedUp", "Sporting Index", "Bet Goodwin", "QuinnBet",
+    "Betway", "Coral", "BetAhoy", "BetTOM", "Ivy Bet",
+    "Sky Bet", "Paddy Power", "AK Bets",
+    "Betfair Exchange", "Matchbook"
+  ],
+  "exchanges": ["Betfair Exchange", "Matchbook"],
+  "ladbrokes_column_index_1based": 6,
+  "ladbrokes_column_verified": "screenshot ss_24944pzy6, logo row column 6 (x=442) reads Ladbrokes; values at x=442 are 11/10 / 21/10 / 11/4",
+  "row_order_as_displayed": ["Liverpool", "Bournemouth", "Draw"],
+  "outcomes": ["home_win", "draw", "away_win"],
+  "outcome_labels": {"home_win": "Bournemouth", "draw": "Draw", "away_win": "Liverpool"},
+  "rows_fractional": {
+    "home_win": ["21/10", "2/1", "2/1", "2/1", "21/10", "21/10", "2/1", "15/8", "9/4", "205/100", "2/1", "2/1", "21/10", "2/1", "15/8", "21/10", "21/10", "2/1", "2/1", null, "21/10", "21/10", "9/4", "11/5", "11/5"],
+    "draw": ["14/5", "13/5", "14/5", "11/4", "14/5", "11/4", "29/10", "13/5", "11/4", "11/4", "13/5", "13/5", "14/5", "13/5", "14/5", "11/4", "14/5", "13/5", "13/5", null, "13/5", "27/10", "29/10", "14/5", "14/5"],
+    "away_win": ["23/20", "23/20", "6/5", "23/20", "23/20", "11/10", "23/20", "23/20", "11/10", "6/5", "11/10", "11/10", "23/20", "11/10", "11/10", "11/10", "23/20", "11/10", "11/10", null, "11/10", "11/10", "6/5", "6/5", "6/5"]
+  },
+  "notes": [
+    "Ivy Bet (column 20) had no price on this fixture; recorded as null, not guessed.",
+    "DOM text returned 24 values per row (blank cells are omitted from the DOM text), the screenshot shows 25 columns. Both agree once the blank is accounted for.",
+    "Bookmaker names come from logo images read off the screenshot. 'ForTheBettor', 'BetAhoy' and 'BetTOM' are best-effort readings of small logos and may be misnamed; they are labels only and do not affect any calculation."
+  ]
+}

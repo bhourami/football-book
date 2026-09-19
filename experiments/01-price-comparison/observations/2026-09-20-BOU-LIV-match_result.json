@@ -1,0 +1,265 @@
+{
+  "fixture_id": "2026-09-20-BOU-LIV",
+  "fixture": "Bournemouth v Liverpool",
+  "market": "match_result",
+  "captured_at_utc": "2026-09-19T18:25:00Z",
+  "source": "oddschecker.com",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league/bournemouth-v-liverpool/winner",
+  "outcomes": [
+    "home_win",
+    "draw",
+    "away_win"
+  ],
+  "outcome_labels": {
+    "home_win": "Bournemouth",
+    "draw": "Draw",
+    "away_win": "Liverpool"
+  },
+  "prices": {
+    "bet365": [
+      3.1,
+      3.8,
+      2.15
+    ],
+    "William Hill": [
+      3.0,
+      3.6,
+      2.15
+    ],
+    "Unibet": [
+      3.0,
+      3.8,
+      2.2
+    ],
+    "Betfred": [
+      3.0,
+      3.75,
+      2.15
+    ],
+    "Spreadex": [
+      3.1,
+      3.8,
+      2.15
+    ],
+    "Ladbrokes": [
+      3.1,
+      3.75,
+      2.1
+    ],
+    "BetVictor": [
+      3.0,
+      3.9,
+      2.15
+    ],
+    "BetMGM": [
+      2.875,
+      3.6,
+      2.15
+    ],
+    "BoyleSports": [
+      3.25,
+      3.75,
+      2.1
+    ],
+    "ForTheBettor": [
+      3.05,
+      3.75,
+      2.2
+    ],
+    "Star Sports": [
+      3.0,
+      3.6,
+      2.1
+    ],
+    "PricedUp": [
+      3.0,
+      3.6,
+      2.1
+    ],
+    "Sporting Index": [
+      3.1,
+      3.8,
+      2.15
+    ],
+    "Bet Goodwin": [
+      3.0,
+      3.6,
+      2.1
+    ],
+    "QuinnBet": [
+      2.875,
+      3.8,
+      2.1
+    ],
+    "Betway": [
+      3.1,
+      3.75,
+      2.1
+    ],
+    "Coral": [
+      3.1,
+      3.8,
+      2.15
+    ],
+    "BetAhoy": [
+      3.0,
+      3.6,
+      2.1
+    ],
+    "BetTOM": [
+      3.0,
+      3.6,
+      2.1
+    ],
+    "Sky Bet": [
+      3.1,
+      3.6,
+      2.1
+    ],
+    "Paddy Power": [
+      3.1,
+      3.7,
+      2.1
+    ],
+    "AK Bets": [
+      3.25,
+      3.9,
+      2.2
+    ]
+  },
+  "exchange_prices": {
+    "Betfair Exchange": [
+      3.2,
+      3.8,
+      2.2
+    ],
+    "Matchbook": [
+      3.2,
+      3.8,
+      2.2
+    ]
+  },
+  "exchanges_excluded_from_consensus": [
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "bookmakers_not_read": [
+    "Ivy Bet"
+  ],
+  "prices_as_displayed": {
+    "home_win": [
+      "21/10",
+      "2/1",
+      "2/1",
+      "2/1",
+      "21/10",
+      "21/10",
+      "2/1",
+      "15/8",
+      "9/4",
+      "205/100",
+      "2/1",
+      "2/1",
+      "21/10",
+      "2/1",
+      "15/8",
+      "21/10",
+      "21/10",
+      "2/1",
+      "2/1",
+      null,
+      "21/10",
+      "21/10",
+      "9/4",
+      "11/5",
+      "11/5"
+    ],
+    "draw": [
+      "14/5",
+      "13/5",
+      "14/5",
+      "11/4",
+      "14/5",
+      "11/4",
+      "29/10",
+      "13/5",
+      "11/4",
+      "11/4",
+      "13/5",
+      "13/5",
+      "14/5",
+      "13/5",
+      "14/5",
+      "11/4",
+      "14/5",
+      "13/5",
+      "13/5",
+      null,
+      "13/5",
+      "27/10",
+      "29/10",
+      "14/5",
+      "14/5"
+    ],
+    "away_win": [
+      "23/20",
+      "23/20",
+      "6/5",
+      "23/20",
+      "23/20",
+      "11/10",
+      "23/20",
+      "23/20",
+      "11/10",
+      "6/5",
+      "11/10",
+      "11/10",
+      "23/20",
+      "11/10",
+      "11/10",
+      "11/10",
+      "23/20",
+      "11/10",
+      "11/10",
+      null,
+      "11/10",
+      "11/10",
+      "6/5",
+      "6/5",
+      "6/5"
+    ]
+  },
+  "column_order": [
+    "bet365",
+    "William Hill",
+    "Unibet",
+    "Betfred",
+    "Spreadex",
+    "Ladbrokes",
+    "BetVictor",
+    "BetMGM",
+    "BoyleSports",
+    "ForTheBettor",
+    "Star Sports",
+    "PricedUp",
+    "Sporting Index",
+    "Bet Goodwin",
+    "QuinnBet",
+    "Betway",
+    "Coral",
+    "BetAhoy",
+    "BetTOM",
+    "Ivy Bet",
+    "Sky Bet",
+    "Paddy Power",
+    "AK Bets",
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "provenance": "screenshot ss_24944pzy6, logo row column 6 (x=442) reads Ladbrokes; values at x=442 are 11/10 / 21/10 / 11/4",
+  "notes": [
+    "Ivy Bet (column 20) had no price on this fixture; recorded as null, not guessed.",
+    "DOM text returned 24 values per row (blank cells are omitted from the DOM text), the screenshot shows 25 columns. Both agree once the blank is accounted for.",
+    "Bookmaker names come from logo images read off the screenshot. 'ForTheBettor', 'BetAhoy' and 'BetTOM' are best-effort readings of small logos and may be misnamed; they are labels only and do not affect any calculation."
+  ]
+}

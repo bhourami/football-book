@@ -1,0 +1,267 @@
+{
+  "fixture_id": "2026-09-20-MCI-SUN",
+  "fixture": "Man City v Sunderland",
+  "market": "match_result",
+  "captured_at_utc": "2026-09-19T18:15:00Z",
+  "source": "oddschecker.com",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league/man-city-v-sunderland/winner",
+  "outcomes": [
+    "home_win",
+    "draw",
+    "away_win"
+  ],
+  "outcome_labels": {
+    "home_win": "Man City",
+    "draw": "Draw",
+    "away_win": "Sunderland"
+  },
+  "prices": {
+    "bet365": [
+      1.333333,
+      5.5,
+      8.5
+    ],
+    "William Hill": [
+      1.333333,
+      5.0,
+      8.5
+    ],
+    "Unibet": [
+      1.344828,
+      5.5,
+      9.0
+    ],
+    "Betfred": [
+      1.3,
+      5.5,
+      10.0
+    ],
+    "Spreadex": [
+      1.3,
+      5.6,
+      8.5
+    ],
+    "Ladbrokes": [
+      1.333333,
+      5.75,
+      8.0
+    ],
+    "BetVictor": [
+      1.3,
+      5.5,
+      9.5
+    ],
+    "BetMGM": [
+      1.32,
+      5.25,
+      8.0
+    ],
+    "BoyleSports": [
+      1.3,
+      5.0,
+      9.5
+    ],
+    "ForTheBettor": [
+      1.32,
+      5.1,
+      10.25
+    ],
+    "Star Sports": [
+      1.333333,
+      5.0,
+      9.0
+    ],
+    "PricedUp": [
+      1.333333,
+      5.0,
+      9.0
+    ],
+    "Sporting Index": [
+      1.3,
+      5.8,
+      8.5
+    ],
+    "Bet Goodwin": [
+      1.285714,
+      5.5,
+      8.5
+    ],
+    "QuinnBet": [
+      1.3,
+      5.25,
+      9.5
+    ],
+    "Betway": [
+      1.3,
+      5.75,
+      8.5
+    ],
+    "Coral": [
+      1.333333,
+      5.75,
+      8.0
+    ],
+    "BetAhoy": [
+      1.3,
+      5.5,
+      8.5
+    ],
+    "BetTOM": [
+      1.3,
+      5.5,
+      8.5
+    ],
+    "Ivy Bet": [
+      1.333333,
+      5.5,
+      9.0
+    ],
+    "Sky Bet": [
+      1.285714,
+      6.0,
+      9.0
+    ],
+    "Paddy Power": [
+      1.285714,
+      5.5,
+      9.5
+    ],
+    "AK Bets": [
+      1.333333,
+      5.75,
+      10.0
+    ]
+  },
+  "exchange_prices": {
+    "Betfair Exchange": [
+      1.333333,
+      5.9,
+      10.3
+    ],
+    "Matchbook": [
+      1.333333,
+      5.9,
+      10.3
+    ]
+  },
+  "exchanges_excluded_from_consensus": [
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "bookmakers_not_read": [],
+  "prices_as_displayed": {
+    "home_win": [
+      "1/3",
+      "1/3",
+      "10/29",
+      "3/10",
+      "3/10",
+      "1/3",
+      "3/10",
+      "8/25",
+      "3/10",
+      "32/100",
+      "1/3",
+      "1/3",
+      "3/10",
+      "2/7",
+      "3/10",
+      "30/100",
+      "1/3",
+      "3/10",
+      "3/10",
+      "1/3",
+      "2/7",
+      "2/7",
+      "1/3",
+      "1/3",
+      "1/3"
+    ],
+    "draw": [
+      "9/2",
+      "4/1",
+      "9/2",
+      "9/2",
+      "23/5",
+      "19/4",
+      "9/2",
+      "17/4",
+      "4/1",
+      "41/10",
+      "4/1",
+      "4/1",
+      "24/5",
+      "9/2",
+      "17/4",
+      "19/4",
+      "19/4",
+      "9/2",
+      "9/2",
+      "9/2",
+      "5/1",
+      "9/2",
+      "19/4",
+      "49/10",
+      "49/10"
+    ],
+    "away_win": [
+      "15/2",
+      "15/2",
+      "8/1",
+      "9/1",
+      "15/2",
+      "7/1",
+      "17/2",
+      "7/1",
+      "17/2",
+      "37/4",
+      "8/1",
+      "8/1",
+      "15/2",
+      "15/2",
+      "17/2",
+      "15/2",
+      "7/1",
+      "15/2",
+      "15/2",
+      "8/1",
+      "8/1",
+      "17/2",
+      "9/1",
+      "93/10",
+      "93/10"
+    ]
+  },
+  "column_order": [
+    "bet365",
+    "William Hill",
+    "Unibet",
+    "Betfred",
+    "Spreadex",
+    "Ladbrokes",
+    "BetVictor",
+    "BetMGM",
+    "BoyleSports",
+    "ForTheBettor",
+    "Star Sports",
+    "PricedUp",
+    "Sporting Index",
+    "Bet Goodwin",
+    "QuinnBet",
+    "Betway",
+    "Coral",
+    "BetAhoy",
+    "BetTOM",
+    "Ivy Bet",
+    "Sky Bet",
+    "Paddy Power",
+    "AK Bets",
+    "Betfair Exchange",
+    "Matchbook"
+  ],
+  "provenance": "screenshot with logo row loaded; column 6 (x=442) is Ladbrokes, values 1/3 / 19/4 / 7/1",
+  "notes": [
+    "All 25 columns populated on this fixture. This is what exposed the fact that the column count varies between pages: the other two Sunday 14:00 fixtures returned 24.",
+    "Heavy odds-on favourite. Proportional and Shin margin removal diverge most in exactly this shape of market, so this is a useful method-sensitivity test case."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "fixture_id": "2026-09-20-MCI-SUN",
+  "fixture": "Man City v Sunderland",
+  "kickoff_local": "2026-09-20 14:00 BST",
+  "market": "match_result",
+  "source": "oddschecker.com",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league/man-city-v-sunderland/winner",
+  "captured_at_utc": "2026-09-19T18:15:00Z",
+  "column_order": [
+    "bet365", "William Hill", "Unibet", "Betfred", "Spreadex",
+    "Ladbrokes", "BetVictor", "BetMGM", "BoyleSports", "ForTheBettor",
+    "Star Sports", "PricedUp", "Sporting Index", "Bet Goodwin", "QuinnBet",
+    "Betway", "Coral", "BetAhoy", "BetTOM", "Ivy Bet",
+    "Sky Bet", "Paddy Power", "AK Bets",
+    "Betfair Exchange", "Matchbook"
+  ],
+  "exchanges": ["Betfair Exchange", "Matchbook"],
+  "ladbrokes_column_index_1based": 6,
+  "ladbrokes_column_verified": "screenshot with logo row loaded; column 6 (x=442) is Ladbrokes, values 1/3 / 19/4 / 7/1",
+  "row_order_as_displayed": ["Man City", "Draw", "Sunderland"],
+  "outcomes": ["home_win", "draw", "away_win"],
+  "outcome_labels": {"home_win": "Man City", "draw": "Draw", "away_win": "Sunderland"},
+  "rows_fractional": {
+    "home_win": ["1/3", "1/3", "10/29", "3/10", "3/10", "1/3", "3/10", "8/25", "3/10", "32/100", "1/3", "1/3", "3/10", "2/7", "3/10", "30/100", "1/3", "3/10", "3/10", "1/3", "2/7", "2/7", "1/3", "1/3", "1/3"],
+    "draw": ["9/2", "4/1", "9/2", "9/2", "23/5", "19/4", "9/2", "17/4", "4/1", "41/10", "4/1", "4/1", "24/5", "9/2", "17/4", "19/4", "19/4", "9/2", "9/2", "9/2", "5/1", "9/2", "19/4", "49/10", "49/10"],
+    "away_win": ["15/2", "15/2", "8/1", "9/1", "15/2", "7/1", "17/2", "7/1", "17/2", "37/4", "8/1", "8/1", "15/2", "15/2", "17/2", "15/2", "7/1", "15/2", "15/2", "8/1", "8/1", "17/2", "9/1", "93/10", "93/10"]
+  },
+  "notes": [
+    "All 25 columns populated on this fixture. This is what exposed the fact that the column count varies between pages: the other two Sunday 14:00 fixtures returned 24.",
+    "Heavy odds-on favourite. Proportional and Shin margin removal diverge most in exactly this shape of market, so this is a useful method-sensitivity test case."
+  ]
+}
