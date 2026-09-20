@@ -148,13 +148,15 @@
       "selection": "away_win",
       "analyst": "claude",
       "our_probability": 0.44,
-      "edge": -0.0114,
-      "price": 2.05,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-15T00:33:00Z",
+      "edge": 0.0104,
+      "price": 2.2,
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Liverpool 6/5)",
+      "price_timestamp_utc": "2026-09-20T12:00:00Z",
       "decision": "declined",
-      "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed"
+      "decision_reason": "edge_below_threshold -- still below the 3pp floor at today's price (+1.04pp, was -1.14pp at the original price)",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com), checked ~1hr pre-kickoff: both sides fielded exactly the absentee lists this candidate's reasoning assumed (Bournemouth: Araujo, Kroupi, Adli, Milosavljevic out; Liverpool: Bradley, Leoni, Ekitike, Chiesa out) -- no material surprise. Decline holds; well below threshold even after the recompute. This is also a standing disagreement with Codex's own higher probability estimate on the same market (0.56 vs 0.44) -- see collaboration/debate-conclusions.json no_position entry."
     },
     {
       "fixture_id": "2026-09-20-LEE-CRY",
@@ -162,13 +164,15 @@
       "selection": "home_win",
       "analyst": "claude",
       "our_probability": 0.46,
-      "edge": -0.0519,
-      "price": 1.833,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-15T00:35:00Z",
+      "edge": -0.1008,
+      "price": 1.7,
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Leeds 7/10, Draw 3/1, Palace 15/4)",
+      "price_timestamp_utc": "2026-09-20T12:00:00Z",
       "decision": "declined",
-      "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed"
+      "decision_reason": "edge_below_threshold -- more negative than at the original price (-10.08pp, was -5.19pp), Leeds having shortened further",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "SERIOUS SCRUTINY APPLIED PER OWNER INSTRUCTION. Official confirmed lineups (lastwordonsports.com, corroborated by insidefutbol.com): Leeds missing only Wilson and Rodon, with Ilia Gruev back available; Crystal Palace missing first-choice striker Jean-Philippe Mateta AND keeper Dean Henderson (both until after the international break), plus Axel Disasi suspended. None of this supports reviving Leeds home_win -- Leeds is now priced even shorter than at research time, pushing this candidate's own edge further negative. Decline reinforced."
     },
     {
       "fixture_id": "2026-09-20-FUL-MUN",
@@ -262,12 +266,14 @@
       "our_probability": null,
       "edge": 0.2263,
       "price": 4.75,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Leeds 7/10, Draw 3/1, Palace 15/4) -- completely unchanged",
+      "price_timestamp_utc": "2026-09-20T12:00:00Z",
       "decision": "declined",
       "decision_reason": "reasoning_error",
-      "team_news_status": "unconfirmed",
-      "note": "Confirmed via live table check 2026-09-19: Leeds are 4th, unbeaten (2W-2D-0L, GD+4); Crystal Palace are 16th, 1 win in 4 (GD-5). A +22.6pp edge backing 16th-place Palace over an unbeaten top-4 side -- the largest edge recorded anywhere in this project -- is the same failure pattern as the Brighton-Arsenal error: a large claimed edge the actual table directly contradicts. Declined, not re-priced."
+      "team_news_status": "confirmed",
+      "note": "Confirmed via live table check 2026-09-19: Leeds are 4th, unbeaten (2W-2D-0L, GD+4); Crystal Palace are 16th, 1 win in 4 (GD-5). A +22.6pp edge backing 16th-place Palace over an unbeaten top-4 side -- the largest edge recorded anywhere in this project -- is the same failure pattern as the Brighton-Arsenal error: a large claimed edge the actual table directly contradicts. Declined, not re-priced.",
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "SERIOUS SCRUTINY APPLIED PER OWNER INSTRUCTION, 2026-09-20 pre-kickoff. Official confirmed lineups (lastwordonsports.com, corroborated by insidefutbol.com): Leeds missing only Harry Wilson (quad) and Joe Rodon (hamstring), with Ilia Gruev back available -- a stronger, not weaker, Leeds team-news picture. Crystal Palace missing Dean Henderson (GK) AND Jean-Philippe Mateta, their first-choice striker and main attacking threat, both until after the international break, plus Axel Disasi suspended -- materially weakens Palace's case to win, not strengthens it. Bet365's price is completely unchanged (Palace still 4.75) -- edge recomputed identically at +22.63pp. DECLINE HOLDS on team news, table/form, and price grounds together; nothing in today's check independently supports a 20+pt edge."
     }
   ]
 }
