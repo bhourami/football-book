@@ -5,7 +5,7 @@
   "stake_gbp": 10,
   "bets_placed": 0,
   "bets_remaining": 20,
-  "running_balance_gbp": 200,
+  "running_balance_gbp": 251.09,
   "review_checkpoint_at_bet": 10,
   "stopped": false,
   "stop_reason": null,
@@ -395,9 +395,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "won",
+      "settled_pl_gbp": 11.0,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Liverpool to win. Claude's own view on this selection was negative-edge at the original price -- a real disagreement.",
@@ -405,7 +405,8 @@
       "confidence_rank_note": "MEDIUM-HIGH -- Liverpool unbeaten (1W-3D) vs winless Bournemouth (0W-3D-1L); direction well supported, edge size may be generous given Liverpool's lack of actual wins.",
       "price_obtained_by_owner_note": "11/10 on Ladbrokes.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com) checked ~1hr pre-kickoff: both sides fielded exactly the absentee lists this selection's estimate assumed (Bournemouth: Araujo, Kroupi, Adli, Milosavljevic out; Liverpool: Bradley, Leoni, Ekitike, Chiesa out) -- no material surprise. FLAGGED: this selection was already placed by the owner (2026-09-19T11:04:00Z) well before this official-lineup confirmation, the same sequencing gap already flagged elsewhere in this project (EVE-IPS, NEW-HUL, MUN-MCI). Raised for the owner, not resolved here. Edge recomputed against today's refreshed Bet365 price (2.20, was 2.15): +13.04pp, still clears the threshold -- selection continues to hold on today's numbers regardless."
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com) checked ~1hr pre-kickoff: both sides fielded exactly the absentee lists this selection's estimate assumed (Bournemouth: Araujo, Kroupi, Adli, Milosavljevic out; Liverpool: Bradley, Leoni, Ekitike, Chiesa out) -- no material surprise. FLAGGED: this selection was already placed by the owner (2026-09-19T11:04:00Z) well before this official-lineup confirmation, the same sequencing gap already flagged elsewhere in this project (EVE-IPS, NEW-HUL, MUN-MCI). Raised for the owner, not resolved here. Edge recomputed against today's refreshed Bet365 price (2.20, was 2.15): +13.04pp, still clears the threshold -- selection continues to hold on today's numbers regardless.",
+      "result_note": "won -- Bournemouth 0-1 Liverpool."
     },
     {
       "fixture_id": "2026-09-20-BOU-LIV",
@@ -424,9 +425,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "won",
+      "settled_pl_gbp": 17.0,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "confidence_rank": 4,
@@ -434,7 +435,8 @@
       "price_obtained_by_owner_note": "17/10 on Ladbrokes.",
       "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Same official confirmed lineup as the match-result entry above -- no material surprise. A fresh Bet365-specific BTTS quote could not be isolated today despite repeated attempts (same recurring oddschecker.com gap as MW5's TOT-AVL and NFO-COV); no evidence of a material market move found elsewhere, so price is retained unchanged. Already placed ahead of this check (same sequencing gap flagged on the sibling match-result entry) -- raised for the owner, not resolved here."
+      "actual_lineup_check_note": "Same official confirmed lineup as the match-result entry above -- no material surprise. A fresh Bet365-specific BTTS quote could not be isolated today despite repeated attempts (same recurring oddschecker.com gap as MW5's TOT-AVL and NFO-COV); no evidence of a material market move found elsewhere, so price is retained unchanged. Already placed ahead of this check (same sequencing gap flagged on the sibling match-result entry) -- raised for the owner, not resolved here.",
+      "result_note": "won -- Bournemouth 0-1 Liverpool, Bournemouth failed to score."
     },
     {
       "fixture_id": "2026-09-20-LEE-CRY",
@@ -462,7 +464,9 @@
       "decision_reason": "reasoning_error",
       "correction_note": "Confirmed via live Premier League table check 2026-09-19: Leeds are 4th, unbeaten (2W-2D-0L, GD+4); Crystal Palace are 16th with 1 win in 4 (GD-5). Backing Palace to win at a +22.6pp edge -- the largest in the project -- against an unbeaten top-4 side is the same failure pattern as the Brighton-Arsenal error: a large claimed edge that the actual table directly contradicts. Declined, not re-priced.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "SERIOUS SCRUTINY APPLIED PER OWNER INSTRUCTION, 2026-09-20 pre-kickoff. Official confirmed lineups (lastwordonsports.com, corroborated by insidefutbol.com): Leeds missing only Harry Wilson (quad) and Joe Rodon (hamstring), with Ilia Gruev back available -- a stronger, not weaker, Leeds team-news picture than assumed. Crystal Palace missing Dean Henderson (GK) AND Jean-Philippe Mateta, their first-choice striker and main attacking threat, both until after the international break, plus Axel Disasi suspended -- materially weakens, not strengthens, Palace's case to win. Nothing in the confirmed lineup supports reviving this pick; if anything it reinforces the decline. Bet365 price completely unchanged (Palace still 4.75) -- edge recomputed identically at +22.63pp. DECLINE HOLDS on team news, form/table, and price grounds together."
+      "actual_lineup_check_note": "SERIOUS SCRUTINY APPLIED PER OWNER INSTRUCTION, 2026-09-20 pre-kickoff. Official confirmed lineups (lastwordonsports.com, corroborated by insidefutbol.com): Leeds missing only Harry Wilson (quad) and Joe Rodon (hamstring), with Ilia Gruev back available -- a stronger, not weaker, Leeds team-news picture than assumed. Crystal Palace missing Dean Henderson (GK) AND Jean-Philippe Mateta, their first-choice striker and main attacking threat, both until after the international break, plus Axel Disasi suspended -- materially weakens, not strengthens, Palace's case to win. Nothing in the confirmed lineup supports reviving this pick; if anything it reinforces the decline. Bet365 price completely unchanged (Palace still 4.75) -- edge recomputed identically at +22.63pp. DECLINE HOLDS on team news, form/table, and price grounds together.",
+      "hypothetical_result_if_placed": "lost -- Leeds 0-0 Crystal Palace. The Palace win was withdrawn pre-match as a suspect pattern (backing 16th-placed Palace at a +22.6pp edge against unbeaten 4th-placed Leeds). It would have lost.",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-20-LEE-CRY",
@@ -481,9 +485,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "won",
+      "settled_pl_gbp": 10.5,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Narrow, barely above threshold.",
@@ -492,7 +496,8 @@
       "price_obtained_by_owner_note": "21/20 on Ladbrokes.",
       "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Same official confirmed lineup as the sibling match-result entry above -- Palace missing their first-choice striker Mateta and keeper Henderson, if anything a point in favour of BTTS No, not against it, though this is not used to adjust the pre-existing probability (no post-hoc anchoring). A fresh Bet365-specific BTTS quote could not be isolated today (same recurring gap elsewhere this project); price retained unchanged, edge unchanged at +3.17pp. Already placed ahead of this check -- same sequencing gap as flagged on the sibling entries."
+      "actual_lineup_check_note": "Same official confirmed lineup as the sibling match-result entry above -- Palace missing their first-choice striker Mateta and keeper Henderson, if anything a point in favour of BTTS No, not against it, though this is not used to adjust the pre-existing probability (no post-hoc anchoring). A fresh Bet365-specific BTTS quote could not be isolated today (same recurring gap elsewhere this project); price retained unchanged, edge unchanged at +3.17pp. Already placed ahead of this check -- same sequencing gap as flagged on the sibling entries.",
+      "result_note": "won -- Leeds 0-0 Crystal Palace, goalless."
     },
     {
       "fixture_id": "2026-09-20-MCI-SUN",
@@ -511,9 +516,9 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "won",
+      "settled_pl_gbp": 3.0,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Man City to win.",
@@ -521,7 +526,8 @@
       "confidence_rank_note": "HIGH -- Man City are 4-0-0, GD+6, table leaders; fully consistent with the pick.",
       "price_obtained_by_owner_note": "3/10 on Ladbrokes.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com) checked ~1hr pre-kickoff. Man City: Donnarumma; Nunes, Dias, Guehi, Gvardiol; Anderson, Fernandez; Ndiaye, Cherki, Semenyo; Haaland -- Foden out (suspended), already covered by this pick's generic absence assumption; Haaland returns to start, a positive not a negative. Sunderland: Roefs; Mukiele, Ballard, Danso, Methalie; Xhaka, Sadiki; Le Fee, Meunier, Angulo, Brobbey -- Reinildo (suspended), Diarra (hamstring), Mundle (long-term knee) all out as expected. One source flags a Riquelme Angulo as unavailable while the confirmed lineup lists an Angulo starting -- unresolved discrepancy between sources, noted rather than silently resolved; does not change the overall picture. No material surprise. FLAGGED: already placed by the owner (2026-09-19T11:04:00Z) ahead of this official confirmation, the same sequencing gap flagged elsewhere. Edge recomputed at today's price: +7.31pp, still clears the threshold."
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com) checked ~1hr pre-kickoff. Man City: Donnarumma; Nunes, Dias, Guehi, Gvardiol; Anderson, Fernandez; Ndiaye, Cherki, Semenyo; Haaland -- Foden out (suspended), already covered by this pick's generic absence assumption; Haaland returns to start, a positive not a negative. Sunderland: Roefs; Mukiele, Ballard, Danso, Methalie; Xhaka, Sadiki; Le Fee, Meunier, Angulo, Brobbey -- Reinildo (suspended), Diarra (hamstring), Mundle (long-term knee) all out as expected. One source flags a Riquelme Angulo as unavailable while the confirmed lineup lists an Angulo starting -- unresolved discrepancy between sources, noted rather than silently resolved; does not change the overall picture. No material surprise. FLAGGED: already placed by the owner (2026-09-19T11:04:00Z) ahead of this official confirmation, the same sequencing gap flagged elsewhere. Edge recomputed at today's price: +7.31pp, still clears the threshold.",
+      "result_note": "won -- Manchester City 5-3 Sunderland."
     },
     {
       "fixture_id": "2026-09-20-MCI-SUN",
@@ -546,7 +552,9 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Same official confirmed lineup as the match-result entry above -- no material surprise (see that entry's note, including the flagged Angulo source discrepancy). Price has drifted in the bettor's favour (1.80 -> 2.00); edge recomputed at +11.29pp under the estimated-overround method described above, up from +6.10pp. Selection continues to hold; not yet placed by the owner on this book (the conclusion book's twin position on this same market IS already placed -- see ledger/conclusion.json). Still subject to methodology.md section 7's BTTS systematic-bias flag; a pre-existing (2026-09-15) selection being rechecked, not a new one."
+      "actual_lineup_check_note": "Same official confirmed lineup as the match-result entry above -- no material surprise (see that entry's note, including the flagged Angulo source discrepancy). Price has drifted in the bettor's favour (1.80 -> 2.00); edge recomputed at +11.29pp under the estimated-overround method described above, up from +6.10pp. Selection continues to hold; not yet placed by the owner on this book (the conclusion book's twin position on this same market IS already placed -- see ledger/conclusion.json). Still subject to methodology.md section 7's BTTS systematic-bias flag; a pre-existing (2026-09-15) selection being rechecked, not a new one.",
+      "hypothetical_result_if_placed": "lost -- Manchester City 5-3 Sunderland, eight goals.",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-20-FUL-MUN",

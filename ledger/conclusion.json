@@ -7,7 +7,7 @@
   "bets_remaining": 13,
   "bets_settled": 6,
   "bets_pending": 1,
-  "running_balance_gbp": 204,
+  "running_balance_gbp": 194.0,
   "gameweek_4_note": "All four conclusion-book entries settled: Draw lost (-\u00a310), BTTS No won (+\u00a316), Newcastle win lost (-\u00a310), accumulator lost (-\u00a310). Net -\u00a314 for the gameweek. Bank \u00a3186/\u00a3200.",
   "accounting_note": "running_balance_gbp reflects settled results only; stakes on open (unsettled) bets are tracked via bets_placed/bets_remaining and each entry's own fields, not deducted here until result is known.",
   "review_checkpoint_at_bet": 10,
@@ -222,16 +222,17 @@
       "price_obtained_timestamp_utc": "2026-09-19T11:04:00Z",
       "closing_price": null,
       "clv": null,
-      "result": "pending",
-      "settled_pl_gbp": null,
-      "status": "placed",
+      "result": "lost",
+      "settled_pl_gbp": -10.0,
+      "status": "settled",
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "note": "Claude edge +10.0pp, Codex edge +6.1pp (same price both times) -- see reconciliation.md",
       "price_obtained_by_owner_note": "Odds 7/10 on Ladbrokes, plain BTTS single. Price drifted down from 1.80 recorded at selection time -- normal market movement, recorded as obtained.",
       "systematic_bias_flag": "SYSTEMATIC BIAS FLAG (2026-09-19): this pick is part of a pattern where every BTTS 'No' position taken this gameweek showed the analyst's own 'No' probability exceeding the market's fair 'No' probability -- across all fixtures, not just this one. See CLAUDE.md 'BTTS market paused' section. Already placed, not retroactively declined, but do not treat this as an independently-verified edge -- it shares a likely common-cause modelling bias with the rest of the book's BTTS picks.",
       "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
-      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com), checked ~1hr pre-kickoff. Man City: Donnarumma; Nunes, Dias, Guehi, Gvardiol; Anderson, Fernandez; Ndiaye, Cherki, Semenyo; Haaland (Foden out, suspended; Haaland returns to start). Sunderland: Roefs; Mukiele, Ballard, Danso, Methalie; Xhaka, Sadiki; Le Fee, Meunier, Angulo, Brobbey (Reinildo suspended, Diarra and Mundle both out injured). One source flags a Riquelme Angulo as unavailable while the confirmed lineup lists an Angulo starting -- unresolved discrepancy, noted rather than resolved; immaterial either way. No material surprise for either side; the pre-existing conclusion-book position (already placed at owner price 1.70) continues to hold. See collaboration/debate-conclusions.json for both analysts' recomputed edges against today's refreshed Bet365 price (now 2.00, drifted from 1.80)."
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com), checked ~1hr pre-kickoff. Man City: Donnarumma; Nunes, Dias, Guehi, Gvardiol; Anderson, Fernandez; Ndiaye, Cherki, Semenyo; Haaland (Foden out, suspended; Haaland returns to start). Sunderland: Roefs; Mukiele, Ballard, Danso, Methalie; Xhaka, Sadiki; Le Fee, Meunier, Angulo, Brobbey (Reinildo suspended, Diarra and Mundle both out injured). One source flags a Riquelme Angulo as unavailable while the confirmed lineup lists an Angulo starting -- unresolved discrepancy, noted rather than resolved; immaterial either way. No material surprise for either side; the pre-existing conclusion-book position (already placed at owner price 1.70) continues to hold. See collaboration/debate-conclusions.json for both analysts' recomputed edges against today's refreshed Bet365 price (now 2.00, drifted from 1.80).",
+      "result_note": "lost -- Manchester City 5-3 Sunderland. Eight goals. This is the BTTS bias the owner spotted and the backtest measured (predicted BTTS-yes 54.3% vs realised 58.1%), landing on the real-money book."
     }
   ]
 }
