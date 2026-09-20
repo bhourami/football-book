@@ -35,7 +35,8 @@
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T12:02:50Z",
       "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json for full comparison). Draw price unchanged at 3.90; edge recomputed against refreshed Bet365 odds via scripts/edge_calculator.py -- still clears the 3pp threshold. Selection remains taken.",
-      "hypothetical_result_if_placed": "lost -- Brighton won 5-0, not a draw"
+      "hypothetical_result_if_placed": "lost -- Brighton won 5-0, not a draw",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-13-COV-BHA",
@@ -59,7 +60,8 @@
       "status": "pending_owner_placement",
       "provisional_pending_lineup_check": true,
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
-      "hypothetical_result_if_placed": "won -- Coventry failed to score (lost 0-5), BTTS No would have won"
+      "hypothetical_result_if_placed": "won -- Coventry failed to score (lost 0-5), BTTS No would have won",
+      "hypothetical_pl_gbp": 11.0
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -85,7 +87,8 @@
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
       "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). Match-result price moved from 2.15 to 2.10 on Man City -- normal market drift as both lineups firmed up with no surprises, not itself team-news driven. Overround/fair-probability/edge recomputed via scripts/edge_calculator.py against the refreshed Bet365 odds (Man Utd 3.25 / Draw 3.80 / Man City 2.10): edge now +10.52pp (was +11.74pp) -- still comfortably clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check.",
-      "hypothetical_result_if_placed": "won -- Man City won 1-0"
+      "hypothetical_result_if_placed": "won -- Man City won 1-0",
+      "hypothetical_pl_gbp": 11.0
     },
     {
       "fixture_id": "2026-09-13-MUN-MCI",
@@ -111,7 +114,8 @@
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-13T14:35:00Z",
       "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change (see collaboration/claude-input.json and collaboration/codex-input.json for full comparison). BTTS No price unchanged at 2.625 (Yes re-quoted directly at 4/9; No backed out of the unchanged overround since no source independently re-quoted it). Edge recomputed via scripts/edge_calculator.py -- unchanged at +5.91pp, still clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check.",
-      "hypothetical_result_if_placed": "won -- final 0-1, only Man City scored, BTTS No would have won"
+      "hypothetical_result_if_placed": "won -- final 0-1, only Man City scored, BTTS No would have won",
+      "hypothetical_pl_gbp": 16.25
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",
@@ -137,7 +141,8 @@
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-14T18:10:00Z",
       "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, one mild deviation (Dedic started over Livramento, a positive for Newcastle's defensive solidity) -- no material change, probability held at 0.428. Price drifted 3.00 -> 2.80; edge recomputed via scripts/edge_calculator.py against the refreshed market -- now +9.09pp (was +11.17pp), still comfortably clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check. Note: Claude's own book declined this same selection on this recheck (its independent edge fell to +1.29pp, below its 3pp threshold at this price) -- see ledger/claude.json and requests/rejected-selections.json.",
-      "hypothetical_result_if_placed": "lost -- Leeds won 4-1, Newcastle did not win"
+      "hypothetical_result_if_placed": "lost -- Leeds won 4-1, Newcastle did not win",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-14-LEE-NEW",
@@ -163,7 +168,8 @@
       "provisional_note": "Set from pre-match injury/doubt reporting, not the official starting lineup. Per methodology.md section 6 (decided 13 Sept 2026), this must be re-checked against the confirmed teamsheet (~1hr before kickoff) before the bet is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-14T18:10:00Z",
       "actual_lineup_check_note": "Official confirmed lineups matched pre-match assumptions, no material change to a goals-both-ends view; probability held at 0.465. BTTS price moved from 2.20 to 2.28 on No. Edge recomputed via scripts/edge_calculator.py: +5.70pp (was +3.64pp) -- still clears the 3pp threshold. Selection remains taken. Still pending_owner_placement -- not yet placed as of this check. This is the only pending pick this gameweek that is Codex-solo-only, with no Claude equivalent to compare against.",
-      "hypothetical_result_if_placed": "lost -- Newcastle scored a 90th-minute consolation (final 4-1), so both teams scored; BTTS No would have lost"
+      "hypothetical_result_if_placed": "lost -- Newcastle scored a 90th-minute consolation (final 4-1), so both teams scored; BTTS No would have lost",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-19-TOT-AVL",
