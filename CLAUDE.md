@@ -224,6 +224,25 @@ fetch tool's own model) before writing a final score or any goal-level
 detail into the ledger. Treat a WebFetch or WebSearch summary of a
 score as unverified until cross-checked there.
 
+**Better route, found 20 September 2026:** the rendered matchweek page
+is JavaScript-driven and the fixture list did not render at all behind
+a cookie consent dialog -- the results region came back empty. Use
+premierleague.com's own backing API instead. It is the same source with
+no rendering layer and no model summarising it:
+
+```
+# season ids
+curl -s -H 'Origin: https://www.premierleague.com' -H 'Account: premierleague' \
+  'https://footballapi.pulselive.com/football/competitions/1/compseasons?page=0&pageSize=10'
+# 2026/27 = compSeason 841
+curl -s -H 'Origin: https://www.premierleague.com' -H 'Account: premierleague' \
+  'https://footballapi.pulselive.com/football/fixtures?comps=1&compSeasons=841&page=0&pageSize=60&sort=asc&statuses=C,L,U'
+```
+
+Returns every fixture with `teams[].score`, `gameweek`, kickoff, and a
+`status` of `C` (complete), `L` (live) or `U` (upcoming). **Never settle
+a fixture whose status is not `C`** -- an `L` scoreline is provisional.
+
 ## BTTS market paused: a systematic bias, not independent value-finds
 
 19 September 2026, owner-caught: "your BTTS is a no in every match --

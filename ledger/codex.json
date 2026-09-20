@@ -188,7 +188,9 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T10:30:00Z",
-      "actual_lineup_check_note": "MECHANICAL UPDATE ONLY, not an independent Codex re-run -- no live Codex process was available in this session, so our_probability above is Codex's original, un-revised figure; only team_news_status, the lineup flags, and the price/edge refresh have been applied. Official confirmed lineup (tottenhamhotspur.com, corroborated by spurs-web.com and lastwordonsports.com): Solanke starts for Tottenham and Gomes/Manzambi start for Villa, all previously assumed absent -- see collaboration/codex-input.json and collaboration/claude-input.json for the full comparison. Whether Codex's own probability estimate would move on this lineup information is unverified pending an actual Codex run; flagged for the owner. Edge recomputed via scripts/edge_calculator.py against today's confirmed price: +10.93pp (was +11.41pp) -- still clears the threshold comfortably."
+      "actual_lineup_check_note": "MECHANICAL UPDATE ONLY, not an independent Codex re-run -- no live Codex process was available in this session, so our_probability above is Codex's original, un-revised figure; only team_news_status, the lineup flags, and the price/edge refresh have been applied. Official confirmed lineup (tottenhamhotspur.com, corroborated by spurs-web.com and lastwordonsports.com): Solanke starts for Tottenham and Gomes/Manzambi start for Villa, all previously assumed absent -- see collaboration/codex-input.json and collaboration/claude-input.json for the full comparison. Whether Codex's own probability estimate would move on this lineup information is unverified pending an actual Codex run; flagged for the owner. Edge recomputed via scripts/edge_calculator.py against today's confirmed price: +10.93pp (was +11.41pp) -- still clears the threshold comfortably.",
+      "hypothetical_result_if_placed": "won -- Tottenham 2-3 Aston Villa, Villa won away",
+      "hypothetical_pl_gbp": 28.0
     },
     {
       "fixture_id": "2026-09-19-TOT-AVL",
@@ -213,7 +215,9 @@
       "provisional_pending_lineup_check": false,
       "provisional_note": "Team news not yet confirmed -- methodology.md section 6 requires this to be re-checked against the official lineup ~1hr before kickoff before real money is placed.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T10:30:00Z",
-      "actual_lineup_check_note": "MECHANICAL UPDATE ONLY -- see the match-result entry above for the full lineup facts and the same caveat: Codex's own probability estimate has not been independently re-run against this lineup information; our_probability is unchanged. BTTS price could not be refreshed either, so edge is unchanged from the original figure."
+      "actual_lineup_check_note": "MECHANICAL UPDATE ONLY -- see the match-result entry above for the full lineup facts and the same caveat: Codex's own probability estimate has not been independently re-run against this lineup information; our_probability is unchanged. BTTS price could not be refreshed either, so edge is unchanged from the original figure.",
+      "hypothetical_result_if_placed": "lost -- Tottenham 2-3 Aston Villa, both teams scored",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-19-BHA-ARS",
@@ -241,7 +245,9 @@
       "decision_reason": "reasoning_error (standing) -- and, as of the confirmed lineup and refreshed price, also edge_below_threshold (edge now -3.64pp, was +7.75pp)",
       "correction_note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book -- Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19. Declined, not re-priced.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
-      "actual_lineup_check_note": "Official confirmed Arsenal lineup (arsenal.com): only Saliba out; Timber AND Mosquera both start. Reinforces, doesn't reopen, the standing reasoning_error correction. Refreshed Bet365 price (Brighton 3.00, down from 4.75) now also puts the edge below zero (-3.64pp). Decline holds on both grounds."
+      "actual_lineup_check_note": "Official confirmed Arsenal lineup (arsenal.com): only Saliba out; Timber AND Mosquera both start. Reinforces, doesn't reopen, the standing reasoning_error correction. Refreshed Bet365 price (Brighton 3.00, down from 4.75) now also puts the edge below zero (-3.64pp). Decline holds on both grounds.",
+      "hypothetical_result_if_placed": "won -- Brighton 3-0 Arsenal. RECORDED WITH A WARNING: this selection was rejected pre-match (requests/rejected-selections.json) because it rested on the 'Arsenal defensive crisis' premise the owner had already falsified -- Arsenal were 6-0-0 with those players absent, and on the day Timber and Mosquera both started. Brighton duly won 3-0. The selection would have returned a profit and its stated reasoning was still wrong. A correct withdrawal that costs money is still a correct withdrawal; see the Forest-Coventry entry for the same lesson in the opposite direction.",
+      "hypothetical_pl_gbp": 20.0
     },
     {
       "fixture_id": "2026-09-19-BHA-ARS",
@@ -269,7 +275,9 @@
       "decision_reason": "reasoning_error",
       "correction_note": "Codex independently reproduced the exact 'Arsenal defensive crisis' framing already corrected as a reasoning error on Claude's book -- Arsenal are 6-0-0 in all competitions this season with this same absence pattern already priced in. Confirmed via live Premier League table check 2026-09-19. Declined, not re-priced.",
       "actual_lineup_check_timestamp_utc": "2026-09-19T13:05:00Z",
-      "actual_lineup_check_note": "Same official confirmed Arsenal lineup as the match-result entry above. Price/edge unchanged (+7.37pp) but decline holds -- the probability input, not the price, is the problem."
+      "actual_lineup_check_note": "Same official confirmed Arsenal lineup as the match-result entry above. Price/edge unchanged (+7.37pp) but decline holds -- the probability input, not the price, is the problem.",
+      "hypothetical_result_if_placed": "lost -- Brighton 3-0 Arsenal, Arsenal failed to score. Same rejected premise as the match-result leg above. Note for the record: the owner's recollection that 'we actually would have won both bets' holds for the match result only -- this leg lost.",
+      "hypothetical_pl_gbp": -10.0
     },
     {
       "fixture_id": "2026-09-19-EVE-IPS",
