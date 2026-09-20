@@ -83,28 +83,34 @@
       "fixture_id": "2026-09-20-BOU-LIV", "market": "match_result",
       "our_probabilities": { "home_win": 0.29, "draw": 0.27, "away_win": 0.44 },
       "reasoning": "Both sides carrying several absences (Bournemouth: Araujo, Kroupi, Adli, Milosavljevic; Liverpool: Bradley, Leoni, Ekitike, Chiesa, Gomez doubtful). Landed close to the market's own fair split -- no differentiated view.",
-      "candidate_selection": "away_win", "price": 2.05, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:35:00Z",
-      "overround": 0.0807, "fair_probability": 0.4514, "edge": -0.0114,
-      "decision": "declined", "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "candidate_selection": "away_win", "price": 2.2, "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Liverpool 6/5)", "price_timestamp_utc": "2026-09-20T12:00:00Z",
+      "overround": 0.0581, "fair_probability": 0.4296, "edge": 0.0104,
+      "decision": "declined", "decision_reason": "edge_below_threshold -- still below the 3pp floor even at today's slightly shorter Liverpool price (+1.04pp, up from -1.14pp at the original price, but nowhere near threshold). Also a genuine standing disagreement with Codex's higher probability estimate (0.56 vs our 0.44), not a data gap.",
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com), checked ~1hr pre-kickoff. Bournemouth and Liverpool both fielded exactly the absentee lists this candidate's reasoning assumed (Bournemouth: Araujo, Kroupi, Adli, Milosavljevic all out; Liverpool: Bradley, Leoni, Ekitike, Chiesa all out) -- no material surprise. Recomputed at today's refreshed Bet365 price (Liverpool 2.20, was 2.05): edge is +1.04pp, still well below the 3pp threshold. Remains declined; no conclusion bet, regardless of what this check found, per standing instruction (this is a real disagreement with Codex's own higher probability estimate, not a lineup or pricing gap)."
     },
     {
       "fixture_id": "2026-09-20-LEE-CRY", "market": "match_result",
       "our_probabilities": { "home_win": 0.46, "draw": 0.28, "away_win": 0.26 },
       "reasoning": "Leeds coming off a morale-denting 4-1 home defeat to Newcastle in MW4, still missing Rodon and Joseph. Palace has its own injury list (5 out per Squawka) but no specific detail found. Shaded Leeds down slightly from the market's favouritism given the heavy loss last time out.",
-      "candidate_selection": "home_win", "price": 1.833, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:37:00Z",
-      "overround": 0.0658, "fair_probability": 0.5119, "edge": -0.0519,
-      "decision": "declined", "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "candidate_selection": "home_win", "price": 1.7, "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Leeds 7/10, Draw 3/1, Palace 15/4 with Bet365) -- Leeds shortened from 1.833 to 1.70 since this file's original run", "price_timestamp_utc": "2026-09-20T12:00:00Z",
+      "overround": 0.0488, "fair_probability": 0.5608, "edge": -0.1008,
+      "decision": "declined", "decision_reason": "edge_below_threshold -- more negative than at the original price (-10.08pp, was -5.19pp), since Leeds has shortened further",
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "SERIOUS SCRUTINY APPLIED PER OWNER INSTRUCTION, 2026-09-20 pre-kickoff. Official confirmed lineups (lastwordonsports.com, corroborated by insidefutbol.com): Leeds out Harry Wilson (quad) and Joe Rodon (hamstring), with Ilia Gruev back available -- broadly consistent with or slightly better than this candidate's assumption. Crystal Palace out Dean Henderson (GK) and Jean-Philippe Mateta, their first-choice striker, both until after the international break, plus Axel Disasi suspended -- Palace materially weaker in attack than a generic 'has its own injury list' framing suggested. None of this supports reviving Leeds home_win (already declined on Claude's book): Leeds now priced even shorter (1.70) than at research time, pushing our own edge further negative. Decline reinforced on both team-news and price grounds. Codex's own candidate for this fixture is a different selection (away_win/Crystal Palace, declined separately on reasoning_error grounds -- see requests/rejected-selections.json) -- no overlap, no conclusion bet possible either way."
     },
     {
       "fixture_id": "2026-09-20-MCI-SUN", "market": "btts",
       "our_probabilities": { "yes": 0.38, "no": 0.62 },
       "reasoning": "Man City heavily favoured at home; Sunderland missing Alese plus a long list flagged as on international duty (treated with some scepticism -- 20 September is not a standard FIFA window date, so this may be a stale search result; the underlying view that a newly-promoted Sunderland away at City is a plausible City-clean-sheet scenario stands regardless).",
-      "candidate_selection": "btts_no", "price": 1.80, "price_source": "oddschecker.com (Bet365 line)", "price_timestamp_utc": "2026-09-15T00:40:00Z",
-      "overround": 0.0684, "fair_probability": 0.5200, "edge": 0.1000,
-      "decision": "taken", "decision_reason": "edge clears 3pp threshold; flagged as a larger-than-typical gap (10.0pp) -- moderate-to-high, monitor rather than auto-decline, since the underlying logic (heavy favourite at home vs newly-promoted side) is a more standard pattern than MW4's Coventry outlier",
-      "team_news_status": "unconfirmed", "provisional_pending_lineup_check": true
+      "candidate_selection": "btts_no", "price": 2.00, "price_source": "oddschecker.com (Bet365 line) -- 'Both Teams to Score - No' quoted at 1/1 (2.00) with Bet365, refreshed 2026-09-20 ~1hr pre-kickoff, up from 1.80. A clean Bet365-attributed BTTS Yes price to pair with it could not be independently confirmed today; fair probability below holds this market's original overround (0.0684) constant and applies it to the new No price only -- flagged as an estimate, not a freshly observed two-way market.", "price_timestamp_utc": "2026-09-20T12:00:00Z",
+      "overround": 0.0684, "fair_probability": 0.4681, "edge": 0.1519,
+      "decision": "taken", "decision_reason": "edge clears 3pp threshold; already flagged at selection time as a larger-than-typical gap (was 10.0pp, now 15.2pp under the estimated-overround method) -- moderate-to-high, monitor rather than auto-decline, since the underlying logic (heavy favourite at home vs newly-promoted side) is a more standard pattern than MW4's Coventry outlier",
+      "team_news_status": "confirmed", "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-20T12:00:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com), checked ~1hr pre-kickoff. Man City XI: Donnarumma; Nunes, Dias, Guehi, Gvardiol; Anderson, Fernandez; Ndiaye, Cherki, Semenyo; Haaland -- Phil Foden out (suspended, red card), already covered by the general 'missing Alese plus a long list' caveat in this candidate's own reasoning; Haaland returns from a midweek rest to lead the line, a modest positive for City's attack that, if anything, argues for MORE City goals and doesn't disturb a BTTS-No case built on Sunderland's defence, not City's attack. Sunderland XI: Roefs; Mukiele, Ballard, Danso, Methalie; Xhaka, Sadiki; Le Fee, Meunier, Angulo, Brobbey -- Reinildo suspended, Habib Diarra (hamstring) and Romaine Mundle (long-term knee) both out. One source flags a Riquelme Angulo as 'unavailable' while the confirmed lineup lists an Angulo starting -- an unresolved discrepancy between sources, noted rather than silently resolved, and immaterial to the BTTS view either way. This session's original caveat about 20 September not being a standard FIFA international window is now moot -- the confirmed absences above are club-specific (injury/suspension), not international-duty related. No material surprise. Price has moved in the bettor's favour (1.80 -> 2.00); edge recomputed at +15.19pp under the estimated-overround method described above, up from +10.0pp. This is a real, placed-pending conclusion-book position (see ledger/conclusion.json, already placed at owner price 1.70) -- treated with the care that implies. Still subject to methodology.md section 7's 19 September BTTS systematic-bias flag; this is a pre-existing (2026-09-15) selection being rechecked, not a new one, so the pause on new BTTS picks does not apply to it."
     },
     {
       "fixture_id": "2026-09-20-FUL-MUN", "market": "match_result",
