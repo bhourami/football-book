@@ -52,6 +52,34 @@ It is one afternoon's prices on one match, recorded because the
 pre-registration says nothing is discarded — not because five negative
 numbers tell us what eight matchweeks will.
 
+## The T-15m slot works — checked, not assumed
+
+Section 3 schedules a capture 15 minutes before kickoff. If the feed
+switched to in-play or dropped the fixture near kickoff, that slot would
+be unworkable, so it was probed on Fulham v Man Utd rather than assumed.
+
+At exactly T-15m the fixture was **still listed with full pre-match
+coverage** — 20 books on match result, 10 on BTTS, identical to 90
+minutes earlier. The capture schedule is viable as registered.
+
+The probe also gave the first look at whether there is any movement for
+the survival test (section 7) and the CLV series (section 8) to measure.
+There is:
+
+| Outcome | T-90m | T-15m | Move | Edge T-90m | Edge T-15m |
+|---|---|---|---|---|---|
+| Fulham | 3.40 | 3.40 | — | −6.6% | −8.5% |
+| Draw | 3.70 | 3.60 | −0.10 | −7.4% | −8.9% |
+| Man Utd | 2.00 | 2.05 | +0.05 | −5.3% | −1.6% |
+| BTTS Yes | 1.50 | 1.53 | +0.03 | −4.9% | −6.1% |
+| BTTS No | 2.45 | 2.37 | −0.08 | −10.4% | −8.4% |
+
+Four of five prices moved in 75 minutes, and the measured edge moved by
+up to 3.7 percentage points. So a qualifying selection surviving to the
+next capture is a genuine question rather than a formality — which is
+exactly what section 7 was written to test. Book coverage held steady at
+14 and 5 across both captures. Nothing qualified at either.
+
 ## When collection actually starts
 
 **Matchweek 6, 10–12 October 2026.** Matchweek 5 was all but over when
