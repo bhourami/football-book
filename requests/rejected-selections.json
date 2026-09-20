@@ -180,13 +180,15 @@
       "selection": "away_win",
       "analyst": "claude",
       "our_probability": 0.46,
-      "edge": -0.0128,
-      "price": 1.95,
-      "price_source": "oddschecker.com (Bet365 line)",
-      "price_timestamp_utc": "2026-09-15T00:38:00Z",
+      "edge": -0.0167,
+      "price": 2.0,
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Man Utd Evs, Fulham 5/2, Draw 14/5)",
+      "price_timestamp_utc": "2026-09-20T14:30:00Z",
       "decision": "declined",
-      "decision_reason": "edge_below_threshold",
-      "team_news_status": "unconfirmed"
+      "decision_reason": "edge_below_threshold -- still below the 3pp floor at today's price (-1.67pp, was -1.28pp at the original price)",
+      "team_news_status": "confirmed",
+      "actual_lineup_check_timestamp_utc": "2026-09-20T14:30:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com): Man Utd missing de Ligt, Ugarte, Amad; Fulham missing Cairney, Tete (concussion) -- no material surprise relative to this candidate's own reasoning. Decline holds; still negative-edge after the recompute. A different selection entirely from Codex's home_win/BTTS-No picks on this fixture, so no conclusion bet possible regardless (see collaboration/debate-conclusions.json)."
     },
     {
       "fixture_id": "2026-09-19-NEW-HUL",

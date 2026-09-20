@@ -404,15 +404,17 @@
       "confidence": "medium",
       "candidate_selection": "home_win",
       "price": 3.5,
-      "price_source": "oddschecker.com (Bet365 line), fetched 2026-09-19",
-      "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff (Fulham 5/2, Draw 14/5, Man Utd Evs, corroborated by racingpost.com and canadasportsbetting.ca) -- completely unchanged from the 2026-09-19 fetch",
+      "price_timestamp_utc": "2026-09-20T14:30:00Z",
       "overround": 0.0489,
       "fair_probability": 0.2724,
       "edge": 0.0506,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-20T14:30:00Z",
+      "actual_lineup_check_note": "Official confirmed lineups (lastwordonsports.com 'Fulham vs Manchester United: Confirmed Lineups for September 20'). Fulham XI: Leno; Castagne, Affengruber, Bassey (C), Robinson; Berge, Charles, King; Bobb, Gonzalo, Iwobi -- out: Tom Cairney, Kenny Tete (concussion from the Anfield match); Ryan Sessegnon assessed but not risked. Man Utd XI: Lammens; Dalot, Maguire, Martinez, Shaw; Tielemans, Mainoo; Mbeumo, Fernandes, Rashford; Cunha -- out: Matthijs de Ligt, Manuel Ugarte, Amad (all injured), matching this candidate's own 'United's defensive absences' assumption (de Ligt/Ugarte both defensive-shape players); Luke Shaw's fitness was a pre-match doubt and he starts, a minor positive for United, not a reversal of an assumed absence. No material surprise for either side. Bet365 price completely unchanged (Fulham 5/2, Draw 14/5, Man Utd Evs) -- edge recomputed identically at +5.06pp, still clears the 3pp threshold. IMPORTANT CONTEXT NOT ARISING FROM THIS CHECK: ledger/codex.json already records this selection as status 'not_placed_by_owner_choice' -- the owner removed it from the betslip before placing on 2026-09-19, for the same weak-team-backing pattern flagged on the confirmed Leeds-Palace error (confidence_rank_note: LOWEST), a decision made independently of today's lineup check and unaffected by it. This check closes out the provisional/team-news flag for the audit record; it does not revive or change the owner's placement decision."
     },
     {
       "fixture_id": "2026-09-20-FUL-MUN",
@@ -425,15 +427,17 @@
       "confidence": "medium",
       "candidate_selection": "btts_no",
       "price": 2.5,
-      "price_source": "oddschecker.com (Bet365 line), fetched 2026-09-19",
-      "price_timestamp_utc": "2026-09-19T10:00:00Z",
+      "price_source": "oddschecker.com (Bet365 line), refreshed 2026-09-20 ~1hr pre-kickoff -- a fresh Bet365-attributed BTTS No quote could not be independently isolated today (same recurring oddschecker.com rendering gap as prior gameweek entries), but a Bet365 BTTS Yes price of -200 (canadasportsbetting.ca, 2026-09-20) implies 1.50 decimal, which combined with this 2.50 No price reproduces the identical 0.0667 overround already on file -- consistent with an unchanged two-way market, so retained rather than guessed",
+      "price_timestamp_utc": "2026-09-20T14:30:00Z",
       "overround": 0.0667,
       "fair_probability": 0.375,
       "edge": 0.034,
       "decision": "taken",
       "decision_reason": "edge clears 3pp threshold",
-      "team_news_status": "unconfirmed",
-      "provisional_pending_lineup_check": true
+      "team_news_status": "confirmed",
+      "provisional_pending_lineup_check": false,
+      "actual_lineup_check_timestamp_utc": "2026-09-20T14:30:00Z",
+      "actual_lineup_check_note": "Same official confirmed lineup as the match-result entry above -- no material surprise for either side. Price retained unchanged (see price_source above); edge recomputed identically at +3.40pp, narrow, still clears the 3pp threshold. Already subject to methodology.md section 7's 19 September BTTS systematic-bias pause note (this is a pre-existing, not new, selection, so the pause on new BTTS selections does not itself apply, but the standing skepticism flag does). IMPORTANT CONTEXT NOT ARISING FROM THIS CHECK: ledger/codex.json already records this selection as status 'not_placed_by_owner_choice' -- the owner dropped it from the betslip alongside the sibling home_win pick on 2026-09-19, independent of team news. This check closes out the provisional/team-news flag for the audit record only."
     }
   ]
 }

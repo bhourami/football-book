@@ -183,12 +183,12 @@
     {
       "fixture_id": "2026-09-20-FUL-MUN",
       "market": "match_result",
-      "reason": "Claude's original candidate was away_win (Man Utd, declined, edge -1.28pp). Codex's positive candidate is home_win (Fulham) at +5.06pp -- a different selection entirely. No overlap. Codex-solo only."
+      "reason": "Claude's original candidate was away_win (Man Utd, declined, edge -1.28pp). Codex's positive candidate is home_win (Fulham) at +5.06pp -- a different selection entirely. No overlap. Codex-solo only. Pre-kickoff lineup check (2026-09-20T14:30Z): official confirmed lineups (lastwordonsports.com) show no material team-news surprise for either side -- Man Utd missing de Ligt/Ugarte/Amad as this candidate's own reasoning already assumed, Fulham missing Cairney/Tete. Today's Bet365 price is unchanged (Fulham 5/2); Codex's edge recomputes identically to +5.06pp, still clearing the threshold. Claude's own recheck of away_win at today's price also still declines (-1.67pp, was -1.28pp). Still Codex-solo only -- no conclusion bet exists or is created. Separately: ledger/codex.json already records this selection as not_placed_by_owner_choice (owner pulled it from the betslip on 2026-09-19 for reasons unrelated to team news); today's check does not change that."
     },
     {
       "fixture_id": "2026-09-20-FUL-MUN",
       "market": "btts",
-      "reason": "Codex took BTTS No narrowly (+3.40pp). Claude never recorded a BTTS view. Codex-solo only."
+      "reason": "Codex took BTTS No narrowly (+3.40pp). Claude never recorded a BTTS view. Codex-solo only. Pre-kickoff lineup check (2026-09-20T14:30Z): same confirmed lineups as the match-result entry above, no material surprise. A fresh Bet365-specific No quote could not be isolated today, but a Bet365 Yes price found today (-200/1.50) reproduces the same overround already on file, so the price is retained unchanged; edge recomputes identically to +3.40pp, still clearing the threshold (narrowly). Still Codex-solo only. Also not_placed_by_owner_choice per ledger/codex.json, unchanged by this check."
     }
   ]
 }
