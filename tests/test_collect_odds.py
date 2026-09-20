@@ -128,3 +128,76 @@ def test_unmapped_club_name_raises_rather_than_guessing():
         assert "Wrexham" in str(exc)
     else:
         raise AssertionError("expected KeyError for an unmapped club")
+
+
+# --------------------------------------------------------------------------
+# Pre-flight findings, 20 September 2026. Each of these is a real property
+# of the-odds-api's UK feed, observed before any data was collected.
+# --------------------------------------------------------------------------
+
+def test_coral_is_excluded_from_the_consensus():
+    """Coral and Ladbrokes are both Entain and quote near-identically.
+
+    Fulham v Man Utd, 20 Sept 2026: both at exactly 1.50/2.45 on BTTS.
+    Leaving Coral in would measure Ladbrokes partly against itself.
+    """
+    o = build([
+        book("ladbrokes_uk", "Ladbrokes", h2h=[3.4, 3.7, 2.0]),
+        book("coral", "Coral", h2h=[3.4, 3.7, 2.05]),
+        book("williamhill", "William Hill", h2h=[3.4, 3.6, 2.0]),
+    ])
+    assert set(o["prices"]) == {"Ladbrokes", "William Hill"}
+    assert o["subject_affiliate_prices"] == {"Coral": [3.4, 3.7, 2.05]}
+
+
+def test_same_product_under_two_brands_gets_one_vote():
+    """LiveScore Bet and Virgin Bet quote identically; one desk, one vote."""
+    o = build([
+        book("ladbrokes_uk", "Ladbrokes", h2h=[3.4, 3.7, 2.0]),
+        book("livescorebet", "LiveScore Bet", h2h=[3.6, 3.65, 1.93]),
+        book("virginbet", "Virgin Bet", h2h=[3.6, 3.65, 1.93]),
+        book("williamhill", "William Hill", h2h=[3.4, 3.6, 2.0]),
+    ])
+    assert "LiveScore Bet" not in o["prices"]
+    assert "Virgin Bet" not in o["prices"]
+    assert o["prices"]["LiveScore Group"] == [3.6, 3.65, 1.93]
+    # both members preserved, nothing thrown away
+    assert set(o["group_members"]["LiveScore Group"]) == {"LiveScore Bet", "Virgin Bet"}
+
+
+def test_group_quote_is_the_median_when_members_disagree():
+    o = build([
+        book("ladbrokes_uk", "Ladbrokes", h2h=[3.4, 3.7, 2.0]),
+        book("livescorebet", "LiveScore Bet", h2h=[3.6, 3.6, 1.90]),
+        book("virginbet", "Virgin Bet", h2h=[3.4, 3.7, 2.00]),
+    ])
+    assert o["prices"]["LiveScore Group"] == [3.5, 3.65, 1.95]
+
+
+def test_all_three_exchanges_stay_out():
+    """Betfair, Matchbook and Smarkets all quoted 3.70/3.95/~2.06 -- blending
+    them would have put three near-identical exchange quotes in the median."""
+    o = build([
+        book("ladbrokes_uk", "Ladbrokes", h2h=[3.4, 3.7, 2.0]),
+        book("betfair_ex_uk", "Betfair", h2h=[3.7, 3.95, 2.06]),
+        book("matchbook", "Matchbook", h2h=[3.7, 3.95, 2.06]),
+        book("smarkets", "Smarkets", h2h=[3.7, 3.95, 2.04]),
+        book("williamhill", "William Hill", h2h=[3.4, 3.6, 2.0]),
+    ])
+    assert set(o["prices"]) == {"Ladbrokes", "William Hill"}
+    assert set(o["exchange_prices"]) == {"Betfair", "Matchbook", "Smarkets"}
+
+
+def test_excluded_books_never_reach_the_screen():
+    o = build([
+        book("ladbrokes_uk", "Ladbrokes", h2h=[3.4, 3.7, 2.0]),
+        book("coral", "Coral", h2h=[3.4, 3.7, 2.05]),
+        book("betfair_ex_uk", "Betfair", h2h=[3.7, 3.95, 2.06]),
+        book("livescorebet", "LiveScore Bet", h2h=[3.6, 3.65, 1.93]),
+        book("virginbet", "Virgin Bet", h2h=[3.6, 3.65, 1.93]),
+        book("williamhill", "William Hill", h2h=[3.4, 3.6, 2.0]),
+        book("betfred_uk", "Betfred (UK)", h2h=[3.4, 3.75, 2.0]),
+    ])
+    screened = ps.screen_market(o)
+    assert screened["books_in_consensus"] == [
+        "Betfred (UK)", "LiveScore Group", "William Hill"]

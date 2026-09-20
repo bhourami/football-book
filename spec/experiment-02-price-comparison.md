@@ -195,3 +195,101 @@ used to validate the method — in either direction.
 while it runs. The separate question of whether to continue staking the
 existing selection rule is untouched by this document — both analysts
 have recommended stopping, and that remains the owner's decision.
+
+---
+
+## Amendment, 20 September 2026 — made BEFORE any data was collected
+
+An API key arrived and the instrument was tested before the first
+capture. The test spent 2 credits and produced **zero observations**;
+nothing was screened, no edge was computed, and none of that pre-flight
+data will be used as experiment data.
+
+This is recorded as an amendment rather than a re-registration as
+Experiment 03 because **collection never began**. The question, the 3%
+threshold (section 5), the decision rule (section 10) and the stopping
+rule (section 9) are all unchanged. What changed is one arithmetic
+error and one exclusion list that was not strict enough. Both changes
+make the measurement harder to pass, not easier, and both were made
+blind to any computed edge.
+
+### Finding 1 — BTTS is not on the bulk endpoint, and the credit budget in section 3 is wrong
+
+`GET /v4/sports/soccer_epl/odds?markets=h2h,btts` returns **HTTP 422
+INVALID_MARKET**. BTTS is an additional market, available only from the
+per-event endpoint, one credit per fixture.
+
+Section 3 said a capture costs 2 credits, five captures a matchweek
+≈ 10, and eight matchweeks ≈ 80. The true cost:
+
+| | credits |
+|---|---|
+| Match result, all fixtures in one call | 1 |
+| BTTS, per fixture × 10 | 10 |
+| **One capture** | **11** |
+| One matchweek (5 captures) | 55 |
+| **Eight matchweeks** | **440** |
+
+**That is 5.5× the registered estimate.** It still fits the free tier,
+which is 500 credits *per month* and resets: eight matchweeks span about
+three months, so the peak month is roughly 165 credits. But the figure
+in section 3 was wrong and is corrected here rather than quietly
+absorbed.
+
+`collect_odds.py` takes `--horizon-hours` (default 30) so a capture
+spends BTTS credits only on the matchweek in hand, never on every
+fixture the API happens to list three weeks out.
+
+### Finding 2 — Coral is Ladbrokes, and was inside the benchmark
+
+Section 4 excludes Ladbrokes from every benchmark it is measured
+against. It did not exclude **Coral**, which is the same operator
+(Entain). On Fulham v Man Utd, 20 September 2026:
+
+| | Home / Draw / Away | BTTS Yes / No |
+|---|---|---|
+| Ladbrokes | 3.40 / 3.70 / 2.00 | 1.50 / 2.45 |
+| Coral | 3.40 / 3.70 / 2.05 | 1.50 / 2.45 |
+
+Identical on BTTS, one tick apart on the match result. Leaving Coral in
+the consensus measures Ladbrokes partly against itself — exactly the
+error section 4 excludes Ladbrokes to avoid, and it biases toward
+*finding* opportunities, the direction this experiment must be most
+sceptical of.
+
+**Coral is excluded from Benchmark A from the outset.** Its prices are
+still captured and recorded, in `subject_affiliate_prices`.
+
+### Finding 3 — two brands, one pricing desk
+
+LiveScore Bet and Virgin Bet returned identical prices on both markets
+(3.60 / 3.65 / 1.93 and 1.47 / 2.55). Counting both lets one desk pull
+the median twice, which is the concentration section 10(4) says must
+not drive a result.
+
+**Brands under one operator contribute a single quote to the
+consensus** — the per-outcome median of their members, with every member
+preserved in `group_members`. This is decided on ownership, fixed in
+advance, not on whether two prices happen to match on a given day.
+
+### Finding 4 — the exchange ruling was right, and mattered more than expected
+
+Betfair Exchange, Matchbook and Smarkets all returned about
+3.70 / 3.95 / 2.05 — clearly better than every sportsbook, and nearly
+identical to each other. Had they been blended into Benchmark A as
+section 4 of Experiment 01 originally contemplated, three correlated
+exchange quotes would have dragged the consensus and manufactured
+apparent Ladbrokes value on almost every outcome. The ruling carried
+over from `HALTED.md` prevented that. Recorded because it is the first
+time a design decision in this project has been vindicated in advance
+rather than corrected afterwards.
+
+### Benchmark pool after these exclusions
+
+Of 20 books quoting the match result: minus Ladbrokes (subject), minus
+Coral (same operator), minus 3 exchanges (Benchmark B), minus one
+duplicate brand = **14 independent quotes**. BTTS is quoted by 10 books,
+leaving **5** after the same exclusions. Thin, and worth watching — a
+5-book median is more fragile than a 14-book one, and if BTTS coverage
+drops further that is itself a finding about whether this market is
+measurable at all.

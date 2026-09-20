@@ -38,6 +38,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import statistics
 import sys
 import urllib.error
 import urllib.parse
@@ -51,7 +52,9 @@ EXPERIMENT = ROOT / "experiments" / "02-price-comparison"
 API_HOST = "https://api.the-odds-api.com"
 SPORT = "soccer_epl"
 REGIONS = "uk"
-MARKETS = "h2h,btts"
+# BTTS is NOT available on the bulk /odds endpoint (HTTP 422
+# INVALID_MARKET). It is fetched per event; see fetch().
+BULK_MARKETS = "h2h"
 
 # Exchanges, not sportsbooks. Benchmark B -- recorded, never blended into
 # the consensus the subject is measured against.
@@ -59,6 +62,22 @@ EXCHANGES = {"betfair_ex_uk", "matchbook", "smarkets"}
 
 SUBJECT_KEY = "ladbrokes_uk"
 SUBJECT_TITLE = "Ladbrokes"   # the name scripts/price_screen.py expects
+
+# Books owned by the same operator as the subject. Ladbrokes and Coral are
+# both Entain, and they quote near-identically -- Fulham v Man Utd on
+# 20 Sept 2026 had both at exactly 1.50/2.45 on BTTS. Leaving Coral in the
+# consensus would measure Ladbrokes partly against itself, which is the
+# same error section 4 excludes Ladbrokes to avoid. Recorded, never blended.
+SUBJECT_AFFILIATES = {"coral"}
+
+# Books that are the same product under two brands. They quote identically,
+# so counting both would let one pricing desk pull the median twice -- the
+# concentration section 10(4) says must not drive a result. Each group
+# contributes exactly one quote to the consensus; all members are preserved.
+BOOK_GROUPS = {
+    "livescorebet": "LiveScore Group",
+    "virginbet": "LiveScore Group",
+}
 
 SLOTS = ("T-24h", "T-3h", "T-1h", "T-15m", "closing")
 
@@ -85,28 +104,72 @@ def load_api_key() -> str:
     return key
 
 
-def fetch(api_key: str) -> tuple[list, dict]:
-    """Return (events, quota headers). Costs 2 credits."""
-    qs = urllib.parse.urlencode({
-        "apiKey": api_key,
-        "regions": REGIONS,
-        "markets": MARKETS,
-        "oddsFormat": "decimal",
-        "dateFormat": "iso",
-    })
-    url = f"{API_HOST}/v4/sports/{SPORT}/odds?{qs}"
+def _get(api_key: str, path: str, **params) -> tuple[object, dict]:
+    params.update({"apiKey": api_key})
+    url = f"{API_HOST}{path}?{urllib.parse.urlencode(params)}"
     try:
         with urllib.request.urlopen(url, timeout=30) as r:
-            payload = json.load(r)
-            quota = {
+            return json.load(r), {
                 "requests_remaining": r.headers.get("x-requests-remaining"),
                 "requests_used": r.headers.get("x-requests-used"),
                 "last_request_cost": r.headers.get("x-requests-last"),
             }
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", "replace")[:400]
-        sys.exit(f"the-odds-api returned HTTP {exc.code}: {body}")
-    return payload, quota
+        sys.exit(f"the-odds-api returned HTTP {exc.code} for {path}: {body}")
+
+
+def fetch(api_key: str, horizon_hours: float | None = None) -> tuple[list, dict]:
+    """Return (events with h2h and btts merged, quota).
+
+    Cost is 1 credit for match result across every fixture at once, plus
+    1 credit per fixture for BTTS. BTTS is not served by the bulk /odds
+    endpoint -- it returns HTTP 422 INVALID_MARKET -- and is only available
+    per event. That is why this is not the flat 2 credits the original
+    pre-registration assumed; see the 20 September 2026 amendment in
+    spec/experiment-02-price-comparison.md.
+
+    horizon_hours limits BTTS calls to fixtures kicking off within that
+    many hours, so a capture does not spend a credit on every fixture in
+    the next three matchweeks.
+    """
+    events, quota = _get(api_key, f"/v4/sports/{SPORT}/odds",
+                         regions=REGIONS, markets="h2h",
+                         oddsFormat="decimal", dateFormat="iso")
+    spent = int(quota.get("last_request_cost") or 1)
+
+    if horizon_hours is not None:
+        cutoff = datetime.now(timezone.utc).timestamp() + horizon_hours * 3600
+        wanted = [e for e in events
+                  if datetime.fromisoformat(
+                      e["commence_time"].replace("Z", "+00:00")).timestamp() <= cutoff]
+    else:
+        wanted = list(events)
+
+    for ev in wanted:
+        detail, q = _get(api_key, f"/v4/sports/{SPORT}/events/{ev['id']}/odds",
+                         regions=REGIONS, markets="btts",
+                         oddsFormat="decimal", dateFormat="iso")
+        spent += int(q.get("last_request_cost") or 1)
+        quota = q
+        btts_by_key = {}
+        for bm in detail.get("bookmakers", []):
+            block = next((m for m in bm.get("markets", []) if m.get("key") == "btts"), None)
+            if block is not None:
+                btts_by_key[bm["key"]] = (bm, block)
+        # Merge the BTTS block into the matching bookmaker on the h2h event,
+        # matched on the API's stable key -- never on list position.
+        existing = {bm["key"]: bm for bm in ev.get("bookmakers", [])}
+        for key, (bm, block) in btts_by_key.items():
+            if key in existing:
+                existing[key].setdefault("markets", []).append(block)
+            else:
+                ev.setdefault("bookmakers", []).append(
+                    {"key": key, "title": bm.get("title", key), "markets": [block]})
+
+    quota["capture_cost_credits"] = spent
+    quota["btts_fixtures_queried"] = len(wanted)
+    return events, quota
 
 
 def team_code(name: str) -> str:
@@ -153,6 +216,9 @@ def build_observations(events: list, slot: str, captured_at: str) -> list[dict]:
             exchange_prices: dict[str, list[float]] = {}
             dropped: list[dict] = []
 
+            affiliate_prices: dict[str, list[float]] = {}
+            grouped: dict[str, dict[str, list[float]]] = {}
+
             for bm in ev.get("bookmakers", []):
                 block = next((m for m in bm.get("markets", [])
                               if m.get("key") == market_key), None)
@@ -169,8 +235,27 @@ def build_observations(events: list, slot: str, captured_at: str) -> list[dict]:
                                     "reason": "incomplete or invalid prices",
                                     "raw": by_name})
                     continue
-                title = SUBJECT_TITLE if bm["key"] == SUBJECT_KEY else bm.get("title", bm["key"])
-                (exchange_prices if bm["key"] in EXCHANGES else prices)[title] = row
+
+                key, title = bm["key"], bm.get("title", bm["key"])
+                if key == SUBJECT_KEY:
+                    prices[SUBJECT_TITLE] = row
+                elif key in SUBJECT_AFFILIATES:
+                    affiliate_prices[title] = row
+                elif key in EXCHANGES:
+                    exchange_prices[title] = row
+                elif key in BOOK_GROUPS:
+                    grouped.setdefault(BOOK_GROUPS[key], {})[title] = row
+                else:
+                    prices[title] = row
+
+            # Each brand group contributes one quote: the per-outcome median
+            # of its members. Members are preserved in group_members.
+            group_members = {}
+            for group, members in grouped.items():
+                rows = list(members.values())
+                prices[group] = [round(statistics.median(r[i] for r in rows), 4)
+                                 for i in range(len(ids))]
+                group_members[group] = members
 
             if SUBJECT_TITLE not in prices:
                 dropped.append({"bookmaker": SUBJECT_TITLE, "key": SUBJECT_KEY,
@@ -191,6 +276,11 @@ def build_observations(events: list, slot: str, captured_at: str) -> list[dict]:
                 "prices": prices,
                 # Benchmark B. Kept alongside, never merged into `prices`.
                 "exchange_prices": exchange_prices,
+                # Same operator as the subject (Entain). Recorded, never
+                # blended -- see SUBJECT_AFFILIATES.
+                "subject_affiliate_prices": affiliate_prices,
+                # Which brands collapsed into each single group quote.
+                "group_members": group_members,
                 "bookmakers_not_read": dropped,
             })
     return out
@@ -222,6 +312,10 @@ def main() -> int:
                     help="which scheduled capture this is (section 3)")
     ap.add_argument("--from-raw", metavar="FILE",
                     help="rebuild observations from a saved raw response; spends no credits")
+    ap.add_argument("--horizon-hours", type=float, default=30.0,
+                    help="only spend a BTTS credit on fixtures kicking off within "
+                         "this many hours (default 30, i.e. the T-24h slot's own "
+                         "matchweek and nothing beyond it)")
     args = ap.parse_args()
 
     if args.from_raw:
@@ -234,7 +328,7 @@ def main() -> int:
         if not args.slot:
             ap.error("--slot is required for a live capture")
         slot = args.slot
-        raw, quota = fetch(load_api_key())
+        raw, quota = fetch(load_api_key(), args.horizon_hours)
         captured_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
     observations = build_observations(raw, slot, captured_at)
@@ -253,9 +347,10 @@ def main() -> int:
     if no_subject:
         print(f"  NO {SUBJECT_TITLE} PRICE in: {sorted(set(no_subject))}")
     if quota.get("requests_remaining") is not None:
-        print(f"  credits: {quota['requests_used']} used, "
-              f"{quota['requests_remaining']} remaining "
-              f"(this call cost {quota.get('last_request_cost')})")
+        print(f"  credits: this capture cost {quota.get('capture_cost_credits')} "
+              f"(1 for match result across all fixtures + 1 each for BTTS on "
+              f"{quota.get('btts_fixtures_queried')} fixture(s)); "
+              f"{quota['requests_remaining']} remaining this month")
     print(f"  raw response -> {raw_path.relative_to(ROOT)}")
     print("\nNext: python3 scripts/price_screen.py "
           f"{(EXPERIMENT / 'observations').relative_to(ROOT)}/*-{slot}-*.json")
