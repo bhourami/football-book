@@ -1,0 +1,103 @@
+{
+  "$comment": "Era 02 selection card. Note what is ABSENT: no stake, no price_obtained_by_owner, no settled_pl_gbp, no bank. Those fields existed in Era 01 and are deliberately not carried over. `result` is recorded because it is a fact, and is explicitly NOT the score -- see scored_on.",
+  "type": "object",
+  "required": [
+    "fixture_id",
+    "market",
+    "selection",
+    "decision_price",
+    "decision_timestamp_utc",
+    "decision_venue",
+    "analyst"
+  ],
+  "properties": {
+    "fixture_id": {
+      "type": "string",
+      "description": "YYYY-MM-DD-HOME-AWAY"
+    },
+    "market": {
+      "enum": [
+        "match_result",
+        "btts"
+      ]
+    },
+    "selection": {
+      "enum": [
+        "home_win",
+        "draw",
+        "away_win",
+        "btts_yes",
+        "btts_no"
+      ]
+    },
+    "decision_price": {
+      "type": "number",
+      "minimum": 1.01,
+      "description": "Best exchange price available when the call was made."
+    },
+    "decision_timestamp_utc": {
+      "type": "string"
+    },
+    "decision_venue": {
+      "type": "string",
+      "description": "betfair_ex_uk | matchbook | smarkets"
+    },
+    "analyst": {
+      "enum": [
+        "claude",
+        "codex",
+        "conclusion"
+      ]
+    },
+    "reasoning": {
+      "type": "string"
+    },
+    "closing_price": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Raw closing price. DERIVED ONLY. Null until sourced."
+    },
+    "closing_price_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "closing_overround": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "closing_fair_price": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Closing price with margin removed. The benchmark."
+    },
+    "clv_pp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "closing fair probability minus decision probability, in pp. The score."
+    },
+    "ev_per_10_gbp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "(closing fair probability x decision price - 1) x 10."
+    },
+    "result": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Recorded as fact. NOT the score."
+    }
+  }
+}

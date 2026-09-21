@@ -1,4 +1,8 @@
-"""Compute each book's running total from the ledgers. Single source of truth.
+"""Era 01 totals, from the archived ledgers. Single source of truth.
+
+Era 01 closed 21 September 2026 (methodology.md section 14). These books
+took real money; nothing is added to them again. Era 02 has no bank and
+no P/L by design -- its scoreboard is scripts/clv_score.py.
 
 The public README used to carry hand-maintained totals, which drifted.
 Anything published should come from here.
@@ -14,7 +18,7 @@ REAL = {"placed", "settled"}
 
 
 def book_totals(name):
-    d = json.load(open(os.path.join(ROOT, "ledger", f"{name}.json")))
+    d = json.load(open(os.path.join(ROOT, "ledger", "archive", f"era-01-{name}.json")))
     real_settled = real_open = tracked = 0.0
     n_real = n_open = n_tracked = 0
     for e in d["entries"]:
@@ -38,7 +42,7 @@ def book_totals(name):
 
 
 def accumulators():
-    d = json.load(open(os.path.join(ROOT, "ledger", "accumulators.json")))
+    d = json.load(open(os.path.join(ROOT, "ledger", "archive", "era-01-accumulators.json")))
     return round(sum(e.get("settled_pl_gbp") or 0 for e in d["entries"]), 2)
 
 

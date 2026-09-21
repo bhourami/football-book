@@ -17,7 +17,9 @@ from results import results, settle
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-LEDGERS = ["ledger/conclusion.json", "ledger/claude.json", "ledger/codex.json"]
+LEDGERS = ["ledger/archive/era-01-conclusion.json",
+           "ledger/archive/era-01-claude.json",
+           "ledger/archive/era-01-codex.json"]
 SKIP = {"declined", "not_placed_by_owner_choice", "withdrawn"}
 
 

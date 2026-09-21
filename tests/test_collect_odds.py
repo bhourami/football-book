@@ -201,3 +201,64 @@ def test_excluded_books_never_reach_the_screen():
     screened = ps.screen_market(o)
     assert screened["books_in_consensus"] == [
         "Betfred (UK)", "LiveScore Group", "William Hill"]
+
+
+# --------------------------------------------------------------------------
+# Era 02 CLV scoring. Verified against the Matchweek 4 figures computed
+# independently on 21 September: -0.75, -0.81 and -0.78 EV per £10.
+# --------------------------------------------------------------------------
+
+import clv_score  # noqa: E402
+
+
+def _table():
+    return clv_score.closing_table()
+
+
+def test_clv_reproduces_the_matchweek_4_expected_values():
+    table = _table()
+    cases = [
+        ("2026-09-13-COV-BHA", "draw", 3.70, -0.75),
+        ("2026-09-14-LEE-NEW", "away_win", 2.90, -0.81),
+        ("2026-09-13-MUN-MCI", "away_win", 2.15, -0.78),
+    ]
+    for fid, sel, price, expected_ev in cases:
+        e = {"fixture_id": fid, "selection": sel, "decision_price": price}
+        assert clv_score.score(e, table), f"{fid} not found in closing data"
+        assert abs(e["ev_per_10_gbp"] - expected_ev) < 0.02, (
+            f"{fid}: got {e['ev_per_10_gbp']}, expected {expected_ev}")
+        assert e["clv_pp"] < 0, f"{fid} should have negative CLV"
+
+
+def test_closing_price_is_margin_removed_not_raw():
+    table = _table()
+    e = {"fixture_id": "2026-09-14-LEE-NEW", "selection": "away_win",
+         "decision_price": 2.90}
+    clv_score.score(e, table)
+    assert e["closing_price"] == 2.98          # raw close
+    assert e["closing_fair_price"] > 3.1       # margin removed, longer
+    assert 0.05 < e["closing_overround"] < 0.07
+
+
+def test_a_price_better_than_the_fair_close_scores_positive():
+    """The whole point: CLV is positive when you beat the fair closing price."""
+    table = _table()
+    e = {"fixture_id": "2026-09-14-LEE-NEW", "selection": "away_win",
+         "decision_price": 3.60}     # better than the 3.16 fair close
+    clv_score.score(e, table)
+    assert e["clv_pp"] > 0
+    assert e["ev_per_10_gbp"] > 0
+
+
+def test_unknown_fixture_is_left_unscored_rather_than_guessed():
+    e = {"fixture_id": "2027-01-01-ARS-LIV", "selection": "home_win",
+         "decision_price": 2.0}
+    assert clv_score.score(e, _table()) is False
+    assert "clv_pp" not in e
+
+
+def test_btts_is_left_unscored_until_a_source_exists():
+    """The season CSV has no BTTS closing column. Null, never invented."""
+    e = {"fixture_id": "2026-09-14-LEE-NEW", "selection": "btts_no",
+         "decision_price": 2.0}
+    assert clv_score.score(e, _table()) is False
