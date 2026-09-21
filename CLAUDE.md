@@ -287,3 +287,28 @@ pending one is flagged with this note rather than treated as sound.
 Do not lift this pause by just picking a few counter-examples where
 "No" would have been right; it lifts when the method itself is shown,
 across a real sample, not to produce this skew.
+
+## CLV must be measured against a real closing price, from data
+
+21 September 2026. The project published one positive closing-line
+figure in its life -- "Newcastle win, +1.2pp CLV, beat the close
+despite losing" -- and it was wrong. The ledger held `closing_price:
+2.80` against a price obtained of 2.90. No book closed near 2.80:
+football-data.co.uk has the average close at 2.98, Bet365 at 3.00,
+best available and Betfair at 3.15. The market drifted OUT, so the
+price taken was worse than the close. True CLV -0.93pp. All three of
+that gameweek's match-result bets in fact lost to the close, mean
+-0.85pp, zero of three positive.
+
+The 2.80 has no traceable source. It was almost certainly eyeballed
+from a screen rather than recorded from data, and it happened to point
+in the flattering direction -- which is the direction an unsourced
+number always seems to point.
+
+**Rule: never write a closing price into a ledger by hand.** Take it
+from `data/E0_<season>.csv` (football-data.co.uk carries AvgC/B365C/
+MaxC/BFEC closing columns for every fixture) or from a timestamped
+capture of the market. If neither exists yet, leave `closing_price`
+null -- a missing number is honest, an invented one is not. This is
+the same failure as the hand-maintained totals and the ESPN scoreline:
+every one of them was a figure typed rather than derived.

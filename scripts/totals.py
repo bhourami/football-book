@@ -54,4 +54,7 @@ if __name__ == "__main__":
                   f"across {t['n_open']} bet(s)")
         print(f"  tracked-only (paper)   : {t['tracked']:+.2f} "
               f"over {t['n_tracked']} selection(s)")
-    print(f"\nCross-book accumulators  : {accumulators():+.2f}")
+    acc = accumulators()
+    print(f"\nCross-book accumulators  : {acc:+.2f}")
+    combined = sum(book_totals(k)["real_settled"] for k in BOOKS) + acc
+    print(f"COMBINED REAL MONEY      : {combined:+.2f}")
