@@ -360,10 +360,34 @@ opinions were worth **+7.0% on average** at the exchange:
 | Leeds v Newcastle, Newcastle | 2.90 | 3.15 | +8.6% |
 | Man Utd v Man City, Man City | 2.15 | 2.30 | +7.0% |
 
-That ~7% is structural and requires no forecasting skill. It is close to
-the entire −7.8% expected loss measured above. **It does not create an
-edge** — it stops paying one away. Profit still requires the opinions to
-be better than the market's, which remains unproven.
+**CORRECTED the same day, by Codex.** The first version of this section
+said the ~7% was "close to the entire −7.8% expected loss" and took us to
+roughly break-even. **That was wrong.** Commission applies to net
+winnings, so the effective price is `1 + (odds − 1) × (1 − commission)`,
+and it must be applied before computing EV. Recomputed on the same three
+selections:
+
+| Commission | Mean EV per bet |
+|---|---|
+| Bookmaker (baseline) | −7.80% |
+| Exchange at 2% | **−2.68%** |
+| Exchange at 5% | **−4.64%** |
+
+The exchange recovers 5.1pp at 2% commission and 3.2pp at 5%. **It
+remains negative at both.** Moving venue makes the method lose less; it
+does not make it break even, and it certainly does not make it
+profitable.
+
+This raises the bar rather than lowering it: to break even on the
+exchange we now need demonstrated edge of **at least 2.7pp** against the
+closing line, not zero. Nothing in this project's history suggests we
+have it.
+
+A second caveat on that "+7%": it compares a bookmaker price taken at
+decision time against an exchange price at the *close*, so it conflates
+venue with timing. Measured at a single instant during the 20 September
+capture (Ladbrokes 3.40/3.70/2.00 against exchange 3.70/3.95/2.06) the
+pure venue effect is about **+6.2%**. The conclusion is unchanged.
 
 Exchanges also do not restrict winning accounts. A bookmaker detects a
 sharp bettor precisely by positive CLV, so on a sportsbook, succeeding

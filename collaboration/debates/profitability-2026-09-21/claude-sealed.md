@@ -1,3 +1,9 @@
+> **Superseded in part, same day.** Section 2's claim that the exchange
+> "takes us from losing to roughly break-even" is **wrong** — Codex
+> caught it. Commission applies to net winnings, and recomputed
+> properly the exchange gives −2.68% at 2% commission and −4.64% at
+> 5%, not break-even. Left unedited below as the sealed record.
+
 # Claude — sealed opening, 21 September 2026
 
 Written and committed before seeing Codex's answer. Question from the
