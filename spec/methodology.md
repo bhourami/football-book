@@ -272,3 +272,130 @@ from public sources only — no account login is used for research.
 
 No sections remain open. Bet one may proceed under this document as
 written.
+
+---
+
+# Amendment, 21 September 2026 — the pivot
+
+Decided by the owner after the September findings. This supersedes the
+staking sections above where they conflict. Everything not restated here
+still stands, including section 13's hard boundary.
+
+## 14. Staking is suspended
+
+**No further stake is placed under the model-driven selection rule.**
+Both analysts recommended this independently on 19 September, when the
+books were roughly flat. It is being actioned on 21 September with the
+books **£35.09 up**, which is the only circumstance in which honouring a
+pre-commitment actually costs anything and therefore the only
+circumstance in which it means anything.
+
+The two real-money books close here:
+
+| Book | Closing bank | Net | Bets |
+|---|---|---|---|
+| Conclusion (debated) | £194.00 | −£6.00 | 7 |
+| Codex solo | £251.09 | +£51.09 | 7 |
+| Cross-book accumulators | own pot | −£10.00 | 1 |
+| **Combined** | | **+£35.09** | **15** |
+
+Fifteen bets cannot distinguish skill from luck and are not claimed to.
+
+### Why, in one number
+
+Measured against the **margin-removed closing price** — the best
+available estimate of true probability — the three Matchweek 4
+match-result bets carried an expected value of **−7.8% per £10 staked**:
+
+| Bet | Taken at | Fair closing price | EV per £10 |
+|---|---|---|---|
+| Coventry v Brighton, Draw | 3.70 | 4.00 | −£0.75 |
+| Leeds v Newcastle, Newcastle | 2.90 | 3.16 | −£0.81 |
+| Man Utd v Man City, Man City | 2.15 | 2.33 | −£0.78 |
+
+Note how tight those three are. That is not variance, it is a stable
+property of the method, and it agrees with the walk-forward backtest's
+realised −9.2% over 1,180 matches. Two independent measurements, the
+same answer.
+
+## 15. The scoreboard is closing line value, not profit
+
+Profit is not the measure of whether this works, and never was a usable
+one: separating a real edge from luck through P&L needs hundreds of
+bets. CLV is measured on every selection against a continuous number,
+so it converges in tens.
+
+**CLV is not a proxy for edge. Measured against the margin-removed
+closing price, it is the edge**, expressed as expected value. A
+selection with positive CLV makes money in the long run whether or not
+it wins; a selection with negative CLV loses money in the long run
+however often it wins.
+
+Recorded for every selection, staked or not:
+
+- price available at decision time, timestamped
+- margin-removed fair price at the close, from
+  `data/E0_<season>.csv` or a timestamped capture — **never typed by
+  hand** (see CLAUDE.md, 21 September)
+- CLV in percentage points, and EV per £10
+
+**Decision point, fixed now:** after **60 selections**, if median CLV is
+at or below zero, the conclusion is that this method cannot price
+football better than the market, and the project stops looking for edge.
+No extension, and no early stop because a run of results looks good.
+
+## 16. Venue: exchange, not bookmaker
+
+Where a price is recorded for comparison, the reference venue is a
+betting **exchange** (Betfair, Matchbook, Smarkets), not a sportsbook.
+
+A bookmaker builds 5–7% margin into the quoted price. An exchange
+charges commission on **net winnings only**, typically 2–5%, and nothing
+when a selection loses. On the three Matchweek 4 selections the same
+opinions were worth **+7.0% on average** at the exchange:
+
+| Selection | Bookmaker | Exchange | |
+|---|---|---|---|
+| Coventry v Brighton, Draw | 3.70 | 3.90 | +5.4% |
+| Leeds v Newcastle, Newcastle | 2.90 | 3.15 | +8.6% |
+| Man Utd v Man City, Man City | 2.15 | 2.30 | +7.0% |
+
+That ~7% is structural and requires no forecasting skill. It is close to
+the entire −7.8% expected loss measured above. **It does not create an
+edge** — it stops paying one away. Profit still requires the opinions to
+be better than the market's, which remains unproven.
+
+Exchanges also do not restrict winning accounts. A bookmaker detects a
+sharp bettor precisely by positive CLV, so on a sportsbook, succeeding
+at section 15 leads to restriction rather than profit.
+
+## 17. Competition stays the Premier League
+
+Checked on 21 September rather than assumed, across full fixture lists:
+
+| League | Median bookmaker margin | Median books |
+|---|---|---|
+| Premier League | **7.34%** | 10.5 |
+| Championship | 8.28% | 8.0 |
+| League Two | 9.28% | 12.0 |
+
+Lower divisions are **more expensive, not less**. The folk belief that
+they are softer is half true — they are priced less accurately — but the
+bookmaker compensates with a wider margin precisely because it is less
+confident. Moving down would require being about 2pp *more* accurate
+than the market just to stand still, in competitions we know less well,
+with a thinner consensus benchmark and thinner exchange liquidity.
+
+There is also no reason to believe a method that cannot price the
+Premier League can price the Championship. **Revisit only if section 15
+returns positive median CLV** — at which point "is the edge larger where
+the market is softer?" becomes a real question with a real prior.
+
+## 18. Stake size
+
+Unchanged and not up for discussion while CLV is unproven. Stake
+multiplies whatever edge exists: at −7.8%, a £2,000 bank loses £156 per
+turnover where a £200 bank loses £15.60. **Stake is revisited only after
+median CLV over 60+ selections is positive**, and then on the measured
+size of the edge, never on how a recent run has felt.
+
