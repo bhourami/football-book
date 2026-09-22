@@ -312,3 +312,44 @@ capture of the market. If neither exists yet, leave `closing_price`
 null -- a missing number is honest, an invented one is not. This is
 the same failure as the hand-maintained totals and the ESPN scoreline:
 every one of them was a figure typed rather than derived.
+
+## Invoking Codex: pin the model and the effort, every time
+
+23 September 2026. Every Codex debate in this project so far -- the
+backtest review that found three errors, the strategy discussion, the
+profitability debate that caught the commission mistake -- ran on
+`gpt-6-astra` at **`model_reasoning_effort = "low"`**, inherited
+silently from `~/.codex/config.toml`. Nothing in this repo pinned it,
+so nobody knew.
+
+That matters here more than in most projects. The entire premise is two
+strong analysts arguing, and one of them has been answering at low
+effort. It still caught a material error in Claude's arithmetic, which
+says something good about Codex and something uncomfortable about how
+much was being left on the table.
+
+**Do not change the global config** -- it is shared with the owner's
+other work. Pin per invocation instead:
+
+```bash
+OPENAI_API_KEY= /Applications/ChatGPT.app/Contents/Resources/codex exec \
+  --skip-git-repo-check \
+  -m gpt-6-sol -c model_reasoning_effort="high" \
+  "$PROMPT" < /dev/null > reply.txt 2>&1
+```
+
+Three things in that line are load-bearing:
+
+- **`OPENAI_API_KEY=`** (empty) forces Codex onto the ChatGPT
+  subscription auth, so it answers as a genuinely independent analyst
+  rather than through an API key this desk controls.
+- **`< /dev/null`** is required. Without it Codex hangs on
+  "Reading additional input from stdin..." even when the prompt is
+  passed as an argument. Cost one killed 9-minute run to discover.
+- **`-c model_reasoning_effort="high"`** for any *debate* or review
+  call. Routine legwork -- reading files, arithmetic, reformatting --
+  should use `-m gpt-6-luna` and low effort, or better, not use a model
+  at all (see the scripts in `scripts/`).
+
+Known models on this machine: `gpt-6-sol`, `gpt-6-astra`, `gpt-6-luna`,
+`gpt-6-pro`, `gpt-5.6-sol`.
