@@ -7,6 +7,11 @@ closing line value rather than profit and loss. It is the sequel to
 `~/earnings-lab`, carrying over what that project paid to learn — see
 `/reference/earnings-desk-handoff.md` for the source document.
 
+**Current state (checked 12 October 2026):** staking is suspended (methodology
+section 14, decided 21 September 2026). Era 02 is paper-only, with no bank or
+stake, scored on closing line value. Where this file talks about live bets or
+the owner placing wagers, that describes Era 01; the methodology governs.
+
 ## Authoritative methodology
 
 `/spec/methodology.md` is the **authoritative rule set** for this project. It
@@ -332,7 +337,7 @@ much was being left on the table.
 other work. Pin per invocation instead:
 
 ```bash
-OPENAI_API_KEY= /Applications/ChatGPT.app/Contents/Resources/codex exec \
+OPENAI_API_KEY= /Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex exec \
   --skip-git-repo-check \
   -m gpt-6-sol -c model_reasoning_effort="high" \
   "$PROMPT" < /dev/null > reply.txt 2>&1
